@@ -80,7 +80,9 @@ for g in DATA['groups']:
     add(escape(g['title']), 'sub')
     for p in (p for p in DATA['publications'] if p['group'] == g['id']):
         n += 1
-        authors = ', '.join(f'<b>{escape(a)}</b>' if a == 'Jiani He' else escape(a) for a in p['authors'])
+        authors = ', '.join((f'<b>{escape(a)}</b>' if a == 'Jiani He' else escape(a)) + ('*' if a in p['equal'] else '') for a in p['authors'])
+        if p['equal']:
+            authors += ' (*equal contribution)'
         record = link(p['url'], p['record']) if p['url'] else escape(p['record'])
         story.append(KeepTogether([Paragraph(f'{n}. {authors}. {p["year"]}. “{escape(p["title"])}.” <i>{escape(p["venue"])}</i>. {record}. '
                                              f'<font color="{GOLD}"><b>{escape(p["status"] + ("; " + p["proceedings"].lower() if p["proceedings"] else ""))}</b></font>', S['pub'])]))

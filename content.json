@@ -27,10 +27,10 @@
       "label": "Years of applied data science"
     }
   ],
-  "bio": "Jiani (Elva) He is a data scientist and independent researcher based in Seattle, Washington. As a Data Science Consultant at Accenture, Jiani has spent five years applying analytics, optimization, and AI to forward and reverse logistics in a technology client’s data center supply chain. Jiani’s research asks how evidence becomes better operational decisions, spanning demand-forecast stability, causal decision support, trustworthy AI deployment, and AI-assisted reverse logistics. This work includes six 2026 papers with collaborators, among them a first-author paper accepted at AIBThings 2026, and Jiani has peer-reviewed more than ten journal manuscripts. Jiani holds an MS in Business Analytics from MIT (Operations Research Center) and a BS in Industrial Engineering from Purdue University.",
+  "bio": "Jiani (Elva) He is a data scientist and independent researcher based in Seattle, Washington. As a Data Science Consultant at Accenture, Jiani has spent five years applying analytics, optimization, and AI to forward and reverse logistics in a technology client’s data center supply chain. Jiani’s research asks how evidence becomes better operational decisions, spanning demand-forecast stability, causal decision support, trustworthy AI deployment, and AI-assisted reverse logistics. This work includes six 2026 papers with collaborators, among them a first-author paper accepted at AIBThings 2026 and a co-first-author paper accepted at ICECCME 2026, and Jiani has peer-reviewed more than ten journal manuscripts. Jiani holds an MS in Business Analytics from MIT (Operations Research Center) and a BS in Industrial Engineering from Purdue University.",
   "highlights": [
-    "<strong>First-author paper</strong> on semantic signals for reverse-logistics inspection, accepted at AIBThings 2026",
-    "<strong>Five more accepted conference papers</strong> with collaborators: IEOM 2026 (two papers), ICECCME 2026, ICEME 2026, and ICOAI 2026",
+    "<strong>First-author and co-first-author papers</strong>: semantic signals for reverse-logistics inspection (AIBThings 2026) and DACRI causal intervention ranking (ICECCME 2026)",
+    "<strong>Four more accepted conference papers</strong> with collaborators: IEOM 2026 (two papers), ICEME 2026, and ICOAI 2026",
     "<strong>National-priority areas</strong>: AI for operational decisions, applied to data center supply chains; related to the AI and Autonomy and Semiconductors and Microelectronics areas of the U.S. Critical and Emerging Technologies List (2026)",
     "<strong>MIT</strong> MS in Business Analytics (GPA 4.7/5.0) and <strong>Purdue</strong> BS in Industrial Engineering (Honors &amp; Distinction, GPA 3.9/4.0)"
   ],
@@ -63,8 +63,8 @@
   "groups": [
     {
       "id": "first",
-      "title": "First-author research",
-      "eyebrow": "Lead author"
+      "title": "Lead-author papers",
+      "eyebrow": "First and co-first author"
     },
     {
       "id": "accepted",
@@ -103,7 +103,41 @@
       "summary": "Uses semantic signals in return notes to guide inspection depth and recovery allocation when asset condition is uncertain and inspection labor is limited. Evaluated in three synthetic reverse-logistics scenarios.",
       "bibtex": "@misc{he2026semantic,\n  title={Semantic Signal-Assisted Inspection and Recovery Allocation in Reverse Logistics},\n  author={He, Jiani and Shang, Dingyan and Xu, Yihua and Huang, Shiqi and Lyu, Yan and Li, Jize and Tang, Shangjing},\n  year={2026},\n  eprint={2609.02116},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2609.02116},\n  url={https://arxiv.org/abs/2609.02116}\n}",
       "short": "Semantic-signal inspection and recovery allocation (first author)",
-      "proceedings": "Proceedings forthcoming"
+      "proceedings": "Proceedings forthcoming",
+      "co_first": false,
+      "equal": []
+    },
+    {
+      "id": "dacri",
+      "title": "DACRI: Decision-Aware Causal Intervention Ranking for Critical Supply Chains",
+      "authors": [
+        "Shiqi Huang",
+        "Jiani He",
+        "Dingyan Shang",
+        "Yihua Xu",
+        "Jize Li",
+        "Yan Lyu",
+        "Lashimi Muraleedharan Nair"
+      ],
+      "year": 2026,
+      "group": "first",
+      "stream": "decide",
+      "first_author": false,
+      "status": "Accepted · ICECCME 2026",
+      "venue": "International Conference on Electrical, Computer, Communications and Mechatronics Engineering (ICECCME 2026) · 15–17 October 2026 · Bali, Indonesia",
+      "record": "arXiv:2608.11154",
+      "url": "https://arxiv.org/abs/2608.11154",
+      "doi": "10.48550/arXiv.2608.11154",
+      "code": "https://github.com/jiani19980225/dacri-criticalscm-bench",
+      "summary": "Ranks supply-chain interventions by recoverable net value, using a controlled synthetic benchmark with causal ground truth and explicit intervention costs, delays, and uncertainty. Identifies when adaptive ranking pays off and when simpler structural policies remain preferable.",
+      "bibtex": "@misc{huang2026dacri,\n  title={DACRI: Decision-Aware Causal Intervention Ranking for Critical Supply Chains},\n  author={Huang, Shiqi and He, Jiani and Shang, Dingyan and Xu, Yihua and Li, Jize and Lyu, Yan and Nair, Lashimi Muraleedharan},\n  year={2026},\n  eprint={2608.11154},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2608.11154},\n  url={https://arxiv.org/abs/2608.11154}\n}",
+      "short": "DACRI: decision-aware causal intervention ranking (co-first author)",
+      "proceedings": "Proceedings forthcoming",
+      "co_first": true,
+      "equal": [
+        "Shiqi Huang",
+        "Jiani He"
+      ]
     },
     {
       "id": "planning",
@@ -130,7 +164,9 @@
       "summary": "An observable evidence standard for deciding whether an added planning capability changes executed plans and improves operational outcomes, evaluated through forecast-to-plan replay on retail datasets.",
       "bibtex": "@misc{xu2026planning,\n  title={When Does an Added Planning Capability Create Operational Value? An Observable Evidence Standard},\n  author={Xu, Yihua and Lyu, Yan and Li, Jize and He, Jiani and Lin, You and Hu, Yidan and Qiang, Rubing},\n  year={2026},\n  eprint={2610.27305},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2610.27305},\n  url={https://arxiv.org/abs/2610.27305}\n}",
       "short": "Observable evidence standard for planning capabilities",
-      "proceedings": "Proceedings forthcoming"
+      "proceedings": "Proceedings forthcoming",
+      "co_first": false,
+      "equal": []
     },
     {
       "id": "late-delivery",
@@ -156,34 +192,9 @@
       "summary": "A leakage-controlled, feedback-driven risk-accumulation framework that turns weak operational signals into late-delivery predictions, early warnings, and cost-sensitive risk prioritization.",
       "bibtex": "",
       "short": "Late-delivery risk prediction and early warning",
-      "proceedings": "Proceedings forthcoming"
-    },
-    {
-      "id": "dacri",
-      "title": "DACRI: Decision-Aware Causal Intervention Ranking for Critical Supply Chains",
-      "authors": [
-        "Shiqi Huang",
-        "Jiani He",
-        "Dingyan Shang",
-        "Yihua Xu",
-        "Jize Li",
-        "Yan Lyu",
-        "Lashimi Muraleedharan Nair"
-      ],
-      "year": 2026,
-      "group": "accepted",
-      "stream": "decide",
-      "first_author": false,
-      "status": "Accepted · ICECCME 2026",
-      "venue": "International Conference on Electrical, Computer, Communications and Mechatronics Engineering (ICECCME 2026) · 15–17 October 2026 · Bali, Indonesia",
-      "record": "arXiv:2608.11154",
-      "url": "https://arxiv.org/abs/2608.11154",
-      "doi": "10.48550/arXiv.2608.11154",
-      "code": "https://github.com/jiani19980225/dacri-criticalscm-bench",
-      "summary": "Ranks supply-chain interventions by recoverable net value, using a controlled synthetic benchmark with causal ground truth and explicit intervention costs, delays, and uncertainty. Identifies when adaptive ranking pays off and when simpler structural policies remain preferable.",
-      "bibtex": "@misc{huang2026dacri,\n  title={DACRI: Decision-Aware Causal Intervention Ranking for Critical Supply Chains},\n  author={Huang, Shiqi and He, Jiani and Shang, Dingyan and Xu, Yihua and Li, Jize and Lyu, Yan and Nair, Lashimi Muraleedharan},\n  year={2026},\n  eprint={2608.11154},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2608.11154},\n  url={https://arxiv.org/abs/2608.11154}\n}",
-      "short": "DACRI: decision-aware causal intervention ranking",
-      "proceedings": "Proceedings forthcoming"
+      "proceedings": "Proceedings forthcoming",
+      "co_first": false,
+      "equal": []
     },
     {
       "id": "forecasting",
@@ -209,7 +220,9 @@
       "summary": "Training-time regularization that makes retail demand forecasts steadier from run to run while preserving point accuracy, evaluated on selected M5 demand series at multiple scales.",
       "bibtex": "@misc{li2026stability,\n  title={Accuracy-Preserving Stability Regularization for Large-Scale Retail Demand Forecasting},\n  author={Li, Jize and He, Jiani and Yang, Dishu and Shang, Dingyan and Liu, Jingjing and Huang, Shiqi},\n  year={2026},\n  eprint={2607.13331},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2607.13331},\n  url={https://arxiv.org/abs/2607.13331}\n}",
       "short": "Accuracy-preserving stability regularization for forecasting",
-      "proceedings": "Proceedings forthcoming"
+      "proceedings": "Proceedings forthcoming",
+      "co_first": false,
+      "equal": []
     },
     {
       "id": "routing",
@@ -236,7 +249,9 @@
       "summary": "Studies how policy boundaries, provenance, and evidence identity determine whether an LLM request-routing package is qualified for deployment and for later updates.",
       "bibtex": "@misc{xu2026routing,\n  title={Policy-Bounded, Provenance-Aware Deployment Assurance for LLM Request Routing},\n  author={Xu, Yihua and He, Jiani and Talati, Ishita Chirag and Qian, Yitian and Wang, Youting and Xu, Zhenyu and Shang, Dingyan},\n  year={2026},\n  publisher={SSRN},\n  doi={10.2139/ssrn.7554440},\n  url={https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7554440}\n}",
       "short": "Deployment assurance for LLM request routing",
-      "proceedings": "Proceedings forthcoming"
+      "proceedings": "Proceedings forthcoming",
+      "co_first": false,
+      "equal": []
     }
   ],
   "experience": [

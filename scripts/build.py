@@ -93,11 +93,18 @@ def page(filename, title, description, body, current='', extra=''):
 # ---------- shared fragments ----------
 
 def authors_html(p):
-    return ', '.join(f'<strong class="me">{e(a)}</strong>' if a == 'Jiani He' else e(a) for a in p['authors'])
+    names = []
+    for a in p['authors']:
+        name = e(a) + ('*' if a in p['equal'] else '')
+        names.append(f'<strong class="me">{name}</strong>' if a == 'Jiani He' else name)
+    note = ' <span class="equal-note">*Equal contribution</span>' if p['equal'] else ''
+    return ', '.join(names) + note
 
 
 def badges(p):
     out = '<span class="badge badge-first">★ First author</span>' if p['first_author'] else ''
+    if p['co_first']:
+        out += '<span class="badge badge-first">★ Co-first author</span>'
     kind = 'review' if p['group'] == 'review' else 'accepted'
     out += f'<span class="badge badge-{kind}">{e(p["status"])}</span>'
     if p['proceedings']:
@@ -201,7 +208,7 @@ def research():
     pmap = ''.join(f'<li><span class="qnum">Q{i:02d}</span><div><p>{e(s["question"])}</p><small>{e(s["name"])}</small></div></li>' for i, s in enumerate(STREAMS, 1))
     ledger = []
     for i, s in enumerate(STREAMS, 1):
-        reps = ''.join(f'<li><a href="publications.html#{p["id"]}">{e(p["title"])}</a><span>{"First author · " if p["first_author"] else ""}{e(p["status"])}</span></li>' for p in PUBS if p['stream'] == s['id'])
+        reps = ''.join(f'<li><a href="publications.html#{p["id"]}">{e(p["title"])}</a><span>{"First author · " if p["first_author"] else "Co-first author · " if p["co_first"] else ""}{e(p["status"])}</span></li>' for p in PUBS if p['stream'] == s['id'])
         ledger.append(f'''<article class="card question" id="{s['id']}"><header><p class="qlabel">Question {i:02d}</p><h3>{e(s['question'])}</h3><p class="qstream">{e(s['name'])}</p></header><dl class="q-rows"><div><dt>Motivation</dt><dd>{e(s['motivation'])}</dd></div><div><dt>Origin in practice</dt><dd>{e(s['practice'])}</dd></div><div><dt>Research</dt><dd><ul class="rep-list">{reps}</ul></dd></div></dl></article>''')
     imp = DATA['importance']
     pillars = ''.join(f'<article class="card impact"><p class="impact-label">{e(x["label"])}</p><h3>{e(x["title"])}</h3><p class="impact-text">{e(x["text"])}</p><p class="impact-papers"><span>Related work</span>{paper_links(x["papers"])}</p></article>' for x in imp['pillars'])
@@ -245,7 +252,9 @@ def experience():
 
 def cv():
     def cv_pub(p):
-        authors = ', '.join(f'<strong>{e(a)}</strong>' if a == 'Jiani He' else e(a) for a in p['authors'])
+        authors = ', '.join(f'<strong>{e(a)}*</strong>' if a == 'Jiani He' and a in p['equal'] else f'<strong>{e(a)}</strong>' if a == 'Jiani He' else e(a) + ('*' if a in p['equal'] else '') for a in p['authors'])
+        if p['equal']:
+            authors += ' (*equal contribution)'
         link = f' <a href="{e(p["url"])}">{e(p["record"])}</a>.' if p['url'] else f' {e(p["record"])}.'
         status = p['status'] + (' · ' + p['proceedings'].lower() if p['proceedings'] else '')
         return f'<li>{authors}. {p["year"]}. “{e(p["title"])}.” <em>{e(p["venue"])}</em>.{link} <span class="cv-status">{e(status)}</span></li>'

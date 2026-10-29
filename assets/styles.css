@@ -280,6 +280,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .cv-meta{margin-bottom:4px}
 .cv-meta em{font-style:normal;color:var(--steel-ink);font-weight:500;font-size:14.5px}
 .cv-entry li{margin-top:3px}
+.cv-context{font-style:italic;color:var(--muted)}
 .cv-sub{margin:20px 0 8px;font-size:14px;font-weight:600;color:var(--ink)}
 .cv-sub:first-of-type{margin-top:0}
 .cv-pubs{padding-left:22px}
@@ -329,8 +330,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .cet-sources a{color:var(--steel-ink);text-decoration:underline;text-decoration-color:var(--steel-line);text-underline-offset:3px}
 .cet-map>div{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px;padding:16px 0;border-top:1px solid var(--line)}
 .cet-map>div:first-child{border-top:0;padding-top:0}
-.cet-map dt{font-family:var(--serif);font-size:18px;line-height:1.35;color:var(--ink)}
+.cet-map dt{font-family:var(--serif);font-size:20px;line-height:1.35;color:var(--ink)}
 .cet-map dd{font-size:14px}
+.cet-map dd p{margin-bottom:8px;line-height:1.65;color:var(--body)}
 .cet-map dd a:first-child{margin-top:0}
 .cet-tag{display:block;margin-bottom:4px;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink)}
 .cet-note{grid-column:1/-1;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}

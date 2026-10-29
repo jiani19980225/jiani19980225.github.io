@@ -27,11 +27,11 @@
       "label": "Years of applied data science"
     }
   ],
-  "bio": "Jiani (Elva) He is a data scientist and independent researcher based in Seattle, Washington. As a Data Science Consultant at Accenture, Jiani has spent five years applying analytics, optimization, and AI to forward and reverse logistics for a technology client. Jiani’s research asks how evidence becomes better operational decisions, spanning demand-forecast stability, causal decision support, trustworthy AI deployment, and AI-assisted reverse logistics. This work includes six 2026 papers with collaborators, among them a first-author paper accepted at AIBThings 2026, and Jiani has peer-reviewed more than ten journal manuscripts. Jiani holds an MS in Business Analytics from MIT (Operations Research Center) and a BS in Industrial Engineering from Purdue University.",
+  "bio": "Jiani (Elva) He is a data scientist and independent researcher based in Seattle, Washington. As a Data Science Consultant at Accenture, Jiani has spent five years applying analytics, optimization, and AI to forward and reverse logistics in a technology client’s data center supply chain. Jiani’s research asks how evidence becomes better operational decisions, spanning demand-forecast stability, causal decision support, trustworthy AI deployment, and AI-assisted reverse logistics. This work includes six 2026 papers with collaborators, among them a first-author paper accepted at AIBThings 2026, and Jiani has peer-reviewed more than ten journal manuscripts. Jiani holds an MS in Business Analytics from MIT (Operations Research Center) and a BS in Industrial Engineering from Purdue University.",
   "highlights": [
     "<strong>First-author paper</strong> on semantic signals for reverse-logistics inspection, accepted at AIBThings 2026",
     "<strong>Five more accepted conference papers</strong> with collaborators: IEOM 2026 (two papers), ICECCME 2026, ICEME 2026, and ICOAI 2026",
-    "<strong>National-priority research areas</strong>: AI for planning and decision making and AI assurance, both named as AI subfields on the U.S. Critical and Emerging Technologies List",
+    "<strong>National-priority areas</strong>: AI for operational decisions, applied to data center supply chains; related to the AI and Autonomy and Semiconductors and Microelectronics areas of the U.S. Critical and Emerging Technologies List (2026)",
     "<strong>MIT</strong> MS in Business Analytics (GPA 4.7/5.0) and <strong>Purdue</strong> BS in Industrial Engineering (Honors &amp; Distinction, GPA 3.9/4.0)"
   ],
   "streams": [
@@ -41,7 +41,7 @@
       "name": "Forecasting & Planning Value",
       "question": "When do better predictions actually produce better plans?",
       "motivation": "A more accurate forecast is not automatically a better planning input. Forecasts that swing from one run to the next create churn in replenishment, and a new analytical capability creates value only if it changes the plans that are executed.",
-      "practice": "Analyzing demand, stock targets, and shortages for a technology client’s supply network"
+      "practice": "Analyzing demand, stock targets, and shortages across a data center supply network"
     },
     {
       "id": "decide",
@@ -57,7 +57,7 @@
       "name": "AI-Assisted Reverse Logistics",
       "question": "How can unstructured signals guide inspection and recovery when labor is scarce?",
       "motivation": "Returned assets arrive with uncertain condition and free-text notes. Choosing how deeply to inspect each one, and whether it goes to reuse, resale, recycling, or disposal, is a resource-allocation problem under partial information.",
-      "practice": "Tracking reverse-logistics cycle times and guiding asset-disposition decisions"
+      "practice": "Tracking reverse-logistics cycle times and guiding disposition decisions for retired data center hardware"
     }
   ],
   "groups": [
@@ -245,7 +245,7 @@
       "role": "Data Science Consultant",
       "dates": "Jun 2024 — Present",
       "place": "Seattle, Washington",
-      "context": "Forward and reverse logistics for a technology client, connecting operational analysis with planning and execution.",
+      "context": "Forward and reverse logistics in a technology client’s data center supply chain, connecting operational analysis with planning and execution.",
       "bullets": [
         "Lead planning analyses, manage client relationships, and present recommendations to senior leaders.",
         "Analyze reverse-logistics cycle time and on-time delivery in SQL to identify bottlenecks; guide reuse, resale, recycling, or disposal decisions based on asset value and lifecycle stage.",
@@ -352,7 +352,7 @@
   ],
   "importance": {
     "title": "Decisions that keep critical systems running.",
-    "lead": "Supply chains and AI systems now sit underneath much of the economy. When a forecast swings without reason, a disruption is met with the wrong intervention, or an AI recommendation cannot be traced, the cost shows up as shortages, idle capacity, discarded hardware, and lost trust. My research asks how to make these decisions measurably better, and how to show that they are.",
+    "lead": "Data centers, the supply chains that build and renew them, and the AI systems they run now sit underneath much of the economy. When a forecast swings without reason, a disruption is met with the wrong intervention, or an AI recommendation cannot be traced, the cost shows up as shortages, idle capacity, discarded hardware, and lost trust. My research asks how to make these decisions measurably better, and how to show that they are.",
     "pillars": [
       {
         "label": "Supply-chain resilience",
@@ -375,48 +375,49 @@
       },
       {
         "label": "Recovering value",
-        "title": "A second life for returned technology",
-        "text": "Returned and retired electronics must be inspected and routed to reuse, resale, recycling, or disposal, usually with limited inspection labor. Better routing keeps usable hardware in service and recovers valuable materials instead of discarding them. My first-author paper shows how semantic signals in free-text return notes can direct inspection effort where it matters most.",
+        "title": "A second life for data center hardware",
+        "text": "Retired data center hardware and other returned electronics must be inspected and routed to reuse, resale, recycling, or disposal, usually with limited inspection labor. Better routing keeps usable hardware in service and recovers valuable materials instead of discarding them. My first-author paper shows how semantic signals in free-text return notes can direct inspection effort where it matters most.",
         "papers": [
           "ssads"
         ]
       }
     ],
-    "cet_intro": "The U.S. Critical and Emerging Technologies (CET) List, maintained by the White House Office of Science and Technology Policy, identifies advanced technologies potentially significant to national security. Artificial intelligence is a CET area, and the February 2024 update names the AI subfields below. AI remains a CET area in the August 2026 update.",
+    "cet_intro": "The U.S. Critical and Emerging Technologies (CET) List identifies technology areas of national-security importance. Its August 2026 update, published as Appendix A of the White House National Security Science and Technology Strategy, narrows the list to 14 areas. My work relates to two of them.",
     "cet_rows": [
       {
-        "subfield": "Planning, reasoning, and decision making",
+        "area": "AI and Autonomy",
+        "kind": "Research",
+        "detail": "AI for planning and decision making, AI assurance and assessment, and trustworthy deployment of large language models, all named as AI subfields in the February 2024 list.",
         "papers": [
           "dacri",
           "ssads",
-          "planning"
-        ]
-      },
-      {
-        "subfield": "AI assurance and assessment techniques",
-        "papers": [
           "planning",
           "routing"
         ]
       },
       {
-        "subfield": "Technologies for improving AI safety, trust, security, and responsible use",
-        "papers": [
-          "routing"
-        ]
+        "area": "Semiconductors and Microelectronics",
+        "kind": "Industry practice",
+        "detail": "Data center hardware is built on semiconductors and microelectronics. For five years I have planned, rebalanced, and recovered that hardware across a technology client’s data center supply chain.",
+        "papers": []
       }
     ],
     "cet_note": "Mapping by the author. The CET List names technology areas, not specific research.",
     "sources": [
       {
-        "label": "Critical and Emerging Technologies List Update (NSTC, February 2024)",
+        "label": "National Security Science & Technology Strategy, Appendix A (August 2026)",
+        "url": "https://www.whitehouse.gov/wp-content/uploads/2026/08/NSSTS-082026.pdf"
+      },
+      {
+        "label": "Critical and Emerging Technologies List Update (February 2024)",
         "url": "https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/02/Critical-and-Emerging-Technologies-List-2024-Update.pdf"
       },
       {
-        "label": "National Security Science & Technology Strategy, Appendix A (August 2026)",
-        "url": "https://www.whitehouse.gov/wp-content/uploads/2026/08/NSSTS-082026.pdf"
+        "label": "Winning the Race: America’s AI Action Plan (July 2025)",
+        "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf"
       }
-    ]
+    ],
+    "policy": "Data center infrastructure is also a pillar of America’s AI Action Plan (July 2025), which calls for building American AI infrastructure, including data centers and semiconductor manufacturing."
   },
   "philosophy": {
     "intro": "Some of the most useful things I know, I learned from operations. Here are a few stories and principles that shape how I work and live.",

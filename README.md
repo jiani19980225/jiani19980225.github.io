@@ -39,7 +39,8 @@ GitHub Pages serves the repository root from `main`. Pushing the generated files
 - Experience and education: the Jiani He Data Science Consultant resume. The phone number is intentionally left out.
 - Portrait: supplied by Jiani He; cropped to a square with image metadata removed.
 - Papers: public arXiv and SSRN records listed in `content.json`, and the Google Scholar profile https://scholar.google.com/citations?user=QoV_NDIAAAAJ&hl=en.
-- CET alignment: the February 2024 Critical and Emerging Technologies List Update (NSTC/OSTP) for AI subfield names, and Appendix A of the August 2026 National Security Science and Technology Strategy. The mapping to papers is the author's own.
+- CET alignment: Appendix A of the August 2026 National Security Science and Technology Strategy (current list, 14 areas; area names supplied by Jiani He and consistent with public coverage), the February 2024 CET List Update for AI subfield names, and America's AI Action Plan (July 2025) for data center infrastructure. The mapping is the author's own.
+- Data center supply-chain context of the Accenture role: supplied by Jiani He.
 - Conference details for shared papers (the IEOM late-delivery manuscript, ICOAI submission of the routing paper, ICECCME dates and location, AIBThings full name): co-author Yihua Xu's public website, last verified 2026-10-26.
 
 Accepted papers were accepted at conferences that have already taken place; proceedings are forthcoming, and the site does not claim final publication. Citation counts are deliberately not hardcoded. The site has no analytics, cookies, or backend; the theme preference is stored only in the visitor's browser.

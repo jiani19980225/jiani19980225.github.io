@@ -57,11 +57,13 @@ add(f"{escape(DATA['headline'])}<br/>{escape(DATA['location'])} | {escape(DATA['
 
 section('Research interests')
 add('Demand-forecast stability and planning value; causal decision support under partial information; trustworthy deployment of AI systems; AI-assisted reverse logistics.')
-add('This work corresponds to AI subfields on the U.S. Critical and Emerging Technologies List, including planning, reasoning, and decision making, and AI assurance and assessment techniques.')
+add('Related areas on the U.S. Critical and Emerging Technologies List (2026): AI and Autonomy (research), and Semiconductors and Microelectronics (through data center hardware supply chains).')
 
 section('Professional experience')
 for x in DATA['experience']:
     block = [row(escape(x['org']), escape(x['dates'].replace('—', '-'))), row(escape(x['role']), escape(x['place']), 'meta')]
+    if x['context']:
+        block.append(Paragraph(f'<i>{escape(x["context"])}</i>', S['body']))
     block += [Paragraph('• ' + escape(b), S['bullet']) for b in x['bullets']]
     story.append(KeepTogether(block + [Spacer(1, 6)]))
 

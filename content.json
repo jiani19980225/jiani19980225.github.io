@@ -521,6 +521,36 @@
           }
         ]
       }
-    ]
+    ],
+    "matters": [
+      {
+        "title": "Better decisions for the people who live with them.",
+        "text": "Behind every forecast and allocation are people: planners who have to commit, teams who have to execute, and customers who feel the result. I want my work to make their decisions measurably better."
+      },
+      {
+        "title": "Helping people grow.",
+        "text": "The analysts I have mentored and the collaborators I research with matter to me as much as any result. Helping someone find their footing is work that keeps paying back."
+      },
+      {
+        "title": "Understanding how real systems behave.",
+        "text": "I am drawn to the gap between how operations look on paper and how they actually run. Closing that gap, one careful question at a time, is what keeps me curious."
+      }
+    ],
+    "test": {
+      "title": "A test for research worth doing.",
+      "text": "Before I commit to a research question, I ask: if this works completely, what changes? I look for at least one of three answers.",
+      "questions": [
+        "A real decision gets better: a planner orders differently, an inspector looks where it matters, a team intervenes earlier.",
+        "People can trust the evidence: they can see what was tested, trace where a recommendation came from, and know when not to rely on it.",
+        "We understand the system better, in a way that changes what the next person learns."
+      ],
+      "closing": "If none of these would change, I keep looking for a better question."
+    },
+    "path": [
+      "I trained as an industrial engineer at Purdue University. Engineering gave me a language for systems, constraints, and trade-offs, and it was there that I first built forecasting and reinforcement-learning models for real problems.",
+      "At MIT’s Operations Research Center I learned to treat uncertainty rigorously. A capstone with BMW Group showed me how a demand model becomes a pricing decision, and how much depends on whether people can understand and use it.",
+      "Since 2021 I have worked at Accenture on forward and reverse logistics for a technology client. The questions I kept meeting there, about unstable forecasts, scarce inspection capacity, and which intervention to fund first, became my research. I now pursue them with collaborators as an independent researcher, alongside my consulting work."
+    ],
+    "stories": []
   }
 }

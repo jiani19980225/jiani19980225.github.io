@@ -382,6 +382,19 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .principle:first-child{padding-top:4px;border-top:0}
 .principle h3{font-family:var(--serif);font-size:clamp(23px,2.2vw,29px);font-weight:500;line-height:1.25}
 .principle p{max-width:640px;margin-top:10px;font-size:16.5px;line-height:1.8}
+.test-band{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1.6fr);gap:56px;align-items:start}
+.test-band h2{margin-top:14px;font-size:clamp(28px,3vw,40px)}
+.test-lead{font-family:var(--serif);font-size:clamp(20px,2vw,24px);line-height:1.5;color:var(--on-navy)}
+.test-list{list-style:none;padding:0;margin-top:22px;counter-reset:q}
+.test-list li{counter-increment:q;position:relative;padding:16px 0 16px 52px;border-top:1px solid rgba(255,255,255,.14);font-size:16px;line-height:1.7}
+.test-list li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:14px;font-family:var(--serif);font-size:24px;color:var(--gold-on-navy)}
+.test-closing{margin-top:20px!important;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-family:var(--serif);font-size:19px;font-style:italic;color:var(--gold-on-navy)}
+.philo-prose p{max-width:680px;font-size:17px;line-height:1.85}
+.philo-prose p+p{margin-top:18px}
+.stories{display:grid;gap:18px}
+.story{padding:30px 34px;border-radius:var(--radius);background:var(--card);border:1px solid var(--card-edge);box-shadow:var(--shadow)}
+.story h3{font-family:var(--serif);font-size:clamp(22px,2.2vw,27px);font-weight:500;line-height:1.25}
+.story p{max-width:680px;margin-top:12px;font-size:16px;line-height:1.85}
 .closing-quote{max-width:920px;margin:0}
 .closing-quote p{font-family:var(--serif);font-size:clamp(26px,3vw,38px);font-style:italic;line-height:1.35;color:var(--on-navy)}
 .closing-quote p::before{content:'“';display:block;margin-bottom:10px;font-size:84px;font-style:normal;line-height:.6;color:var(--gold-on-navy)}
@@ -408,9 +421,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
   .profile-card{max-width:440px;width:100%}
   .stats{grid-template-columns:repeat(2,1fr);row-gap:28px}
   .stat:nth-child(3){padding-left:0;border-left:0}
-  .brief,.streams,.cta-band,.footer-card,.edu-grid,.service-grid,.impact-grid,.cet,.beliefs,.philo-hero,.philo-group{grid-template-columns:1fr}
+  .brief,.streams,.cta-band,.footer-card,.edu-grid,.service-grid,.impact-grid,.cet,.beliefs,.philo-hero,.philo-group,.test-band{grid-template-columns:1fr}
   .philo-group header{position:static}
-  .philo-group{gap:28px}
+  .philo-group,.test-band{gap:28px}
   .philo-portrait{justify-self:start}
   .pub-row{grid-template-columns:1fr;gap:16px}
   .pub-row .pub-links{justify-content:flex-start}

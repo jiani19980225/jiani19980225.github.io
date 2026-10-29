@@ -291,9 +291,21 @@ def philosophy():
         items.setdefault(g['id'], []).append(f'<li class="principle"><span class="principle-num">{n:02d}</span><div><h3>{e(item["title"])}</h3><p>{e(item["text"])}</p></div></li>')
     for i, g in enumerate(ph['groups']):
         band = 'band band-sky' if i % 2 == 0 else 'band'
-        groups.append(f'''<section class="{band}" id="{g['id']}" aria-labelledby="title-{g['id']}"><div class="wrap philo-group"><header>{eyebrow(e(g['eyebrow']), f'{i + 2:02d}')}<h2 id="title-{g['id']}">{e(g['title'])}</h2></header><ol class="principles">{''.join(items[g['id']])}</ol></div></section>''')
+        groups.append(f'''<section class="{band}" id="{g['id']}" aria-labelledby="title-{g['id']}"><div class="wrap philo-group"><header>{eyebrow(e(g['eyebrow']), f'{i + 5:02d}')}<h2 id="title-{g['id']}">{e(g['title'])}</h2></header><ol class="principles">{''.join(items[g['id']])}</ol></div></section>''')
+    matters = ''.join(f'<article class="card belief"><span class="principle-num">{n}</span><h3>{e(m["title"])}</h3><p>{e(m["text"])}</p></article>' for n, m in zip(('i', 'ii', 'iii'), ph['matters']))
+    test = ph['test']
+    checks = ''.join(f'<li>{e(q)}</li>' for q in test['questions'])
+    path = ''.join(f'<p>{e(x)}</p>' for x in ph['path'])
+    stories = ''
+    if ph['stories']:
+        cards = ''.join(f'<article class="story"><h3>{e(s["title"])}</h3>{"".join(f"<p>{e(x)}</p>" for x in s["text"])}</article>' for s in ph['stories'])
+        stories = f'''<section class="band" id="life-stories" aria-labelledby="title-stories"><div class="wrap philo-group"><header>{eyebrow('Life stories', f'{len(ph["groups"]) + 5:02d}')}<h2 id="title-stories">Moments that shaped me.</h2></header><div class="stories">{cards}</div></div></section>'''
     body = f'''<section class="band band-hero" aria-labelledby="philo-title"><div class="wrap philo-hero"><div>{eyebrow('Philosophy', '01')}<h1 id="philo-title">What I believe.</h1><p class="philo-intro">{e(ph['intro'])}</p></div><figure class="philo-portrait"><div class="avatar"><div class="avatar-inner">{portrait}</div></div><figcaption>{DATA['name']} · {DATA['location']}</figcaption></figure></div></section>
+<section class="band band-sky" id="what-matters" aria-labelledby="title-matters"><div class="wrap"><div class="section-head"><div>{eyebrow('What matters to me', '02')}<h2 id="title-matters">Three things I care about.</h2></div></div><div class="beliefs">{matters}</div></div></section>
+<section class="band band-navy" id="research-test" aria-labelledby="title-test"><div class="wrap test-band"><header>{eyebrow('On choosing problems', '03')}<h2 id="title-test">{e(test['title'])}</h2></header><div><p class="test-lead">{e(test['text'])}</p><ol class="test-list">{checks}</ol><p class="test-closing">{e(test['closing'])}</p></div></div></section>
+<section class="band" id="my-path" aria-labelledby="title-path"><div class="wrap philo-group"><header>{eyebrow('My path', '04')}<h2 id="title-path">How I got here.</h2></header><div class="philo-prose">{path}</div></div></section>
 {''.join(groups)}
+{stories}
 <section class="band band-navy" aria-label="Closing thought"><div class="wrap"><blockquote class="closing-quote"><p>{e(ph['quote'])}</p><footer>{DATA['name']}</footer></blockquote></div></section>'''
     page('philosophy.html', 'Philosophy', 'The principles Jiani (Elva) He brings to research, to working with people, and to life, many of them learned from operations.', body, 'philosophy')
 

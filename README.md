@@ -27,7 +27,7 @@ Preview locally with `python3 -m http.server 8000` and open http://localhost:800
 
 ## Design
 
-The palette comes from the Verto Mind app: a sky-blue to champagne background gradient (`#EBF5FD` → `#E5F2FD` → `#FBF6EE` → `#FDF2E2`), steel-blue actions (`#3375B1`), a translucent cream header (`#F2F1E7`), and charcoal headings (`#252829`). A champagne gold (`#C8963E`, with `#8C6422` for small text) marks highlights and first-author work. Type is Newsreader for headings and Inter for text, from Google Fonts with system fallbacks. Page structure is inspired by https://yvonnexu442.github.io/research.html; the code is original.
+Colors are drawn from the Verto Mind app palette and applied by section: a warm cream page (`#FBF8F2`) with white cards; a sky-blue wash (`#E5F2FD` → `#EBF5FD`) at the top of each page and on alternating sections; a deep steel-navy band (`#17375C`) with champagne-gold figures (`#E4BB68`) for achievements and service; a champagne section (`#FBF6EE` → `#FDF2E2`) for Verto Mind; a cream header and footer (`#F2F1E7`); steel-blue actions (`#3375B1`); and charcoal headings (`#252829`). Gold (`#C8963E`, with `#8C6422` for small text) marks highlights and first-author work. Type is Newsreader for headings and Inter for text, from Google Fonts with system fallbacks. Page structure is inspired by https://yvonnexu442.github.io/research.html; the code is original.
 
 ## Deployment
 

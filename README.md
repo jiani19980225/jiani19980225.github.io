@@ -8,7 +8,7 @@ Research and professional portfolio for GitHub Pages, written so collaborators a
 
 - `index.html`: profile links (Google Scholar, LinkedIn, GitHub, email, CV), achievement stats, a copyable short bio, highlights, research program, selected papers, and a one-line philosophy.
 - `research.html`: the research program: one guiding question, why the work matters (with alignment to the U.S. Critical and Emerging Technologies List), and three streams (motivation, origin in practice, papers).
-- `philosophy.html`: life stories, four principles, and a closing belief.
+- `philosophy.html`: life stories, two stories about acting and deciding ("In practice"), and a closing belief. First-person stories are limited to experiences Jiani He has confirmed.
 - `publications.html`: all papers grouped by first-author and accepted (an under-review group appears when needed), with DOIs, code, and BibTeX.
 - `experience.html`: experience, education, service and mentoring, skills.
 - `cv.html` and `assets/Jiani_He_CV.pdf`: web and PDF CV.

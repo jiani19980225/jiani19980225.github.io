@@ -435,33 +435,8 @@
     "policy": "Data center infrastructure is also a pillar of America’s AI Action Plan (July 2025), which calls for building American AI infrastructure, including data centers and semiconductor manufacturing."
   },
   "philosophy": {
-    "intro": "Some of the most useful things I know, I learned from operations. Here are a few stories and principles that shape how I work and live.",
+    "intro": "Some of the most useful things I know, I learned from operations. Here are a few stories that shape how I work and live.",
     "quote": "The world has always had enough resources. The work is in using them well, and that is how I hope to help more people.",
-    "groups": [
-      {
-        "id": "principles",
-        "eyebrow": "Principles",
-        "title": "What I try to live by.",
-        "items": [
-          {
-            "title": "Judge a model by the decision it changes.",
-            "text": "It is easy to fall in love with a clever method. Before I commit to a research question, I ask: if this works completely, will a real decision get better? If not, I keep looking for a better question."
-          },
-          {
-            "title": "Say exactly what you know.",
-            "text": "Evidence earns trust only when it is reported honestly: what was tested, what wasn’t, and how sure we are. I would rather make a smaller claim that holds than a bigger one that doesn’t."
-          },
-          {
-            "title": "Everything deserves a second life.",
-            "text": "In reverse logistics, a returned device isn’t waste; it’s an asset whose next use hasn’t been decided yet. I try to treat setbacks the same way: inspect them honestly, keep what’s valuable, and route the rest toward something new."
-          },
-          {
-            "title": "Steady beats spectacular.",
-            "text": "My forecasting research favors predictions that don’t swing wildly from week to week, because steadiness is what lets others plan. I try to be that kind of colleague and friend: consistent, reliable, and there when it counts."
-          }
-        ]
-      }
-    ],
     "stories": [
       {
         "title": "Why I chose optimization",
@@ -473,7 +448,7 @@
       {
         "title": "Always learning",
         "text": [
-          "I am someone who always wants to keep improving. Since graduating, I have kept learning well beyond my field, from investing to a range of sports, because I want to grow as a whole person and not only as a professional.",
+          "I am someone who always wants to keep improving. Since graduating, I have kept learning well beyond my field, from investing and reading to meditation and a range of sports, because I want to grow as a whole person and not only as a professional.",
           "I hope to keep growing in every direction for the rest of my life."
         ]
       },
@@ -484,6 +459,21 @@
           "Whether I am mentoring a junior analyst or talking through a problem with a friend, being able to help is one of the things that makes my life feel meaningful."
         ]
       }
-    ]
+    ],
+    "practice": {
+      "eyebrow": "In practice",
+      "title": "Think it through. Then try it.",
+      "intro": "I push for the things I want, and I also let some things take their course. Two small stories show both sides.",
+      "items": [
+        {
+          "title": "The deadline passed. I still asked.",
+          "text": "I have missed a hackathon application deadline and messaged the organizers anyway. When a talk I really wanted to attend put me on the waitlist, I reached out then too. I can’t control the answer, but I can make my interest clear. I would rather ask one more question than decide for myself that the door is already closed."
+        },
+        {
+          "title": "My life decision ended in a tie.",
+          "text": "When I had to decide whether to stay or move, I did what an optimization person does: I built a scoring sheet and rated both options on every dimension I cared about. The totals came out almost the same, because each place was better in different ways. So I chose to go with the flow, and I remind myself that things are unfolding as they’re meant to. The scores showed me the trade-offs. Living well with the choice is up to me."
+        }
+      ]
+    }
   }
 }

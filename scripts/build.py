@@ -144,15 +144,6 @@ def paper_links(ids):
     return ''.join(f'<a href="publications.html#{i}">{e(PUB[i]["short"])}</a>' for i in ids)
 
 
-def principles():
-    """Philosophy items numbered continuously across groups."""
-    n = 0
-    for g in DATA['philosophy']['groups']:
-        for item in g['items']:
-            n += 1
-            yield g, n, item
-
-
 def stream_count(sid):
     n = sum(1 for p in PUBS if p['stream'] == sid)
     return f'{n} paper' + ('' if n == 1 else 's')
@@ -277,21 +268,18 @@ def cv():
 def philosophy():
     ph = DATA['philosophy']
     portrait = f'<img src="{e(DATA["photo"])}" width="220" height="220" alt="Portrait of {DATA["name"]}">' if DATA['photo'] else '<span aria-hidden="true">JH</span>'
-    groups, items = [], {}
-    for g, n, item in principles():
-        items.setdefault(g['id'], []).append(f'<li class="principle"><span class="principle-num">{n:02d}</span><div><h3>{e(item["title"])}</h3><p>{e(item["text"])}</p></div></li>')
-    for i, g in enumerate(ph['groups']):
-        band = 'band'
-        groups.append(f'''<section class="{band}" id="{g['id']}" aria-labelledby="title-{g['id']}"><div class="wrap philo-group"><header>{eyebrow(e(g['eyebrow']), f'{i + 3:02d}')}<h2 id="title-{g['id']}">{e(g['title'])}</h2></header><ol class="principles">{''.join(items[g['id']])}</ol></div></section>''')
+    pr = ph['practice']
+    moments = ''.join(f'<article class="moment"><h3>{e(m["title"])}</h3><p>{e(m["text"])}</p></article>' for m in pr['items'])
+    practice = f'''<section class="band" id="in-practice" aria-labelledby="title-practice"><div class="wrap"><div class="section-head"><div>{eyebrow(e(pr['eyebrow']), '03')}<h2 id="title-practice">{e(pr['title'])}</h2><p class="section-lead">{e(pr['intro'])}</p></div></div><div class="moments">{moments}</div></div></section>'''
     stories = ''
     if ph['stories']:
         cards = ''.join(f'<article class="story"><h3>{e(s["title"])}</h3>{"".join(f"<p>{e(x)}</p>" for x in s["text"])}</article>' for s in ph['stories'])
         stories = f'''<section class="band band-sky" id="life-stories" aria-labelledby="title-stories"><div class="wrap philo-group"><header>{eyebrow('Life stories', '02')}<h2 id="title-stories">What shapes me.</h2></header><div class="stories">{cards}</div></div></section>'''
     body = f'''<section class="band band-hero" aria-labelledby="philo-title"><div class="wrap philo-hero"><div>{eyebrow('Philosophy', '01')}<h1 id="philo-title">What I believe.</h1><p class="philo-intro">{e(ph['intro'])}</p></div><figure class="philo-portrait"><div class="avatar"><div class="avatar-inner">{portrait}</div></div><figcaption>{DATA['name']} · {DATA['location']}</figcaption></figure></div></section>
 {stories}
-{''.join(groups)}
+{practice}
 <section class="band band-navy" aria-label="Closing thought"><div class="wrap"><blockquote class="closing-quote"><p>{e(ph['quote'])}</p><footer>{DATA['name']}</footer></blockquote></div></section>'''
-    page('philosophy.html', 'Philosophy', 'The principles Jiani (Elva) He brings to research, to working with people, and to life, many of them learned from operations.', body, 'philosophy')
+    page('philosophy.html', 'Philosophy', 'Stories from Jiani (Elva) He: choosing optimization, always learning, asking one more question, and a life decision that ended in a tie.', body, 'philosophy')
 
 
 home()

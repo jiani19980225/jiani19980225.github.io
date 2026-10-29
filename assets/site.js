@@ -45,23 +45,6 @@
     }
   });
 
-  const filterButtons = document.querySelectorAll('.filter-button');
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const filter = button.dataset.filter;
-      filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-      let count = 0;
-      document.querySelectorAll('.pub').forEach(paper => {
-        paper.hidden = filter !== 'all' && paper.dataset.stream !== filter;
-        if (!paper.hidden) count++;
-      });
-      document.querySelectorAll('.pub-group').forEach(group => {
-        group.hidden = !group.querySelector('.pub:not([hidden])');
-      });
-      document.querySelector('.count').textContent = `${count} ${count === 1 ? 'paper' : 'papers'}`;
-    });
-  });
-
   const dialog = document.querySelector('.citation-dialog');
   const citationData = document.getElementById('citation-data');
   if (dialog && citationData) {

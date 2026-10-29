@@ -32,8 +32,6 @@
     "<strong>First-author paper</strong> on semantic signals for reverse-logistics inspection, accepted at AIBThings 2026",
     "<strong>Five more accepted conference papers</strong> with collaborators: IEOM 2026 (two papers), ICECCME 2026, ICEME 2026, and ICOAI 2026",
     "<strong>National-priority research areas</strong>: AI for planning and decision making and AI assurance, both named as AI subfields on the U.S. Critical and Emerging Technologies List",
-    "<strong>Peer reviewer</strong> for more than ten journal manuscripts",
-    "<strong>Five years at Accenture</strong> applying SQL, optimization, and LLM workflows to supply-chain decisions; mentored five junior analysts",
     "<strong>MIT</strong> MS in Business Analytics (GPA 4.7/5.0) and <strong>Purdue</strong> BS in Industrial Engineering (Honors &amp; Distinction, GPA 3.9/4.0)"
   ],
   "streams": [
@@ -43,13 +41,6 @@
       "name": "Forecasting & Planning Value",
       "question": "When do better predictions actually produce better plans?",
       "motivation": "A more accurate forecast is not automatically a better planning input. Forecasts that swing from one run to the next create churn in replenishment, and a new analytical capability creates value only if it changes the plans that are executed.",
-      "problems": [
-        "Forecast stability",
-        "Forecast-to-plan replay",
-        "Late-delivery risk",
-        "Early warning",
-        "Planning value attribution"
-      ],
       "practice": "Analyzing demand, stock targets, and shortages for a technology client’s supply network"
     },
     {
@@ -58,13 +49,6 @@
       "name": "Causal Decision Support & Trustworthy AI",
       "question": "Which action should come next, and when can the evidence behind it be trusted?",
       "motivation": "Detecting a disruption is not the same as knowing which intervention recovers the most value. Good decisions need causal evidence and explicit costs and delays. AI-enabled decisions also need provenance that people can review before deployment.",
-      "problems": [
-        "Causal intervention ranking",
-        "Net-value objectives",
-        "Partial & delayed information",
-        "Deployment assurance",
-        "LLM routing provenance"
-      ],
       "practice": "Rebalancing inventory across sites and standardizing enterprise LLM workflows"
     },
     {
@@ -73,13 +57,6 @@
       "name": "AI-Assisted Reverse Logistics",
       "question": "How can unstructured signals guide inspection and recovery when labor is scarce?",
       "motivation": "Returned assets arrive with uncertain condition and free-text notes. Choosing how deeply to inspect each one, and whether it goes to reuse, resale, recycling, or disposal, is a resource-allocation problem under partial information.",
-      "problems": [
-        "Semantic signals",
-        "Inspection depth",
-        "Recovery allocation",
-        "Condition uncertainty",
-        "Labor-constrained operations"
-      ],
       "practice": "Tracking reverse-logistics cycle times and guiding asset-disposition decisions"
     }
   ],
@@ -405,7 +382,7 @@
         ]
       }
     ],
-    "cet_intro": "The U.S. Critical and Emerging Technologies (CET) List, maintained by the White House Office of Science and Technology Policy, identifies advanced technologies that are potentially significant to U.S. national security. Artificial intelligence is a CET area. The February 2024 update names AI subfields that correspond directly to this research, and artificial intelligence remains a priority area in the August 2026 update published with the National Security Science and Technology Strategy.",
+    "cet_intro": "The U.S. Critical and Emerging Technologies (CET) List, maintained by the White House Office of Science and Technology Policy, identifies advanced technologies potentially significant to national security. Artificial intelligence is a CET area, and the February 2024 update names the AI subfields below. AI remains a CET area in the August 2026 update.",
     "cet_rows": [
       {
         "subfield": "Planning, reasoning, and decision making",
@@ -427,26 +404,6 @@
         "papers": [
           "routing"
         ]
-      },
-      {
-        "subfield": "Synthetic data approaches for training, tuning, and testing",
-        "papers": [
-          "dacri",
-          "ssads"
-        ]
-      },
-      {
-        "subfield": "Machine learning",
-        "papers": [
-          "forecasting",
-          "late-delivery"
-        ]
-      },
-      {
-        "subfield": "Generative AI systems, multimodal and large language models",
-        "papers": [
-          "routing"
-        ]
       }
     ],
     "cet_note": "Mapping by the author. The CET List names technology areas, not specific research.",
@@ -462,80 +419,32 @@
     ]
   },
   "philosophy": {
-    "intro": "Many of the most useful things I know, I learned from operations: every system has constraints, information is never complete, and almost nothing should be thrown away too quickly. These are the principles I try to bring to research, to the people I work with, and to the rest of my life. Like any good model, they are a work in progress.",
+    "intro": "Some of the most useful things I know, I learned from operations. Here are a few stories and principles that shape how I work and live.",
     "quote": "The world has always had enough resources. The work is in using them well, and that is how I hope to help more people.",
     "groups": [
       {
-        "id": "on-research",
-        "eyebrow": "On research",
-        "title": "How I approach research.",
+        "id": "principles",
+        "eyebrow": "Principles",
+        "title": "What I try to live by.",
         "items": [
           {
             "title": "Judge a model by the decision it changes.",
-            "featured": true,
-            "text": "It is easy to fall in love with a clever method. I try to start from the decision someone actually has to make, and to measure success by whether that decision gets better. If nothing would change, the analysis isn’t finished."
+            "text": "It is easy to fall in love with a clever method. Before I commit to a research question, I ask: if this works completely, will a real decision get better? If not, I keep looking for a better question."
           },
           {
             "title": "Say exactly what you know.",
             "text": "Evidence earns trust only when it is reported honestly: what was tested, what wasn’t, and how sure we are. I would rather make a smaller claim that holds than a bigger one that doesn’t."
           },
           {
-            "title": "Curiosity doesn’t need a title.",
-            "text": "My research grew out of questions from my day-to-day work that I couldn’t stop thinking about. You don’t need permission to be curious. You need a question you care about, good collaborators, and the patience to keep going."
-          }
-        ]
-      },
-      {
-        "id": "on-people",
-        "eyebrow": "On people",
-        "title": "How I work with others.",
-        "items": [
-          {
-            "title": "Leave people better than you found them.",
-            "text": "Some of the work I value most will never appear in a paper: helping junior analysts grow into confident problem solvers. Teaching someone to frame a problem well outlasts any single analysis I could hand them."
-          },
-          {
-            "title": "Make it useful to everyone at the table.",
-            "text": "A model that only its author understands rarely changes anything. I try to explain assumptions and limits in plain language, whether I’m talking with executives, engineers, or the people closest to the work."
-          }
-        ]
-      },
-      {
-        "id": "on-life",
-        "eyebrow": "On life",
-        "title": "What operations taught me about living.",
-        "items": [
-          {
             "title": "Everything deserves a second life.",
-            "featured": true,
             "text": "In reverse logistics, a returned device isn’t waste; it’s an asset whose next use hasn’t been decided yet. I try to treat setbacks the same way: inspect them honestly, keep what’s valuable, and route the rest toward something new."
           },
           {
             "title": "Steady beats spectacular.",
-            "featured": true,
             "text": "My forecasting research favors predictions that don’t swing wildly from week to week, because steadiness is what lets others plan. I try to be that kind of colleague and friend: consistent, reliable, and there when it counts."
-          },
-          {
-            "title": "Decide with the information you have.",
-            "text": "Waiting for perfect information is itself a decision, and usually an expensive one. I try to act on the best evidence available, stay open to new signals, and adjust without regret."
           }
         ]
       }
-    ],
-    "test": {
-      "title": "A test for research worth doing.",
-      "text": "Before I commit to a research question, I ask: if this works completely, what changes? I look for at least one of three answers.",
-      "questions": [
-        "A real decision gets better: a planner orders differently, an inspector looks where it matters, a team intervenes earlier.",
-        "People can trust the evidence: they can see what was tested, trace where a recommendation came from, and know when not to rely on it.",
-        "We understand the system better, in a way that changes what the next person learns."
-      ],
-      "closing": "If none of these would change, I keep looking for a better question."
-    },
-    "path": [
-      "I trained as an industrial engineer at Purdue University. Engineering gave me a language for systems, constraints, and trade-offs, and it was there that I first built forecasting and reinforcement-learning models for real problems.",
-      "At MIT’s Operations Research Center I learned to treat uncertainty rigorously. A capstone with BMW Group showed me how a demand model becomes a pricing decision, and how much depends on whether people can understand and use it.",
-      "Since 2021 I have worked at Accenture on forward and reverse logistics for a technology client. The questions I kept meeting there, about unstable forecasts, scarce inspection capacity, and which intervention to fund first, became my research. I now pursue them with collaborators as an independent researcher, alongside my consulting work."
     ],
     "stories": [
       {

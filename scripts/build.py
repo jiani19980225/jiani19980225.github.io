@@ -96,14 +96,12 @@ def authors_html(p):
     return ', '.join(f'<strong class="me">{e(a)}</strong>' if a == 'Jiani He' else e(a) for a in p['authors'])
 
 
-def badges(p, code=True):
+def badges(p):
     out = '<span class="badge badge-first">★ First author</span>' if p['first_author'] else ''
     kind = 'review' if p['group'] == 'review' else 'accepted'
     out += f'<span class="badge badge-{kind}">{e(p["status"])}</span>'
     if p['proceedings']:
         out += f'<span class="badge badge-note">{e(p["proceedings"])}</span>'
-    if code and p['code']:
-        out += '<span class="badge badge-code">Open code</span>'
     return f'<div class="badges">{out}</div>'
 
 
@@ -184,19 +182,18 @@ def home():
         avatar = f'<img src="{e(DATA["photo"])}" width="148" height="148" alt="Portrait of {DATA["name"]}">'
     else:
         avatar = '<span aria-hidden="true">JH</span>'
-    profile_card = f'''<aside class="profile-card" aria-label="Profile summary"><div class="avatar"><div class="avatar-inner">{avatar}</div></div><p class="profile-name">{DATA['name']}</p><p class="profile-role">Data Science Consultant, Accenture<br>{DATA['location']}</p><ul class="facts"><li><span>Research</span><strong>Forecasting · Causal decision support · Reverse logistics</strong></li><li><span>Education</span><strong>MIT, MS Business Analytics<br>Purdue, BS Industrial Engineering</strong></li><li><span>Service</span><strong>Peer reviewer, 10+ journal manuscripts</strong></li></ul></aside>'''
+    profile_card = f'''<aside class="profile-card" aria-label="Profile summary"><div class="avatar"><div class="avatar-inner">{avatar}</div></div><p class="profile-name">{DATA['name']}</p><p class="profile-role">Data Science Consultant, Accenture<br>{DATA['location']}</p></aside>'''
     highlights = ''.join(f'<li>{h}</li>' for h in DATA['highlights'])
-    streams = ''.join(f'''<article class="card stream"><span class="stream-num">{i:02d}</span><p class="stream-label">{e(s['label'])}</p><h3>{e(s['question'])}</h3><div class="chips">{"".join(f"<span class=chip>{e(k)}</span>" for k in s['problems'][:3])}</div><a class="link-arrow" href="research.html#{s['id']}">{stream_count(s['id'])} {ARROW}</a></article>''' for i, s in enumerate(STREAMS, 1))
-    selected = ''.join(f'''<article class="card pub-row"><div>{badges(p)}<h3>{pub_title(p, 'publications.html#' + p['id'])}</h3><p class="authors">{authors_html(p)}</p></div>{pub_links(p, cite=False)}</article>''' for p in (PUB['ssads'], PUB['dacri'], PUB['forecasting'], PUB['planning']))
+    streams = ''.join(f'''<article class="card stream"><span class="stream-num">{i:02d}</span><p class="stream-label">{e(s['label'])}</p><h3>{e(s['question'])}</h3><a class="link-arrow" href="research.html#{s['id']}">{stream_count(s['id'])} {ARROW}</a></article>''' for i, s in enumerate(STREAMS, 1))
+    selected = ''.join(f'''<article class="card pub-row"><div>{badges(p)}<h3>{pub_title(p, 'publications.html#' + p['id'])}</h3><p class="authors">{authors_html(p)}</p></div>{pub_links(p, cite=False)}</article>''' for p in (PUB['ssads'], PUB['dacri'], PUB['forecasting']))
     cet_chips = ''.join(f'<span class="chip">{e(r["subfield"])}</span>' for r in DATA['importance']['cet_rows'][:3])
     cet_strip = f'<div class="cet-strip"><div><p class="cet-strip-label">Related AI subfields on the U.S. Critical and Emerging Technologies List</p><div class="chips">{cet_chips}</div></div>{arrow_link("research.html#why", "Why this work matters")}</div>'
-    beliefs = ''.join(f'<article class="card belief"><span class="principle-num">{n:02d}</span><h3>{e(item["title"])}</h3><p>{e(item["text"])}</p></article>' for _, n, item in principles() if item.get('featured'))
     body = f'''<section class="band band-hero" aria-labelledby="home-title"><div class="wrap hero"><div class="hero-copy"><p class="kicker"><span class="dot" aria-hidden="true"></span>Data scientist · Independent researcher</p><h1 id="home-title">Jiani He <span class="alt">(Elva)</span></h1><p class="hero-statement">I study how evidence becomes <em>better operational decisions</em>, from demand forecasting to supply-chain intervention and AI-assisted reverse logistics.</p><p class="hero-affil">Data Science Consultant at <strong>Accenture</strong> · MS, <strong>MIT</strong> · BS, <strong>Purdue</strong></p>{profile_buttons()}</div>{profile_card}</div></section>
 {stats_band()}
 <section class="band" id="about" aria-label="About"><div class="wrap brief"><div class="card bio-card">{eyebrow('Short bio', '01')}<h2>In brief.</h2><p id="bio-text" class="bio">{e(DATA['bio'])}</p><div class="bio-actions"><button class="btn btn-soft copy-bio" data-copy="#bio-text">{ICONS['copy']}Copy bio</button><p class="copy-status bio-status" role="status"></p></div></div><div class="card highlight-card">{eyebrow('Highlights', '02')}<h2>Selected achievements.</h2><ul class="highlights">{highlights}</ul></div></div></section>
 <section class="band band-sky" aria-labelledby="focus-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Research program', '03')}<h2 id="focus-title">Evidence for operational decisions.</h2><p class="section-lead">Three connected questions about when analytics and AI actually improve the decisions organizations make.</p></div>{arrow_link('research.html', 'Explore the research program')}</div><div class="streams">{streams}</div>{cet_strip}</div></section>
 <section class="band band-champagne" aria-labelledby="selected-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Selected publications', '04')}<h2 id="selected-title">Recent papers.</h2></div>{arrow_link('publications.html', f'All {len(PUBS)} papers')}</div><div class="pub-list">{selected}</div></div></section>
-<section class="band" aria-labelledby="believe-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Philosophy', '05')}<h2 id="believe-title">A few things I believe.</h2><p class="section-lead believe-lead">“{e(DATA['philosophy']['quote'])}”</p></div>{arrow_link('philosophy.html', 'Read my philosophy')}</div><div class="beliefs">{beliefs}</div></div></section>'''
+<section class="band" aria-labelledby="believe-title"><div class="wrap believe">{eyebrow('Philosophy', '05')}<h2 id="believe-title" class="believe-quote">“{e(DATA['philosophy']['quote'])}”</h2>{arrow_link('philosophy.html', 'Read my philosophy')}</div></section>'''
     page('index.html', '', 'Jiani (Elva) He is a Seattle-based data scientist and independent researcher working on demand forecasting, causal decision support, and AI-assisted reverse logistics. Data Science Consultant at Accenture; MIT and Purdue alumna.', body)
 
 
@@ -205,16 +202,7 @@ def research():
     ledger = []
     for i, s in enumerate(STREAMS, 1):
         reps = ''.join(f'<li><a href="publications.html#{p["id"]}">{e(p["title"])}</a><span>{"First author · " if p["first_author"] else ""}{e(p["status"])}</span></li>' for p in PUBS if p['stream'] == s['id'])
-        chips = ''.join(f'<span class="chip">{e(k)}</span>' for k in s['problems'])
-        ledger.append(f'''<article class="card question" id="{s['id']}"><header><p class="qlabel">Question {i:02d}</p><h3>{e(s['question'])}</h3><p class="qstream">{e(s['name'])}</p></header><dl class="q-rows"><div><dt>Motivation</dt><dd>{e(s['motivation'])}</dd></div><div><dt>Origin in practice</dt><dd>{e(s['practice'])}</dd></div><div><dt>Representative problems</dt><dd><div class="chips">{chips}</div></dd></div><div><dt>Research</dt><dd><ul class="rep-list">{reps}</ul></dd></div></dl></article>''')
-    journey = [
-        ('01', 'Purdue University · 2020', 'Engineering foundations', 'Industrial engineering supplied a language for systems, constraints, and trade-offs. LSTM forecasting models and reinforcement learning for sensor placement were a first experience of research.'),
-        ('02', 'MIT · 2021', 'Analytical expansion', 'At the Operations Research Center: robust optimization, interpretable classification, and an NLP admissions pipeline for AdmitHub. A BMW Group capstone modeled demand and cross-price elasticity for dynamic vehicle pricing.'),
-        ('03', 'Accenture · 2021–present', 'Questions from practice', 'Five years in forward and reverse logistics for a technology client kept raising the same problems: unstable demand signals, inventory imbalances, and asset-recovery decisions made under uncertainty.'),
-        ('04', 'Independent research · 2026', 'A connected program', f'{len(PUBS)} papers with collaborators on forecast stability, causal intervention ranking, trustworthy AI deployment, and AI-assisted reverse logistics, including a first-author paper.'),
-    ]
-    steps = ''.join(f'<li class="card step"><span class="step-num">{n}</span><p class="step-when">{w}</p><h3>{t}</h3><p>{d}</p></li>' for n, w, t, d in journey)
-    methods = ['Machine learning & forecasting', 'Causal inference', 'Robust optimization', 'NLP & LLM systems', 'Synthetic benchmarks with ground truth', 'Decision & value analysis']
+        ledger.append(f'''<article class="card question" id="{s['id']}"><header><p class="qlabel">Question {i:02d}</p><h3>{e(s['question'])}</h3><p class="qstream">{e(s['name'])}</p></header><dl class="q-rows"><div><dt>Motivation</dt><dd>{e(s['motivation'])}</dd></div><div><dt>Origin in practice</dt><dd>{e(s['practice'])}</dd></div><div><dt>Research</dt><dd><ul class="rep-list">{reps}</ul></dd></div></dl></article>''')
     imp = DATA['importance']
     pillars = ''.join(f'<article class="card impact"><p class="impact-label">{e(x["label"])}</p><h3>{e(x["title"])}</h3><p class="impact-text">{e(x["text"])}</p><p class="impact-papers"><span>Related work</span>{paper_links(x["papers"])}</p></article>' for x in imp['pillars'])
     cet_rows = ''.join(f'<div><dt><span class="cet-tag">CET · Artificial intelligence</span>{e(r["subfield"])}</dt><dd>{paper_links(r["papers"])}</dd></div>' for r in imp['cet_rows'])
@@ -222,43 +210,35 @@ def research():
     why = f'''<section class="band" id="why" aria-labelledby="why-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Why this work matters', '02')}<h2 id="why-title">{e(imp['title'])}</h2><p class="section-lead">{e(imp['lead'])}</p></div></div><div class="impact-grid">{pillars}</div><div class="card cet" id="cet"><div class="cet-head">{eyebrow('National priorities')}<h3>Alignment with the U.S. Critical and Emerging Technologies List</h3><p>{e(imp['cet_intro'])}</p><ul class="cet-sources">{sources}</ul></div><dl class="cet-map">{cet_rows}</dl><p class="cet-note">{e(imp['cet_note'])}</p></div></div></section>'''
     body = f'''<section class="band band-hero"><div class="wrap program-hero"><div class="program-copy">{eyebrow('Research program', '01')}<p class="program-name">Evidence for Operational Decisions</p><h1>When does better evidence lead to better decisions?</h1><div class="program-thesis"><p>My research begins with questions that keep recurring in operations: forecasts that are accurate but unstable, disruptions that are detected but not resolved, and returned assets whose condition is uncertain.</p><p>I don’t judge models only by their predictive accuracy. I evaluate them by the decisions they change. That means paying attention to constraints, costs, delays, partial information, and whether people can trust and review the evidence behind an action.</p></div><div class="hero-buttons">{external(DATA['scholar'], ICONS['scholar'] + 'Google Scholar', 'btn btn-primary')}<a class="btn btn-soft" href="publications.html">All publications</a></div></div><figure class="card program-map"><figcaption>{eyebrow('One program, three questions')}</figcaption><ol class="map-list">{pmap}</ol><div class="map-converge"><strong>Operational decisions</strong><span>Models judged by the decisions they change</span></div></figure></div></section>
 {why}
-<section class="band band-sky" aria-labelledby="streams-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Research streams', '03')}<h2 id="streams-title">Three connected questions.</h2><p class="section-lead">Each stream starts from a problem met in practice and asks what evidence a better decision needs.</p></div></div><div class="ledger">{''.join(ledger)}</div></div></section>
-<section class="band" aria-labelledby="journey-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Research journey', '04')}<h2 id="journey-title">From engineering to operational decision research.</h2></div>{arrow_link('experience.html', 'Experience & education')}</div><ol class="journey">{steps}</ol></div></section>
-<section class="band band-navy" aria-labelledby="methods-title"><div class="wrap cta-band"><div>{eyebrow('Methods', '05')}<h2 id="methods-title">Methods in service of the question.</h2><div class="chips chips-lg">{''.join(f"<span class=chip>{e(m)}</span>" for m in methods)}</div></div><div class="cta-actions"><a class="btn btn-primary" href="publications.html">Read the papers {ARROW}</a>{external(DATA['scholar'], 'Google Scholar ' + ARROW, 'btn btn-soft')}</div></div></section>'''
+<section class="band band-sky" aria-labelledby="streams-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Research streams', '03')}<h2 id="streams-title">Three connected questions.</h2><p class="section-lead">Each stream starts from a problem met in practice and asks what evidence a better decision needs.</p></div></div><div class="ledger">{''.join(ledger)}</div></div></section>'''
     page('research.html', 'Research', 'Research program of Jiani (Elva) He: why better operational decisions matter for supply-chain resilience, trustworthy AI, and recovering value from returned technology, with alignment to U.S. Critical and Emerging Technologies.', body, 'research')
 
 
 def publications():
-    filters = [('all', 'All')] + [(s['id'], s['label']) for s in STREAMS]
-    filter_html = ''.join(f'<button class="filter-button" data-filter="{k}" aria-pressed="{str(k == "all").lower()}">{e(label)}</button>' for k, label in filters)
     groups, n = [], 0
     for g in DATA['groups']:
         cards = []
         for p in (p for p in PUBS if p['group'] == g['id']):
             n += 1
-            meta = f'<div><dt>Venue</dt><dd>{e(p["venue"])}</dd></div><div><dt>Public record</dt><dd>{e(p["record"])}</dd></div><div><dt>Research stream</dt><dd><a href="research.html#{p["stream"]}">{e(STREAM[p["stream"]]["name"])}</a></dd></div>'
+            meta = f'<div><dt>Venue</dt><dd>{e(p["venue"])}</dd></div><div><dt>Public record</dt><dd>{e(p["record"])}</dd></div>'
             cards.append(f'''<article class="card pub" id="{p['id']}" data-stream="{p['stream']}"><div class="pub-index"><span class="pub-num">{n:02d}</span><span class="pub-year">{p['year']}</span></div><div class="pub-body">{badges(p)}<h3>{pub_title(p)}</h3><p class="authors">{authors_html(p)}</p><p class="pub-summary">{e(p['summary'])}</p><dl class="pub-meta">{meta}</dl>{pub_links(p)}</div></article>''')
         count = len(cards)
         if not count:
             continue
         groups.append(f'''<section class="pub-group" aria-labelledby="group-{g['id']}"><div class="group-head"><div>{eyebrow(g['eyebrow'])}<h2 id="group-{g['id']}">{e(g['title'])}</h2></div><span class="group-count">{count} paper{'' if count == 1 else 's'}</span></div><div class="pub-stack">{''.join(cards)}</div></section>''')
-    accepted = sum(1 for p in PUBS if p['group'] in ('first', 'accepted'))
-    coded = sum(1 for p in PUBS if p['code'])
-    summary = f'<ul class="summary-chips"><li><strong>{len(PUBS)}</strong> papers</li><li><strong>{accepted}</strong> accepted at conferences</li><li><strong>1</strong> first-author</li><li><strong>{coded}</strong> with open code</li></ul>'
-    body = f'''<section class="band band-hero"><div class="wrap page-hero">{eyebrow('Publications', '01')}<h1>Publications &amp; preprints.</h1><p class="lead">Papers with collaborators on demand forecasting, causal decision support, trustworthy AI deployment, and AI-assisted reverse logistics. My name is underlined in each author list.</p>{summary}<div class="hero-buttons">{external(DATA['scholar'], ICONS['scholar'] + 'Google Scholar profile', 'btn btn-primary')}<a class="btn btn-soft" href="research.html">How the papers connect</a></div></div></section>
-<section class="band band-flush" aria-label="Papers"><div class="wrap"><div class="filter-bar" role="group" aria-label="Filter by research stream">{filter_html}<span class="count" aria-live="polite">{len(PUBS)} papers</span></div>{''.join(groups)}<p class="small-note">Last checked {DATA['updated']}. Accepted papers were accepted at international conferences that have already taken place; their proceedings are forthcoming. arXiv and SSRN links point to public preprints; one accepted manuscript is not yet publicly available.</p><aside class="card service-note">{eyebrow('Academic service')}<h2>Peer review.</h2><p>Peer reviewer for more than ten journal manuscripts across operations, analytics, and applied AI.</p></aside></div></section>'''
+    body = f'''<section class="band band-hero"><div class="wrap page-hero">{eyebrow('Publications', '01')}<h1>Publications &amp; preprints.</h1><p class="lead">Papers with collaborators on demand forecasting, causal decision support, trustworthy AI deployment, and AI-assisted reverse logistics. My name is underlined in each author list.</p><div class="hero-buttons">{external(DATA['scholar'], ICONS['scholar'] + 'Google Scholar profile', 'btn btn-primary')}<a class="btn btn-soft" href="research.html">How the papers connect</a></div></div></section>
+<section class="band band-flush" aria-label="Papers"><div class="wrap">{''.join(groups)}<p class="small-note">Last checked {DATA['updated']}. Accepted papers were accepted at international conferences that have already taken place; their proceedings are forthcoming. arXiv and SSRN links point to public preprints; one accepted manuscript is not yet publicly available.</p></div></section>'''
     page('publications.html', 'Publications', f'Publications and preprints by Jiani (Elva) He: {len(PUBS)} papers on demand forecasting, causal decision support, LLM deployment assurance, and reverse logistics, with code and BibTeX.', body, 'publications', citation_extra(PUBS))
 
 
 def experience():
     service = [('10+', 'Journal manuscripts peer-reviewed', 'Reviews across operations, analytics, and applied AI.'),
-               ('5', 'Junior analysts mentored', 'SQL, business problem solving, and client communication across both Accenture roles.'),
-               ('AI', 'Enablement lead', 'Standardized prompts and analytical queries for enterprise LLM assistants; wrote reusable guides and trained analysts.')]
+               ('5', 'Junior analysts mentored', 'SQL, business problem solving, and client communication across both Accenture roles.')]
     service_html = ''.join(f'<article class="card service-card"><span class="stat-value">{v}</span><h3>{t}</h3><p>{d}</p></article>' for v, t, d in service)
-    body = f'''<section class="band band-hero"><div class="wrap page-hero">{eyebrow('Experience & education', '01')}<h1>Where analysis meets operations.</h1><p class="lead">From industrial engineering to business analytics and five years of data science consulting, my work turns complex operational questions into analyses people can use.</p>{profile_buttons()}</div></section>
+    body = f'''<section class="band band-hero"><div class="wrap page-hero">{eyebrow('Experience & education', '01')}<h1>Where analysis meets operations.</h1><p class="lead">From industrial engineering to business analytics and five years of data science consulting, my work turns complex operational questions into analyses people can use.</p></div></section>
 <section class="band" aria-labelledby="practice-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Professional experience', '02')}<h2 id="practice-title">Experience.</h2></div>{arrow_link('cv.html', 'Full CV')}</div>{experience_items()}</div></section>
 <section class="band band-sky" aria-labelledby="education-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Education', '03')}<h2 id="education-title">An engineering lens, an analytics toolkit.</h2></div></div>{education_items()}</div></section>
-<section class="band band-navy" aria-labelledby="service-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Service & leadership', '04')}<h2 id="service-title">Giving back.</h2></div></div><div class="service-grid">{service_html}</div></div></section>
+<section class="band band-navy" aria-labelledby="service-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Service & mentoring', '04')}<h2 id="service-title">Giving back.</h2></div></div><div class="service-grid">{service_html}</div></div></section>
 <section class="band" aria-labelledby="skills-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Skills', '05')}<h2 id="skills-title">Tools for the question at hand.</h2></div></div>{skills_grid()}</div></section>'''
     page('experience.html', 'Experience & Education', 'Jiani (Elva) He: Data Science Consultant at Accenture, BMW Group dynamic-pricing capstone, MIT MS in Business Analytics (Operations Research Center), and Purdue BS in Industrial Engineering.', body, 'experience')
 
@@ -292,19 +272,14 @@ def philosophy():
     for g, n, item in principles():
         items.setdefault(g['id'], []).append(f'<li class="principle"><span class="principle-num">{n:02d}</span><div><h3>{e(item["title"])}</h3><p>{e(item["text"])}</p></div></li>')
     for i, g in enumerate(ph['groups']):
-        band = 'band band-sky' if i % 2 == 0 else 'band'
-        groups.append(f'''<section class="{band}" id="{g['id']}" aria-labelledby="title-{g['id']}"><div class="wrap philo-group"><header>{eyebrow(e(g['eyebrow']), f'{i + 5:02d}')}<h2 id="title-{g['id']}">{e(g['title'])}</h2></header><ol class="principles">{''.join(items[g['id']])}</ol></div></section>''')
-    test = ph['test']
-    checks = ''.join(f'<li>{e(q)}</li>' for q in test['questions'])
-    path = ''.join(f'<p>{e(x)}</p>' for x in ph['path'])
+        band = 'band'
+        groups.append(f'''<section class="{band}" id="{g['id']}" aria-labelledby="title-{g['id']}"><div class="wrap philo-group"><header>{eyebrow(e(g['eyebrow']), f'{i + 3:02d}')}<h2 id="title-{g['id']}">{e(g['title'])}</h2></header><ol class="principles">{''.join(items[g['id']])}</ol></div></section>''')
     stories = ''
     if ph['stories']:
         cards = ''.join(f'<article class="story"><h3>{e(s["title"])}</h3>{"".join(f"<p>{e(x)}</p>" for x in s["text"])}</article>' for s in ph['stories'])
         stories = f'''<section class="band band-sky" id="life-stories" aria-labelledby="title-stories"><div class="wrap philo-group"><header>{eyebrow('Life stories', '02')}<h2 id="title-stories">What shapes me.</h2></header><div class="stories">{cards}</div></div></section>'''
     body = f'''<section class="band band-hero" aria-labelledby="philo-title"><div class="wrap philo-hero"><div>{eyebrow('Philosophy', '01')}<h1 id="philo-title">What I believe.</h1><p class="philo-intro">{e(ph['intro'])}</p></div><figure class="philo-portrait"><div class="avatar"><div class="avatar-inner">{portrait}</div></div><figcaption>{DATA['name']} · {DATA['location']}</figcaption></figure></div></section>
 {stories}
-<section class="band band-navy" id="research-test" aria-labelledby="title-test"><div class="wrap test-band"><header>{eyebrow('On choosing problems', '03')}<h2 id="title-test">{e(test['title'])}</h2></header><div><p class="test-lead">{e(test['text'])}</p><ol class="test-list">{checks}</ol><p class="test-closing">{e(test['closing'])}</p></div></div></section>
-<section class="band" id="my-path" aria-labelledby="title-path"><div class="wrap philo-group"><header>{eyebrow('My path', '04')}<h2 id="title-path">How I got here.</h2></header><div class="philo-prose">{path}</div></div></section>
 {''.join(groups)}
 <section class="band band-navy" aria-label="Closing thought"><div class="wrap"><blockquote class="closing-quote"><p>{e(ph['quote'])}</p><footer>{DATA['name']}</footer></blockquote></div></section>'''
     page('philosophy.html', 'Philosophy', 'The principles Jiani (Elva) He brings to research, to working with people, and to life, many of them learned from operations.', body, 'philosophy')

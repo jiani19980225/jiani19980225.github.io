@@ -71,7 +71,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .band-navy .btn-primary:hover{background:#EFCB82;color:#17283D}
 .band-navy .btn-soft{background:transparent;color:var(--on-navy);border-color:rgba(255,255,255,.3)}
 .band-navy .btn-soft:hover{border-color:var(--gold-on-navy);color:var(--on-navy)}
-.band-navy .chip,.band-navy .chips-lg .chip{background:rgba(255,255,255,.08);color:var(--on-navy);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.band-navy .chip{background:rgba(255,255,255,.08);color:var(--on-navy);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
 .band-navy .link-arrow{color:var(--on-navy);border-color:var(--gold-on-navy)}
 
 /* ---------- header ---------- */
@@ -116,13 +116,11 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .link-arrow:hover{border-color:var(--gold)}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{display:inline-block;font-size:12.5px;font-weight:500;line-height:1.4;padding:4px 11px;border-radius:999px;background:var(--steel-wash);color:var(--steel-ink)}
-.chips-lg .chip{font-size:14px;padding:7px 14px}
 .badges{display:flex;flex-wrap:wrap;gap:6px}
 .badge{display:inline-flex;align-items:center;font-size:12px;font-weight:600;line-height:1.4;padding:4px 10px;border-radius:999px}
 .badge-first{background:linear-gradient(135deg,#F7E3B5,#EDC57A);color:#4F370F}
 .badge-accepted{background:var(--steel-wash);color:var(--steel-ink);box-shadow:inset 0 0 0 1px var(--steel-line)}
 .badge-review{background:var(--gold-wash);color:var(--gold-btn-ink);box-shadow:inset 0 0 0 1px var(--gold-line)}
-.badge-code{color:var(--muted);box-shadow:inset 0 0 0 1px var(--line-strong)}
 .authors{font-size:14px;color:var(--muted);line-height:1.6}
 .authors .me{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:3px}
 .copy-status{font-size:13px;color:var(--steel-ink);min-height:20px}
@@ -152,11 +150,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .avatar-inner img{width:100%;height:100%;object-fit:cover}
 .profile-name{font-family:var(--serif);font-size:25px;font-weight:500;color:var(--ink);margin-top:16px}
 .profile-role{font-size:14px;color:var(--muted);margin-top:4px;line-height:1.55}
-.facts{list-style:none;padding:0;margin-top:20px;text-align:left;border-top:1px solid var(--line)}
-.facts li{display:grid;grid-template-columns:86px 1fr;gap:12px;padding:12px 2px;border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.5}
-.facts li:last-child{border-bottom:0}
-.facts span{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);padding-top:2px}
-.facts strong{font-weight:500;color:var(--ink)}
 .band-stats{padding:50px 0}
 .stats{display:grid;grid-template-columns:repeat(4,1fr)}
 .stat{padding:4px 28px;border-left:1px solid rgba(255,255,255,.14)}
@@ -180,6 +173,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .stream-label{margin-top:16px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--steel-ink)}
 .stream h3{margin-top:10px;font-family:var(--serif);font-size:24px;font-weight:500;line-height:1.28}
 .stream .chips{margin:18px 0 24px}
+.stream h3{margin-bottom:24px}
 .stream .link-arrow{margin-top:auto;align-self:flex-start}
 .pub-list{display:grid;gap:14px}
 .pub-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;padding:24px 28px}
@@ -216,27 +210,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .rep-list a{display:block;font-weight:600;color:var(--ink);line-height:1.45}
 .rep-list a:hover{color:var(--steel-ink)}
 .rep-list span{display:block;margin-top:2px;font-size:13px;color:var(--steel-ink)}
-.journey{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.step{position:relative;padding:26px}
-.step::before{content:'';position:absolute;top:0;left:26px;right:26px;height:3px;border-radius:0 0 3px 3px;background:linear-gradient(90deg,var(--steel-btn),var(--gold))}
-.step-num{font-family:var(--serif);font-size:34px;line-height:1;color:var(--steel)}
-.step-when{margin-top:14px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink)}
-.step h3{margin-top:6px;font-size:17px;font-weight:600}
-.step p:last-child{margin-top:10px;font-size:14.5px;line-height:1.7}
-.cta-band{display:grid;grid-template-columns:minmax(0,1.4fr) auto;gap:40px;align-items:end}
-.cta-band h2{margin-top:14px}
-.cta-band .chips{margin-top:22px}
-.cta-actions{display:flex;flex-wrap:wrap;gap:10px}
 
 /* ---------- publications ---------- */
-.summary-chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.summary-chips li{padding:8px 16px;border-radius:999px;background:var(--surface);border:1px solid var(--card-edge);font-size:14px;color:var(--body)}
-.summary-chips strong{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--steel);margin-right:3px}
-.filter-bar{display:flex;flex-wrap:wrap;align-items:center;gap:6px;width:fit-content;max-width:100%;padding:6px;border-radius:999px;background:var(--surface);border:1px solid var(--card-edge);box-shadow:var(--shadow)}
-.filter-button{border:0;background:transparent;padding:8px 15px;border-radius:999px;font-size:13.5px;font-weight:500;color:var(--body)}
-.filter-button:hover{color:var(--steel-ink)}
-.filter-button[aria-pressed=true]{background:var(--steel-btn);color:#fff}
-.count{padding:0 12px;font-size:13px;color:var(--muted)}
 .pub-group{margin-top:52px}
 .pub-group[hidden],.pub[hidden]{display:none}
 .group-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:18px}
@@ -261,9 +236,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .pub-links a:hover,.cite-button:hover{border-color:var(--steel-line);color:var(--steel-ink)}
 .pub-links a.primary{background:var(--steel-btn);border-color:var(--steel-btn);color:#fff}
 .pub-links a.primary:hover{background:var(--steel-btn-hover);color:#fff}
-.service-note{margin-top:28px;padding:30px 34px;border-left:3px solid var(--gold)}
-.service-note h2{margin-top:10px;font-size:28px}
-.service-note p{margin-top:8px}
 
 /* ---------- experience ---------- */
 .xp-stack,.edu-grid{display:grid;gap:16px}
@@ -282,7 +254,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .edu-degree{margin-top:8px;font-weight:600;color:var(--steel-ink)}
 .edu-gpa{margin-top:4px!important;font-size:14px;color:var(--muted)}
 .edu-detail{margin-top:12px!important;font-size:15px}
-.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .service-card h3{margin-top:12px;font-size:17px;font-weight:600}
 .service-card p{margin-top:8px;font-size:14.5px}
 .band-navy .service-card{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);box-shadow:none}
@@ -364,10 +336,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .cet-note{grid-column:1/-1;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
 
 /* ---------- philosophy ---------- */
-.believe-lead{font-family:var(--serif);font-size:clamp(19px,1.8vw,22px);font-style:italic;color:var(--gold-ink)}
-.beliefs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.belief h3{margin-top:14px;font-family:var(--serif);font-size:23px;font-weight:500;line-height:1.28}
-.belief p{margin-top:10px;font-size:15px;line-height:1.75}
+.believe{display:flex;flex-direction:column;align-items:flex-start}
+.believe-quote{max-width:880px;margin:16px 0 26px;font-size:clamp(26px,3vw,38px);font-style:italic;font-weight:400;line-height:1.35}
 .principle-num{font-family:var(--serif);font-size:34px;line-height:1;color:var(--gold-ink)}
 .philo-hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(220px,.55fr);gap:56px;align-items:center;padding:72px 0 76px}
 .philo-hero h1{margin-top:18px}
@@ -383,15 +353,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .principle:first-child{padding-top:4px;border-top:0}
 .principle h3{font-family:var(--serif);font-size:clamp(23px,2.2vw,29px);font-weight:500;line-height:1.25}
 .principle p{max-width:640px;margin-top:10px;font-size:16.5px;line-height:1.8}
-.test-band{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1.6fr);gap:56px;align-items:start}
-.test-band h2{margin-top:14px;font-size:clamp(28px,3vw,40px)}
-.test-lead{font-family:var(--serif);font-size:clamp(20px,2vw,24px);line-height:1.5;color:var(--on-navy)}
-.test-list{list-style:none;padding:0;margin-top:22px;counter-reset:q}
-.test-list li{counter-increment:q;position:relative;padding:16px 0 16px 52px;border-top:1px solid rgba(255,255,255,.14);font-size:16px;line-height:1.7}
-.test-list li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:14px;font-family:var(--serif);font-size:24px;color:var(--gold-on-navy)}
-.test-closing{margin-top:20px!important;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-family:var(--serif);font-size:19px;font-style:italic;color:var(--gold-on-navy)}
-.philo-prose p{max-width:680px;font-size:17px;line-height:1.85}
-.philo-prose p+p{margin-top:18px}
 .stories{display:grid;gap:18px}
 .story{padding:30px 34px;border-radius:var(--radius);background:var(--card);border:1px solid var(--card-edge);box-shadow:var(--shadow)}
 .story h3{font-family:var(--serif);font-size:clamp(22px,2.2vw,27px);font-weight:500;line-height:1.25}
@@ -401,7 +362,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .closing-quote p::before{content:'“';display:block;margin-bottom:10px;font-size:84px;font-style:normal;line-height:.6;color:var(--gold-on-navy)}
 .closing-quote footer{margin-top:24px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-on-navy)}
 
-.no-js .menu-toggle,.no-js .theme-toggle,.no-js .filter-bar,.no-js .cite-button,.no-js .copy-bio,.no-js .print-button{display:none}
+.no-js .menu-toggle,.no-js .theme-toggle,.no-js .cite-button,.no-js .copy-bio,.no-js .print-button{display:none}
 
 /* ---------- responsive ---------- */
 @media(max-width:1080px){
@@ -409,7 +370,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
   .primary-nav a{padding:7px 9px;font-size:13.5px}
   .hero{gap:36px}
   .question{grid-template-columns:1fr;gap:22px}
-  .journey{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:900px){
   .menu-toggle{display:grid}
@@ -422,9 +382,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
   .profile-card{max-width:440px;width:100%}
   .stats{grid-template-columns:repeat(2,1fr);row-gap:28px}
   .stat:nth-child(3){padding-left:0;border-left:0}
-  .brief,.streams,.cta-band,.footer-card,.edu-grid,.service-grid,.impact-grid,.cet,.beliefs,.philo-hero,.philo-group,.test-band{grid-template-columns:1fr}
+  .brief,.streams,.footer-card,.edu-grid,.service-grid,.impact-grid,.cet,.philo-hero,.philo-group{grid-template-columns:1fr}
   .philo-group header{position:static}
-  .philo-group,.test-band{gap:28px}
+  .philo-group{gap:28px}
   .philo-portrait{justify-self:start}
   .pub-row{grid-template-columns:1fr;gap:16px}
   .pub-row .pub-links{justify-content:flex-start}
@@ -457,7 +417,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
   .avatar-inner{font-size:29px;border-width:2px}
   .profile-name{align-self:end;margin-top:0;font-size:21px}
   .profile-role{align-self:start;font-size:13.5px}
-  .facts{display:none}
   .page-hero,.program-hero{padding:44px 0 48px}
   .page-hero h1{font-size:clamp(38px,10.5vw,52px)}
   .page-hero .lead{font-size:16.5px}
@@ -468,14 +427,10 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
   .stat-label{font-size:13.5px}
   .section-head{display:block}
   .section-head>.link-arrow{margin-top:18px}
-  .journey{grid-template-columns:1fr}
   .q-rows>div{grid-template-columns:1fr;gap:6px}
   .pub{grid-template-columns:1fr;gap:12px;padding:24px}
   .pub-index{flex-direction:row;align-items:baseline;gap:12px}
   .pub-num{font-size:26px}
-  .filter-bar{border-radius:20px;width:100%}
-  .filter-button{padding:7px 12px;font-size:13px}
-  .count{width:100%;padding:4px 10px 2px}
   .group-head{display:block}
   .group-count{display:block;margin-top:6px}
   .cv-doc{padding:28px 22px}

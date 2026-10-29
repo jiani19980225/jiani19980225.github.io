@@ -6,11 +6,11 @@ Research and professional portfolio for GitHub Pages, written so collaborators a
 
 ## Pages
 
-- `index.html`: profile links (Google Scholar, LinkedIn, GitHub, email, CV), achievement stats, a copyable short bio, highlights, research program, and selected papers.
-- `research.html`: the research program: one guiding question, why the work matters (with alignment to the U.S. Critical and Emerging Technologies List), three streams (motivation, origin in practice, problems, papers), and the research journey.
-- `philosophy.html`: principles for research, working with people, and life.
-- `publications.html`: all papers grouped by first-author, accepted, and under review, with stream filters, DOIs, code, and BibTeX.
-- `experience.html`: experience, education, service and leadership, skills.
+- `index.html`: profile links (Google Scholar, LinkedIn, GitHub, email, CV), achievement stats, a copyable short bio, highlights, research program, selected papers, and a one-line philosophy.
+- `research.html`: the research program: one guiding question, why the work matters (with alignment to the U.S. Critical and Emerging Technologies List), and three streams (motivation, origin in practice, papers).
+- `philosophy.html`: life stories, four principles, and a closing belief.
+- `publications.html`: all papers grouped by first-author and accepted (an under-review group appears when needed), with DOIs, code, and BibTeX.
+- `experience.html`: experience, education, service and mentoring, skills.
 - `cv.html` and `assets/Jiani_He_CV.pdf`: web and PDF CV.
 
 ## Edit the website
@@ -22,7 +22,7 @@ The published site is plain HTML, CSS, and JavaScript. Nothing needs to be insta
 - `scripts/build_cv.py`: regenerates the PDF CV from `content.json`. Requires `reportlab`.
 - `scripts/build_images.js`: regenerates `assets/og-image.png` (link preview) and `assets/apple-touch-icon.png`. Requires Playwright.
 - `assets/styles.css`: palette, typography, layout, dark theme, print styles.
-- `assets/site.js`: mobile menu, theme toggle, publication filters, BibTeX dialog, copy-bio button.
+- `assets/site.js`: mobile menu, theme toggle, BibTeX dialog, copy-bio button.
 
 Preview locally with `python3 -m http.server 8000` and open http://localhost:8000.
 

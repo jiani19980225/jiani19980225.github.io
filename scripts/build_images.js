@@ -6,6 +6,7 @@ const root = path.resolve(__dirname, '..');
 const data = require(path.join(root, 'content.json'));
 const fonts = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,400&display=swap">';
 const gradient = 'linear-gradient(180deg,#E5F2FD 0%,#EBF5FD 50%,#FBF8F2 100%)';
+const photo = data.photo ? 'data:image/jpeg;base64,' + require('fs').readFileSync(path.join(root, data.photo)).toString('base64') : '';
 const stats = data.stats.slice(0, 3).map(s => `<div><b>${s.value}</b><span>${s.label}</span></div>`).join('');
 
 const og = `<!doctype html><html><head>${fonts}<style>
@@ -16,11 +17,13 @@ body::after{content:'';position:absolute;right:-120px;top:-120px;width:520px;hei
 .mono{width:64px;height:64px;border-radius:18px;border:2px solid #C8963E;display:grid;place-items:center;font:500 28px Newsreader,serif;letter-spacing:0;color:#E4BB68;background:#17375C}
 h1{font:500 100px/1 Newsreader,serif;letter-spacing:-.02em;margin-top:46px}
 h1 i{font-weight:400;color:#3375B1;font-size:.55em}
-p{font:400 italic 34px/1.3 Newsreader,serif;margin-top:20px;color:#3E4447;max-width:900px}
+p{font:400 italic 31px/1.3 Newsreader,serif;margin-top:20px;color:#3E4447;max-width:${photo ? 640 : 900}px}
+.photo{position:absolute;right:84px;top:64px;width:280px;height:280px;border-radius:50%;padding:6px;background:linear-gradient(140deg,#C8963E,#F3DDAA 45%,#3375B1)}
+.photo img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;border:5px solid #fff}
 .stats{display:flex;gap:18px;margin-top:auto}
 .stats div{background:#17375C;border-radius:20px;padding:18px 24px;display:flex;align-items:baseline;gap:12px;font-size:17px;color:#BFCCDB;white-space:nowrap}
 .stats b{font:500 40px Newsreader,serif;color:#E4BB68}
-</style></head><body><div class="top"><span class="mono">JH</span>Data science · Research · Applied AI</div><h1>Jiani He <i>(Elva)</i></h1><p>How evidence becomes better operational decisions: forecasting, causal decision support, and AI-assisted reverse logistics.</p><div class="stats">${stats}</div></body></html>`;
+</style></head><body><div class="top"><span class="mono">JH</span>Data science · Research · Applied AI</div><h1>Jiani He <i>(Elva)</i></h1><p>How evidence becomes better operational decisions: forecasting, causal decision support, and AI-assisted reverse logistics.</p><div class="stats">${stats}</div>${photo ? `<div class="photo"><img src="${photo}" alt=""></div>` : ''}</body></html>`;
 
 const icon = `<!doctype html><html><head>${fonts}<style>
 *{margin:0}body{width:180px;height:180px;background:#17375C;display:grid;place-items:center;font:500 76px Newsreader,serif;color:#E4BB68;box-shadow:inset 0 0 0 7px #C8963E}

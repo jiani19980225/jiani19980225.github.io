@@ -1,5 +1,5 @@
-/* Palette drawn from the Verto Mind app: sky blue, champagne cream, steel-blue actions, charcoal text,
-   plus a deep steel-navy and champagne gold for the blue-and-gold accents. */
+/* Palette: sky blue and champagne cream, steel-blue actions, charcoal text,
+   with a deep steel-navy and champagne gold for the blue-and-gold accents. */
 :root{
   --paper:#FBF8F2;--surface:#FFFFFF;
   --sky:#EBF5FD;--sky-2:#E5F2FD;
@@ -187,30 +187,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .pub-row h3 a:hover{color:var(--steel-ink)}
 .pub-row .authors{margin-top:6px;font-size:13.5px}
 .pub-row .pub-links{margin-top:0;justify-content:flex-end}
-.verto{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-.verto h2{margin-top:14px;font-size:clamp(40px,4.4vw,60px)}
-.verto-role{margin-top:8px;font-weight:600;color:var(--steel-ink)}
-.verto-lead{font-family:var(--serif);font-size:clamp(22px,2.2vw,28px);line-height:1.3;color:var(--gold-ink);margin:16px 0 18px;font-style:italic}
-.verto-steps{list-style:none;padding:0;margin-top:22px;counter-reset:step}
-.verto-steps li{counter-increment:step;position:relative;padding:11px 0 11px 44px;border-top:1px solid var(--line);font-size:15px}
-.verto-steps li::before{content:counter(step,decimal-leading-zero);position:absolute;left:0;top:10px;font-family:var(--serif);font-size:19px;color:var(--gold-ink)}
-.verto-steps strong{color:var(--ink);font-weight:600}
-.verto-actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px;margin-top:26px}
-.beta-note{font-size:13px;color:var(--muted)}
-.phone-figure{text-align:center}
-.phone-figure figcaption{margin-top:16px;font-size:12px;color:var(--muted)}
-.phone{width:248px;height:500px;margin:0 auto;padding:11px;border-radius:44px;background:#252829;box-shadow:0 34px 60px -28px rgba(37,40,41,.55)}
-.phone-screen{position:relative;height:100%;display:flex;flex-direction:column;align-items:center;padding:52px 18px 0;border-radius:34px;overflow:hidden;background:linear-gradient(180deg,#EBF5FD 0%,#E5F2FD 30%,#FBF6EE 70%,#FDF2E2 100%)}
-.phone-notch{position:absolute;top:11px;left:50%;width:82px;height:22px;border-radius:12px;background:#252829;transform:translateX(-50%)}
-.phone-brand{font-family:var(--serif);font-size:21px;font-weight:500;color:#252829}
-.phone-card{display:block;width:100%;margin-top:28px;padding:20px 16px;border-radius:20px;background:rgba(255,255,255,.72);text-align:left}
-.phone-card i{display:block;height:8px;margin-top:10px;border-radius:4px;background:rgba(37,40,41,.12)}
-.phone-card i:first-child{margin-top:0;width:62%;background:rgba(37,40,41,.2)}
-.phone-card i:last-child{width:45%}
-.phone-cta{margin-top:26px;padding:13px 26px;border-radius:999px;background:#3375B1;color:#fff;font-size:12px;font-weight:700;letter-spacing:.14em;box-shadow:0 10px 18px -10px rgba(51,117,177,.9)}
-.phone-tabbar{display:flex;justify-content:space-around;align-items:center;width:calc(100% + 36px);height:62px;margin-top:auto;background:rgba(242,241,231,.88);border-top:1px solid rgba(37,40,41,.06)}
-.phone-tabbar i{width:22px;height:22px;border-radius:7px;background:rgba(37,40,41,.14)}
-.phone-tabbar i:first-child{background:rgba(51,117,177,.55)}
 
 /* ---------- research ---------- */
 .program-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr);gap:52px;align-items:center;padding:72px 0 76px}
@@ -382,10 +358,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
   .profile-card{max-width:440px;width:100%}
   .stats{grid-template-columns:repeat(2,1fr);row-gap:28px}
   .stat:nth-child(3){padding-left:0;border-left:0}
-  .brief,.streams,.verto,.cta-band,.footer-card,.edu-grid,.service-grid{grid-template-columns:1fr}
+  .brief,.streams,.cta-band,.footer-card,.edu-grid,.service-grid{grid-template-columns:1fr}
   .pub-row{grid-template-columns:1fr;gap:16px}
   .pub-row .pub-links{justify-content:flex-start}
-  .verto{gap:40px}
   .xp{grid-template-columns:1fr;gap:10px}
   .pub-meta{grid-template-columns:1fr;gap:12px}
   .band{padding:72px 0}
@@ -436,7 +411,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
   .count{width:100%;padding:4px 10px 2px}
   .group-head{display:block}
   .group-count{display:block;margin-top:6px}
-  .phone{width:220px;height:440px;border-radius:40px}
   .cv-doc{padding:28px 22px}
   .cv-head h2{font-size:32px}
   .cv-row{flex-direction:column;gap:0}

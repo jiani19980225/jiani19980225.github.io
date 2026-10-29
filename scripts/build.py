@@ -50,8 +50,7 @@ def profile_buttons(cv=True):
 
 def header(current):
     links = [('index.html', 'Home', 'home'), ('research.html', 'Research', 'research'),
-             ('publications.html', 'Publications', 'publications'), ('experience.html', 'Experience', 'experience'),
-             ('index.html#verto-mind', 'Verto Mind', 'verto'), ('cv.html', 'CV', 'cv')]
+             ('publications.html', 'Publications', 'publications'), ('experience.html', 'Experience', 'experience'), ('cv.html', 'CV', 'cv')]
     nav = ''.join(f'<a href="{url}"' + (' aria-current="page"' if key == current else '') + f'>{label}</a>' for url, label, key in links)
     tools = (external(DATA['scholar'], ICONS['scholar'] + '<span class="sr-only">Google Scholar</span>', 'icon-btn')
              + external(DATA['linkedin'], ICONS['linkedin'] + '<span class="sr-only">LinkedIn</span>', 'icon-btn'))
@@ -68,7 +67,7 @@ def footer():
              + external(DATA['linkedin'], f'{ICONS["linkedin"]}LinkedIn')
              + external(DATA['github'], f'{ICONS["github"]}GitHub')
              + f'<a href="assets/Jiani_He_CV.pdf" download>{ICONS["file"]}CV (PDF)</a>')
-    return f'''<footer class="site-footer" id="contact"><div class="wrap"><div class="footer-card"><div><p class="footer-title">Let’s connect.</p><p class="footer-description">Open to research collaboration and conversations about supply-chain analytics, operations research, and thoughtful AI products.</p><a class="footer-email" href="mailto:{DATA['email']}">{ICONS['mail']}{DATA['email']}</a></div><nav class="footer-links" aria-label="Profiles">{links}</nav></div><div class="footer-bottom"><span>© 2026 {DATA['name']} · {DATA['location']}</span><span>Updated {DATA['updated']} · <a href="#main-content">Back to top ↑</a></span></div></div></footer>'''
+    return f'''<footer class="site-footer" id="contact"><div class="wrap"><div class="footer-card"><div><p class="footer-title">Let’s connect.</p><p class="footer-description">Open to research collaboration and conversations about supply-chain analytics, operations research, and trustworthy applied AI.</p><a class="footer-email" href="mailto:{DATA['email']}">{ICONS['mail']}{DATA['email']}</a></div><nav class="footer-links" aria-label="Profiles">{links}</nav></div><div class="footer-bottom"><span>© 2026 {DATA['name']} · {DATA['location']}</span><span>Updated {DATA['updated']} · <a href="#main-content">Back to top ↑</a></span></div></div></footer>'''
 
 
 def page(filename, title, description, body, current='', extra=''):
@@ -79,6 +78,7 @@ def page(filename, title, description, body, current='', extra=''):
               'worksFor': {'@type': 'Organization', 'name': 'Accenture'},
               'address': {'@type': 'PostalAddress', 'addressLocality': 'Seattle', 'addressRegion': 'WA'},
               'sameAs': [DATA['scholar'], DATA['linkedin'], DATA['github']],
+              **({'image': SITE + DATA['photo']} if DATA['photo'] else {}),
               'knowsAbout': ['Demand forecasting', 'Operations research', 'Causal decision support',
                              'Reverse logistics', 'Supply-chain analytics', 'Applied AI'],
               'alumniOf': [{'@type': 'CollegeOrUniversity', 'name': 'Massachusetts Institute of Technology'},
@@ -172,13 +172,11 @@ def home():
     highlights = ''.join(f'<li>{h}</li>' for h in DATA['highlights'])
     streams = ''.join(f'''<article class="card stream"><span class="stream-num">{i:02d}</span><p class="stream-label">{e(s['label'])}</p><h3>{e(s['question'])}</h3><div class="chips">{"".join(f"<span class=chip>{e(k)}</span>" for k in s['problems'][:3])}</div><a class="link-arrow" href="research.html#{s['id']}">{stream_count(s['id'])} {ARROW}</a></article>''' for i, s in enumerate(STREAMS, 1))
     selected = ''.join(f'''<article class="card pub-row"><div>{badges(p)}<h3>{pub_title(p, 'publications.html#' + p['id'])}</h3><p class="authors">{authors_html(p)}</p></div>{pub_links(p, cite=False)}</article>''' for p in (PUB['ssads'], PUB['dacri'], PUB['forecasting'], PUB['planning']))
-    role = f'<p class="verto-role">{e(DATA["verto_role"])}</p>' if DATA['verto_role'] else ''
     body = f'''<section class="band band-hero" aria-labelledby="home-title"><div class="wrap hero"><div class="hero-copy"><p class="kicker"><span class="dot" aria-hidden="true"></span>Data scientist · Independent researcher</p><h1 id="home-title">Jiani He <span class="alt">(Elva)</span></h1><p class="hero-statement">I study how evidence becomes <em>better operational decisions</em>, from demand forecasting to supply-chain intervention and AI-assisted reverse logistics.</p><p class="hero-affil">Data Science Consultant at <strong>Accenture</strong> · MS, <strong>MIT</strong> · BS, <strong>Purdue</strong></p>{profile_buttons()}</div>{profile_card}</div></section>
 {stats_band()}
 <section class="band" id="about" aria-label="About"><div class="wrap brief"><div class="card bio-card">{eyebrow('Short bio', '01')}<h2>In brief.</h2><p id="bio-text" class="bio">{e(DATA['bio'])}</p><div class="bio-actions"><button class="btn btn-soft copy-bio" data-copy="#bio-text">{ICONS['copy']}Copy bio</button><p class="copy-status bio-status" role="status"></p></div></div><div class="card highlight-card">{eyebrow('Highlights', '02')}<h2>Selected achievements.</h2><ul class="highlights">{highlights}</ul></div></div></section>
 <section class="band band-sky" aria-labelledby="focus-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Research program', '03')}<h2 id="focus-title">Evidence for operational decisions.</h2><p class="section-lead">Three connected questions about when analytics and AI actually improve the decisions organizations make.</p></div>{arrow_link('research.html', 'Explore the research program')}</div><div class="streams">{streams}</div></div></section>
-<section class="band" aria-labelledby="selected-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Selected publications', '04')}<h2 id="selected-title">Recent papers.</h2></div>{arrow_link('publications.html', f'All {len(PUBS)} papers')}</div><div class="pub-list">{selected}</div></div></section>
-<section class="band band-champagne" id="verto-mind" aria-labelledby="verto-title"><div class="wrap verto"><div class="verto-copy">{eyebrow('Building beyond research', '05')}<h2 id="verto-title">Verto Mind</h2>{role}<p class="verto-lead">A little space.<br>A different perspective.</p><p>An AI-powered cognitive-reframing app that guides people from a stressful thought toward a more balanced perspective, ending with a personalized Verto Card to revisit.</p><ol class="verto-steps"><li><strong>Name the thought.</strong> Begin with a specific worry.</li><li><strong>Explore a new perspective.</strong> A structured, AI-assisted reframing process.</li><li><strong>Keep the insight.</strong> Reveal a personalized Verto Card.</li></ol><div class="verto-actions">{external(DATA['testflight'], 'Join the TestFlight beta ' + ARROW, 'btn btn-primary')}<span class="beta-note">iOS · TestFlight beta</span></div></div><figure class="phone-figure"><div class="phone" aria-hidden="true"><div class="phone-screen"><span class="phone-notch"></span><span class="phone-brand">Verto Mind</span><span class="phone-card"><i></i><i></i><i></i><i></i></span><span class="phone-cta">POUR IT OUT</span><span class="phone-tabbar"><i></i><i></i><i></i></span></div></div><figcaption>Illustration in the Verto Mind palette</figcaption></figure></div></section>'''
+<section class="band band-champagne" aria-labelledby="selected-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Selected publications', '04')}<h2 id="selected-title">Recent papers.</h2></div>{arrow_link('publications.html', f'All {len(PUBS)} papers')}</div><div class="pub-list">{selected}</div></div></section>'''
     page('index.html', '', 'Jiani (Elva) He is a Seattle-based data scientist and independent researcher working on demand forecasting, causal decision support, and AI-assisted reverse logistics. Data Science Consultant at Accenture; MIT and Purdue alumna.', body)
 
 

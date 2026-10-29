@@ -7,15 +7,25 @@
   "scholar": "https://scholar.google.com/citations?user=QoV_NDIAAAAJ&hl=en",
   "linkedin": "https://www.linkedin.com/in/jianihe",
   "github": "https://github.com/jiani19980225",
-  "testflight": "https://testflight.apple.com/join/h7WgfPgM",
-  "photo": "",
-  "verto_role": "",
+  "photo": "assets/headshot.jpg",
   "updated": "October 2026",
   "stats": [
-    {"value": "6", "label": "Research papers in 2026"},
-    {"value": "5", "label": "Conference acceptances"},
-    {"value": "10+", "label": "Journal manuscripts peer-reviewed"},
-    {"value": "5", "label": "Years of applied data science"}
+    {
+      "value": "6",
+      "label": "Research papers in 2026"
+    },
+    {
+      "value": "5",
+      "label": "Conference acceptances"
+    },
+    {
+      "value": "10+",
+      "label": "Journal manuscripts peer-reviewed"
+    },
+    {
+      "value": "5",
+      "label": "Years of applied data science"
+    }
   ],
   "bio": "Jiani (Elva) He is a data scientist and independent researcher based in Seattle, Washington. As a Data Science Consultant at Accenture, Jiani has spent five years applying analytics, optimization, and AI to forward and reverse logistics for a technology client. Jiani’s research asks how evidence becomes better operational decisions, spanning demand-forecast stability, causal decision support, trustworthy AI deployment, and AI-assisted reverse logistics. This work includes six 2026 papers with collaborators, among them a first-author paper accepted at AIBThings 2026, and Jiani has peer-reviewed more than ten journal manuscripts. Jiani holds an MS in Business Analytics from MIT (Operations Research Center) and a BS in Industrial Engineering from Purdue University.",
   "highlights": [
@@ -23,8 +33,7 @@
     "<strong>Four more accepted conference papers</strong> with collaborators: IEOM 2026 (two papers), ICECCME 2026, and ICEME 2026",
     "<strong>Peer reviewer</strong> for more than ten journal manuscripts",
     "<strong>Five years at Accenture</strong> applying SQL, optimization, and LLM workflows to supply-chain decisions; mentored five junior analysts",
-    "<strong>MIT</strong> MS in Business Analytics (GPA 4.7/5.0) and <strong>Purdue</strong> BS in Industrial Engineering (Honors &amp; Distinction, GPA 3.9/4.0)",
-    "Part of the team building <strong>Verto Mind</strong>, an AI cognitive-reframing app in TestFlight beta"
+    "<strong>MIT</strong> MS in Business Analytics (GPA 4.7/5.0) and <strong>Purdue</strong> BS in Industrial Engineering (Honors &amp; Distinction, GPA 3.9/4.0)"
   ],
   "streams": [
     {
@@ -33,7 +42,13 @@
       "name": "Forecasting & Planning Value",
       "question": "When do better predictions actually produce better plans?",
       "motivation": "A more accurate forecast is not automatically a better planning input. Forecasts that swing from one run to the next create churn in replenishment, and a new analytical capability creates value only if it changes the plans that are executed.",
-      "problems": ["Forecast stability", "Forecast-to-plan replay", "Late-delivery risk", "Early warning", "Planning value attribution"],
+      "problems": [
+        "Forecast stability",
+        "Forecast-to-plan replay",
+        "Late-delivery risk",
+        "Early warning",
+        "Planning value attribution"
+      ],
       "practice": "Analyzing demand, stock targets, and shortages for a technology client’s supply network"
     },
     {
@@ -42,7 +57,13 @@
       "name": "Causal Decision Support & Trustworthy AI",
       "question": "Which action should come next, and when can the evidence behind it be trusted?",
       "motivation": "Detecting a disruption is not the same as knowing which intervention recovers the most value. Good decisions need causal evidence and explicit costs and delays. AI-enabled decisions also need provenance that people can review before deployment.",
-      "problems": ["Causal intervention ranking", "Net-value objectives", "Partial & delayed information", "Deployment assurance", "LLM routing provenance"],
+      "problems": [
+        "Causal intervention ranking",
+        "Net-value objectives",
+        "Partial & delayed information",
+        "Deployment assurance",
+        "LLM routing provenance"
+      ],
       "practice": "Rebalancing inventory across sites and standardizing enterprise LLM workflows"
     },
     {
@@ -51,20 +72,46 @@
       "name": "AI-Assisted Reverse Logistics",
       "question": "How can unstructured signals guide inspection and recovery when labor is scarce?",
       "motivation": "Returned assets arrive with uncertain condition and free-text notes. Choosing how deeply to inspect each one, and whether it goes to reuse, resale, recycling, or disposal, is a resource-allocation problem under partial information.",
-      "problems": ["Semantic signals", "Inspection depth", "Recovery allocation", "Condition uncertainty", "Labor-constrained operations"],
+      "problems": [
+        "Semantic signals",
+        "Inspection depth",
+        "Recovery allocation",
+        "Condition uncertainty",
+        "Labor-constrained operations"
+      ],
       "practice": "Tracking reverse-logistics cycle times and guiding asset-disposition decisions"
     }
   ],
   "groups": [
-    {"id": "first", "title": "First-author research", "eyebrow": "Lead author"},
-    {"id": "accepted", "title": "Accepted conference papers", "eyebrow": "Accepted with collaborators"},
-    {"id": "review", "title": "Under review", "eyebrow": "Submitted manuscripts"}
+    {
+      "id": "first",
+      "title": "First-author research",
+      "eyebrow": "Lead author"
+    },
+    {
+      "id": "accepted",
+      "title": "Accepted conference papers",
+      "eyebrow": "Accepted with collaborators"
+    },
+    {
+      "id": "review",
+      "title": "Under review",
+      "eyebrow": "Submitted manuscripts"
+    }
   ],
   "publications": [
     {
       "id": "ssads",
       "title": "Semantic Signal-Assisted Inspection and Recovery Allocation in Reverse Logistics",
-      "authors": ["Jiani He", "Dingyan Shang", "Yihua Xu", "Shiqi Huang", "Yan Lyu", "Jize Li", "Shangjing Tang"],
+      "authors": [
+        "Jiani He",
+        "Dingyan Shang",
+        "Yihua Xu",
+        "Shiqi Huang",
+        "Yan Lyu",
+        "Jize Li",
+        "Shangjing Tang"
+      ],
       "year": 2026,
       "group": "first",
       "stream": "recover",
@@ -81,7 +128,15 @@
     {
       "id": "planning",
       "title": "When Does an Added Planning Capability Create Operational Value? An Observable Evidence Standard",
-      "authors": ["Yihua Xu", "Yan Lyu", "Jize Li", "Jiani He", "You Lin", "Yidan Hu", "Rubing Qiang"],
+      "authors": [
+        "Yihua Xu",
+        "Yan Lyu",
+        "Jize Li",
+        "Jiani He",
+        "You Lin",
+        "Yidan Hu",
+        "Rubing Qiang"
+      ],
       "year": 2026,
       "group": "accepted",
       "stream": "forecast",
@@ -98,7 +153,14 @@
     {
       "id": "late-delivery",
       "title": "From Weak Signals to Supply Chain Reliability Risk: A Feedback-Driven Risk Accumulation Framework for Late-Delivery Prediction, Early Warning, and Risk Prioritization",
-      "authors": ["Yan Lyu", "Yihua Xu", "Jiani He", "Jize Li", "Rubing Qiang", "Yidan Hu"],
+      "authors": [
+        "Yan Lyu",
+        "Yihua Xu",
+        "Jiani He",
+        "Jize Li",
+        "Rubing Qiang",
+        "Yidan Hu"
+      ],
       "year": 2026,
       "group": "accepted",
       "stream": "forecast",
@@ -115,7 +177,15 @@
     {
       "id": "dacri",
       "title": "DACRI: Decision-Aware Causal Intervention Ranking for Critical Supply Chains",
-      "authors": ["Shiqi Huang", "Jiani He", "Dingyan Shang", "Yihua Xu", "Jize Li", "Yan Lyu", "Lashimi Muraleedharan Nair"],
+      "authors": [
+        "Shiqi Huang",
+        "Jiani He",
+        "Dingyan Shang",
+        "Yihua Xu",
+        "Jize Li",
+        "Yan Lyu",
+        "Lashimi Muraleedharan Nair"
+      ],
       "year": 2026,
       "group": "accepted",
       "stream": "decide",
@@ -132,7 +202,14 @@
     {
       "id": "forecasting",
       "title": "Accuracy-Preserving Stability Regularization for Large-Scale Retail Demand Forecasting",
-      "authors": ["Jize Li", "Jiani He", "Dishu Yang", "Dingyan Shang", "Jingjing Liu", "Shiqi Huang"],
+      "authors": [
+        "Jize Li",
+        "Jiani He",
+        "Dishu Yang",
+        "Dingyan Shang",
+        "Jingjing Liu",
+        "Shiqi Huang"
+      ],
       "year": 2026,
       "group": "accepted",
       "stream": "forecast",
@@ -149,7 +226,15 @@
     {
       "id": "routing",
       "title": "Policy-Bounded, Provenance-Aware Deployment Assurance for LLM Request Routing",
-      "authors": ["Yihua Xu", "Jiani He", "Ishita Chirag Talati", "Yitian Qian", "Youting Wang", "Zhenyu Xu", "Dingyan Shang"],
+      "authors": [
+        "Yihua Xu",
+        "Jiani He",
+        "Ishita Chirag Talati",
+        "Yitian Qian",
+        "Youting Wang",
+        "Zhenyu Xu",
+        "Dingyan Shang"
+      ],
       "year": 2026,
       "group": "review",
       "stream": "decide",
@@ -222,10 +307,57 @@
     }
   ],
   "skills": [
-    {"area": "Tools", "items": ["SQL", "Python", "R", "Julia", "Keras", "Tableau", "AWS"]},
-    {"area": "Modeling", "items": ["Machine learning", "Forecasting", "Regression", "Classification", "Clustering", "Robust optimization"]},
-    {"area": "Analytics & BI", "items": ["Statistical analysis", "Root-cause analysis", "Data visualization", "Dashboards", "KPI design"]},
-    {"area": "AI", "items": ["Generative AI", "NLP", "LLM workflows", "Prompt & query design"]},
-    {"area": "Consulting", "items": ["Problem framing", "Client communication", "Stakeholder coordination", "Project delivery", "Mentoring"]}
+    {
+      "area": "Tools",
+      "items": [
+        "SQL",
+        "Python",
+        "R",
+        "Julia",
+        "Keras",
+        "Tableau",
+        "AWS"
+      ]
+    },
+    {
+      "area": "Modeling",
+      "items": [
+        "Machine learning",
+        "Forecasting",
+        "Regression",
+        "Classification",
+        "Clustering",
+        "Robust optimization"
+      ]
+    },
+    {
+      "area": "Analytics & BI",
+      "items": [
+        "Statistical analysis",
+        "Root-cause analysis",
+        "Data visualization",
+        "Dashboards",
+        "KPI design"
+      ]
+    },
+    {
+      "area": "AI",
+      "items": [
+        "Generative AI",
+        "NLP",
+        "LLM workflows",
+        "Prompt & query design"
+      ]
+    },
+    {
+      "area": "Consulting",
+      "items": [
+        "Problem framing",
+        "Client communication",
+        "Stakeholder coordination",
+        "Project delivery",
+        "Mentoring"
+      ]
+    }
   ]
 }

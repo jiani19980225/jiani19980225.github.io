@@ -1,0 +1,83 @@
+{
+  "name": "Jiani (Elva) He",
+  "email": "jiani19980225@gmail.com",
+  "location": "Seattle, Washington",
+  "scholar": "https://scholar.google.com/citations?user=QoV_NDIAAAAJ&hl=en",
+  "linkedin": "https://www.linkedin.com/in/jianihe",
+  "github": "https://github.com/jiani19980225",
+  "testflight": "https://testflight.apple.com/join/h7WgfPgM",
+  "verto_role": "",
+  "updated": "October 2026",
+  "publications": [
+    {
+      "id": "ssads",
+      "title": "Semantic Signal-Assisted Inspection and Recovery Allocation in Reverse Logistics",
+      "authors": ["Jiani He", "Dingyan Shang", "Yihua Xu", "Shiqi Huang", "Yan Lyu", "Jize Li", "Shangjing Tang"],
+      "year": 2026,
+      "category": "Recovery & logistics",
+      "status": "Accepted · AIBThings 2026",
+      "record": "Public preprint · arXiv:2609.02116",
+      "summary": "Using return notes to guide inspection depth and recovery allocation when asset condition is uncertain and inspection labor is limited. Evaluated in three synthetic reverse-logistics scenarios.",
+      "url": "https://arxiv.org/abs/2609.02116",
+      "code": "https://github.com/jiani19980225/ssads-reverse-logistics",
+      "first_author": true,
+      "bibtex": "@misc{he2026semantic,\n  title={Semantic Signal-Assisted Inspection and Recovery Allocation in Reverse Logistics},\n  author={He, Jiani and Shang, Dingyan and Xu, Yihua and Huang, Shiqi and Lyu, Yan and Li, Jize and Tang, Shangjing},\n  year={2026},\n  eprint={2609.02116},\n  archivePrefix={arXiv},\n  url={https://arxiv.org/abs/2609.02116}\n}"
+    },
+    {
+      "id": "planning",
+      "title": "When Does an Added Planning Capability Create Operational Value? An Observable Evidence Standard",
+      "authors": ["Yihua Xu", "Yan Lyu", "Jize Li", "Jiani He", "You Lin", "Yidan Hu", "Rubing Qiang"],
+      "year": 2026,
+      "category": "Decision systems",
+      "status": "Accepted & presented · IEOM Irvine 2026",
+      "record": "Public preprint · arXiv:2610.27305",
+      "summary": "An evidence standard for assessing whether an added planning capability changes executed plans and improves operational outcomes, evaluated through forecast-to-plan replay on retail datasets.",
+      "url": "https://arxiv.org/abs/2610.27305",
+      "code": "",
+      "first_author": false,
+      "bibtex": "@misc{xu2026planning,\n  title={When Does an Added Planning Capability Create Operational Value? An Observable Evidence Standard},\n  author={Xu, Yihua and Lyu, Yan and Li, Jize and He, Jiani and Lin, You and Hu, Yidan and Qiang, Rubing},\n  year={2026},\n  eprint={2610.27305},\n  archivePrefix={arXiv},\n  url={https://arxiv.org/abs/2610.27305}\n}"
+    },
+    {
+      "id": "routing",
+      "title": "Policy-Bounded, Provenance-Aware Deployment Assurance for LLM Request Routing",
+      "authors": ["Yihua Xu", "Jiani He", "Ishita Chirag Talati", "Yitian Qian", "Youting Wang", "Zhenyu Xu", "Dingyan Shang"],
+      "year": 2026,
+      "category": "Decision systems",
+      "status": "Preprint · SSRN",
+      "record": "SSRN abstract 7554440",
+      "summary": "Research on policy boundaries, evidence provenance, and deployment assurance for routing requests to large language models.",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7554440",
+      "code": "",
+      "first_author": false,
+      "bibtex": "@misc{xu2026routing,\n  title={Policy-Bounded, Provenance-Aware Deployment Assurance for LLM Request Routing},\n  author={Xu, Yihua and He, Jiani and Talati, Ishita Chirag and Qian, Yitian and Wang, Youting and Xu, Zhenyu and Shang, Dingyan},\n  year={2026},\n  url={https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7554440}\n}"
+    },
+    {
+      "id": "dacri",
+      "title": "DACRI: Decision-Aware Causal Intervention Ranking for Critical Supply Chains",
+      "authors": ["Shiqi Huang", "Jiani He", "Dingyan Shang", "Yihua Xu", "Jize Li", "Yan Lyu", "Lashimi Muraleedharan Nair"],
+      "year": 2026,
+      "category": "Decision systems",
+      "status": "Accepted for presentation · ICECCME 2026",
+      "record": "Public preprint · arXiv:2608.11154",
+      "summary": "Ranking supply-chain interventions by recoverable net value, using a controlled synthetic benchmark with causal ground truth and explicit intervention costs, delays, and uncertainty.",
+      "url": "https://arxiv.org/abs/2608.11154",
+      "code": "https://github.com/jiani19980225/dacri-criticalscm-bench",
+      "first_author": false,
+      "bibtex": "@misc{huang2026dacri,\n  title={DACRI: Decision-Aware Causal Intervention Ranking for Critical Supply Chains},\n  author={Huang, Shiqi and He, Jiani and Shang, Dingyan and Xu, Yihua and Li, Jize and Lyu, Yan and Nair, Lashimi Muraleedharan},\n  year={2026},\n  eprint={2608.11154},\n  archivePrefix={arXiv},\n  url={https://arxiv.org/abs/2608.11154}\n}"
+    },
+    {
+      "id": "forecasting",
+      "title": "Accuracy-Preserving Stability Regularization for Large-Scale Retail Demand Forecasting",
+      "authors": ["Jize Li", "Jiani He", "Dishu Yang", "Dingyan Shang", "Jingjing Liu", "Shiqi Huang"],
+      "year": 2026,
+      "category": "Forecasting",
+      "status": "Accepted for presentation · ICEME 2026",
+      "record": "Public preprint · arXiv:2607.13331",
+      "summary": "Training-time regularization for steadier retail demand forecasts while preserving point accuracy, evaluated on selected M5 demand series at multiple scales.",
+      "url": "https://arxiv.org/abs/2607.13331",
+      "code": "https://github.com/jizeli-hub/accuracy-preserving-stability-forecasting",
+      "first_author": false,
+      "bibtex": "@misc{li2026stability,\n  title={Accuracy-Preserving Stability Regularization for Large-Scale Retail Demand Forecasting},\n  author={Li, Jize and He, Jiani and Yang, Dishu and Shang, Dingyan and Liu, Jingjing and Huang, Shiqi},\n  year={2026},\n  eprint={2607.13331},\n  archivePrefix={arXiv},\n  url={https://arxiv.org/abs/2607.13331}\n}"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 540" fill="none">
+<g stroke="#d2dedf"><circle cx="270" cy="270" r="217"/><circle cx="270" cy="270" r="160" stroke-dasharray="3 8"/><path d="M53 270h434M270 53v434" stroke-dasharray="3 8"/></g>
+<g stroke="#0077b6" stroke-width="1.5"><path d="M270 114 405 347H135L270 114Z"/><path d="m270 114 0 156m135 77L270 270m-135 77 135-77"/></g>
+<circle cx="270" cy="270" r="68" fill="#102d46"/><circle cx="270" cy="270" r="80" stroke="#eb993f"/>
+<g fill="#fff" font-family="Georgia,serif" font-size="28" text-anchor="middle"><text x="270" y="279">Decide.</text></g>
+<g fill="#fff" stroke="#0077b6" stroke-width="1.5"><circle cx="270" cy="114" r="9"/><circle cx="405" cy="347" r="9"/><circle cx="135" cy="347" r="9"/></g>
+<g fill="#102d46" font-family="Arial,sans-serif" font-size="12" letter-spacing="2" text-anchor="middle"><text x="270" y="89">FORECAST</text><text x="405" y="381">OPTIMIZE</text><text x="130" y="381">UNDERSTAND</text></g>
+<g fill="#eb993f"><circle cx="53" cy="270" r="4"/><circle cx="270" cy="487" r="4"/><circle cx="487" cy="270" r="4"/></g>
+</svg>

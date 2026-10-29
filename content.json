@@ -15,7 +15,7 @@
       "label": "Research papers in 2026"
     },
     {
-      "value": "5",
+      "value": "6",
       "label": "Conference acceptances"
     },
     {
@@ -30,7 +30,7 @@
   "bio": "Jiani (Elva) He is a data scientist and independent researcher based in Seattle, Washington. As a Data Science Consultant at Accenture, Jiani has spent five years applying analytics, optimization, and AI to forward and reverse logistics for a technology client. Jiani’s research asks how evidence becomes better operational decisions, spanning demand-forecast stability, causal decision support, trustworthy AI deployment, and AI-assisted reverse logistics. This work includes six 2026 papers with collaborators, among them a first-author paper accepted at AIBThings 2026, and Jiani has peer-reviewed more than ten journal manuscripts. Jiani holds an MS in Business Analytics from MIT (Operations Research Center) and a BS in Industrial Engineering from Purdue University.",
   "highlights": [
     "<strong>First-author paper</strong> on semantic signals for reverse-logistics inspection, accepted at AIBThings 2026",
-    "<strong>Four more accepted conference papers</strong> with collaborators: IEOM 2026 (two papers), ICECCME 2026, and ICEME 2026",
+    "<strong>Five more accepted conference papers</strong> with collaborators: IEOM 2026 (two papers), ICECCME 2026, ICEME 2026, and ICOAI 2026",
     "<strong>National-priority research areas</strong>: AI for planning and decision making and AI assurance, both named as AI subfields on the U.S. Critical and Emerging Technologies List",
     "<strong>Peer reviewer</strong> for more than ten journal manuscripts",
     "<strong>Five years at Accenture</strong> applying SQL, optimization, and LLM workflows to supply-chain decisions; mentored five junior analysts",
@@ -247,11 +247,11 @@
         "Dingyan Shang"
       ],
       "year": 2026,
-      "group": "review",
+      "group": "accepted",
       "stream": "decide",
       "first_author": false,
-      "status": "Under review · ICOAI 2026",
-      "venue": "Submitted to ICOAI 2026 · public preprint on SSRN",
+      "status": "Accepted · ICOAI 2026",
+      "venue": "ICOAI 2026 · public preprint on SSRN",
       "record": "SSRN 7554440",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7554440",
       "doi": "10.2139/ssrn.7554440",
@@ -259,7 +259,7 @@
       "summary": "Studies how policy boundaries, provenance, and evidence identity determine whether an LLM request-routing package is qualified for deployment and for later updates.",
       "bibtex": "@misc{xu2026routing,\n  title={Policy-Bounded, Provenance-Aware Deployment Assurance for LLM Request Routing},\n  author={Xu, Yihua and He, Jiani and Talati, Ishita Chirag and Qian, Yitian and Wang, Youting and Xu, Zhenyu and Shang, Dingyan},\n  year={2026},\n  publisher={SSRN},\n  doi={10.2139/ssrn.7554440},\n  url={https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7554440}\n}",
       "short": "Deployment assurance for LLM request routing",
-      "proceedings": ""
+      "proceedings": "Proceedings forthcoming"
     }
   ],
   "experience": [
@@ -463,7 +463,7 @@
   },
   "philosophy": {
     "intro": "Many of the most useful things I know, I learned from operations: every system has constraints, information is never complete, and almost nothing should be thrown away too quickly. These are the principles I try to bring to research, to the people I work with, and to the rest of my life. Like any good model, they are a work in progress.",
-    "quote": "Optimization taught me that the best solution respects its constraints. I try to live that way: aim high, work within what is real, and keep improving.",
+    "quote": "The world has always had enough resources. The work is in using them well, and that is how I hope to help more people.",
     "groups": [
       {
         "id": "on-research",
@@ -522,20 +522,6 @@
         ]
       }
     ],
-    "matters": [
-      {
-        "title": "Better decisions for the people who live with them.",
-        "text": "Behind every forecast and allocation are people: planners who have to commit, teams who have to execute, and customers who feel the result. I want my work to make their decisions measurably better."
-      },
-      {
-        "title": "Helping people grow.",
-        "text": "The analysts I have mentored and the collaborators I research with matter to me as much as any result. Helping someone find their footing is work that keeps paying back."
-      },
-      {
-        "title": "Understanding how real systems behave.",
-        "text": "I am drawn to the gap between how operations look on paper and how they actually run. Closing that gap, one careful question at a time, is what keeps me curious."
-      }
-    ],
     "test": {
       "title": "A test for research worth doing.",
       "text": "Before I commit to a research question, I ask: if this works completely, what changes? I look for at least one of three answers.",
@@ -551,6 +537,28 @@
       "At MIT’s Operations Research Center I learned to treat uncertainty rigorously. A capstone with BMW Group showed me how a demand model becomes a pricing decision, and how much depends on whether people can understand and use it.",
       "Since 2021 I have worked at Accenture on forward and reverse logistics for a technology client. The questions I kept meeting there, about unstable forecasts, scarce inspection capacity, and which intervention to fund first, became my research. I now pursue them with collaborators as an independent researcher, alongside my consulting work."
     ],
-    "stories": []
+    "stories": [
+      {
+        "title": "Why I chose optimization",
+        "text": [
+          "I have always believed that the world has enough resources. What it often lacks is the ability to use them well and get them to the right place. That belief is why I chose to study operations research and optimization: at heart, they are the science of allocating what we have so that it helps more people.",
+          "I see the same pattern in my work today: inventory sitting at one site while another runs short, returned devices that could still be used, inspection hours spent where they matter least. Each one is a chance to do more with what already exists, and that is the kind of problem I want to spend my career on."
+        ]
+      },
+      {
+        "title": "Always learning",
+        "text": [
+          "I am someone who always wants to keep improving. Since graduating, I have kept learning well beyond my field, from investing to a range of sports, because I want to grow as a whole person and not only as a professional.",
+          "I hope to keep growing in every direction for the rest of my life."
+        ]
+      },
+      {
+        "title": "Someone people can talk to",
+        "text": [
+          "I think of myself as an energetic, warm person, and the people around me often come to me when they are facing a problem. Many times, after we talk, I see them leave a little lighter, and nothing makes me happier than that.",
+          "Whether I am mentoring a junior analyst or talking through a problem with a friend, being able to help is one of the things that makes my life feel meaningful."
+        ]
+      }
+    ]
   }
 }

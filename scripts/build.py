@@ -196,7 +196,7 @@ def home():
 <section class="band" id="about" aria-label="About"><div class="wrap brief"><div class="card bio-card">{eyebrow('Short bio', '01')}<h2>In brief.</h2><p id="bio-text" class="bio">{e(DATA['bio'])}</p><div class="bio-actions"><button class="btn btn-soft copy-bio" data-copy="#bio-text">{ICONS['copy']}Copy bio</button><p class="copy-status bio-status" role="status"></p></div></div><div class="card highlight-card">{eyebrow('Highlights', '02')}<h2>Selected achievements.</h2><ul class="highlights">{highlights}</ul></div></div></section>
 <section class="band band-sky" aria-labelledby="focus-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Research program', '03')}<h2 id="focus-title">Evidence for operational decisions.</h2><p class="section-lead">Three connected questions about when analytics and AI actually improve the decisions organizations make.</p></div>{arrow_link('research.html', 'Explore the research program')}</div><div class="streams">{streams}</div>{cet_strip}</div></section>
 <section class="band band-champagne" aria-labelledby="selected-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Selected publications', '04')}<h2 id="selected-title">Recent papers.</h2></div>{arrow_link('publications.html', f'All {len(PUBS)} papers')}</div><div class="pub-list">{selected}</div></div></section>
-<section class="band" aria-labelledby="believe-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Philosophy', '05')}<h2 id="believe-title">A few things I believe.</h2></div>{arrow_link('philosophy.html', 'Read my philosophy')}</div><div class="beliefs">{beliefs}</div></div></section>'''
+<section class="band" aria-labelledby="believe-title"><div class="wrap"><div class="section-head"><div>{eyebrow('Philosophy', '05')}<h2 id="believe-title">A few things I believe.</h2><p class="section-lead believe-lead">“{e(DATA['philosophy']['quote'])}”</p></div>{arrow_link('philosophy.html', 'Read my philosophy')}</div><div class="beliefs">{beliefs}</div></div></section>'''
     page('index.html', '', 'Jiani (Elva) He is a Seattle-based data scientist and independent researcher working on demand forecasting, causal decision support, and AI-assisted reverse logistics. Data Science Consultant at Accenture; MIT and Purdue alumna.', body)
 
 
@@ -239,6 +239,8 @@ def publications():
             meta = f'<div><dt>Venue</dt><dd>{e(p["venue"])}</dd></div><div><dt>Public record</dt><dd>{e(p["record"])}</dd></div><div><dt>Research stream</dt><dd><a href="research.html#{p["stream"]}">{e(STREAM[p["stream"]]["name"])}</a></dd></div>'
             cards.append(f'''<article class="card pub" id="{p['id']}" data-stream="{p['stream']}"><div class="pub-index"><span class="pub-num">{n:02d}</span><span class="pub-year">{p['year']}</span></div><div class="pub-body">{badges(p)}<h3>{pub_title(p)}</h3><p class="authors">{authors_html(p)}</p><p class="pub-summary">{e(p['summary'])}</p><dl class="pub-meta">{meta}</dl>{pub_links(p)}</div></article>''')
         count = len(cards)
+        if not count:
+            continue
         groups.append(f'''<section class="pub-group" aria-labelledby="group-{g['id']}"><div class="group-head"><div>{eyebrow(g['eyebrow'])}<h2 id="group-{g['id']}">{e(g['title'])}</h2></div><span class="group-count">{count} paper{'' if count == 1 else 's'}</span></div><div class="pub-stack">{''.join(cards)}</div></section>''')
     accepted = sum(1 for p in PUBS if p['group'] in ('first', 'accepted'))
     coded = sum(1 for p in PUBS if p['code'])
@@ -267,7 +269,7 @@ def cv():
         link = f' <a href="{e(p["url"])}">{e(p["record"])}</a>.' if p['url'] else f' {e(p["record"])}.'
         status = p['status'] + (' · ' + p['proceedings'].lower() if p['proceedings'] else '')
         return f'<li>{authors}. {p["year"]}. “{e(p["title"])}.” <em>{e(p["venue"])}</em>.{link} <span class="cv-status">{e(status)}</span></li>'
-    pub_sections = ''.join(f'<h3 class="cv-sub">{e(g["title"])}</h3><ol class="cv-pubs">{"".join(cv_pub(p) for p in PUBS if p["group"] == g["id"])}</ol>' for g in DATA['groups'])
+    pub_sections = ''.join(f'<h3 class="cv-sub">{e(g["title"])}</h3><ol class="cv-pubs">{"".join(cv_pub(p) for p in PUBS if p["group"] == g["id"])}</ol>' for g in DATA['groups'] if any(p['group'] == g['id'] for p in PUBS))
     xp = ''.join(f'''<div class="cv-entry"><div class="cv-row"><strong>{e(x['org'])}</strong><span>{e(x['dates'])}</span></div><div class="cv-row cv-meta"><em>{e(x['role'])}</em><span>{e(x['place'])}</span></div><ul>{"".join(f"<li>{e(b)}</li>" for b in x['bullets'])}</ul></div>''' for x in DATA['experience'])
     edu = ''.join(f'''<div class="cv-entry"><div class="cv-row"><strong>{e(x['school'])}</strong><span>{e(x['date'])}</span></div><div class="cv-row cv-meta"><em>{e(x['degree'])} · {e(x['gpa'])}</em><span>{e(x['place'])}</span></div><p>{e(x['detail'])}</p></div>''' for x in DATA['education'])
     skills = ''.join(f'<p><strong>{e(s["area"])}:</strong> {e(", ".join(s["items"]))}</p>' for s in DATA['skills'])
@@ -292,20 +294,18 @@ def philosophy():
     for i, g in enumerate(ph['groups']):
         band = 'band band-sky' if i % 2 == 0 else 'band'
         groups.append(f'''<section class="{band}" id="{g['id']}" aria-labelledby="title-{g['id']}"><div class="wrap philo-group"><header>{eyebrow(e(g['eyebrow']), f'{i + 5:02d}')}<h2 id="title-{g['id']}">{e(g['title'])}</h2></header><ol class="principles">{''.join(items[g['id']])}</ol></div></section>''')
-    matters = ''.join(f'<article class="card belief"><span class="principle-num">{n}</span><h3>{e(m["title"])}</h3><p>{e(m["text"])}</p></article>' for n, m in zip(('i', 'ii', 'iii'), ph['matters']))
     test = ph['test']
     checks = ''.join(f'<li>{e(q)}</li>' for q in test['questions'])
     path = ''.join(f'<p>{e(x)}</p>' for x in ph['path'])
     stories = ''
     if ph['stories']:
         cards = ''.join(f'<article class="story"><h3>{e(s["title"])}</h3>{"".join(f"<p>{e(x)}</p>" for x in s["text"])}</article>' for s in ph['stories'])
-        stories = f'''<section class="band" id="life-stories" aria-labelledby="title-stories"><div class="wrap philo-group"><header>{eyebrow('Life stories', f'{len(ph["groups"]) + 5:02d}')}<h2 id="title-stories">Moments that shaped me.</h2></header><div class="stories">{cards}</div></div></section>'''
+        stories = f'''<section class="band band-sky" id="life-stories" aria-labelledby="title-stories"><div class="wrap philo-group"><header>{eyebrow('Life stories', '02')}<h2 id="title-stories">What shapes me.</h2></header><div class="stories">{cards}</div></div></section>'''
     body = f'''<section class="band band-hero" aria-labelledby="philo-title"><div class="wrap philo-hero"><div>{eyebrow('Philosophy', '01')}<h1 id="philo-title">What I believe.</h1><p class="philo-intro">{e(ph['intro'])}</p></div><figure class="philo-portrait"><div class="avatar"><div class="avatar-inner">{portrait}</div></div><figcaption>{DATA['name']} · {DATA['location']}</figcaption></figure></div></section>
-<section class="band band-sky" id="what-matters" aria-labelledby="title-matters"><div class="wrap"><div class="section-head"><div>{eyebrow('What matters to me', '02')}<h2 id="title-matters">Three things I care about.</h2></div></div><div class="beliefs">{matters}</div></div></section>
+{stories}
 <section class="band band-navy" id="research-test" aria-labelledby="title-test"><div class="wrap test-band"><header>{eyebrow('On choosing problems', '03')}<h2 id="title-test">{e(test['title'])}</h2></header><div><p class="test-lead">{e(test['text'])}</p><ol class="test-list">{checks}</ol><p class="test-closing">{e(test['closing'])}</p></div></div></section>
 <section class="band" id="my-path" aria-labelledby="title-path"><div class="wrap philo-group"><header>{eyebrow('My path', '04')}<h2 id="title-path">How I got here.</h2></header><div class="philo-prose">{path}</div></div></section>
 {''.join(groups)}
-{stories}
 <section class="band band-navy" aria-label="Closing thought"><div class="wrap"><blockquote class="closing-quote"><p>{e(ph['quote'])}</p><footer>{DATA['name']}</footer></blockquote></div></section>'''
     page('philosophy.html', 'Philosophy', 'The principles Jiani (Elva) He brings to research, to working with people, and to life, many of them learned from operations.', body, 'philosophy')
 

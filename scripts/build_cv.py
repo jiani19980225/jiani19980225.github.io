@@ -73,6 +73,8 @@ for x in DATA['education']:
 section('Research & publications')
 n = 0
 for g in DATA['groups']:
+    if not any(p['group'] == g['id'] for p in DATA['publications']):
+        continue
     add(escape(g['title']), 'sub')
     for p in (p for p in DATA['publications'] if p['group'] == g['id']):
         n += 1

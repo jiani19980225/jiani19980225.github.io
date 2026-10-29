@@ -12,28 +12,26 @@
   "stats": [
     {
       "value": "6",
-      "label": "Research papers in 2026"
+      "label": "Conference papers accepted in 2026",
+      "short": "accepted papers in 2026"
     },
     {
-      "value": "6",
-      "label": "Conference acceptances"
+      "value": "2",
+      "label": "As lead author (first or co-first)",
+      "short": "as lead author"
     },
     {
       "value": "10+",
-      "label": "Journal manuscripts peer-reviewed"
+      "label": "Journal manuscripts peer-reviewed",
+      "short": "manuscripts reviewed"
     },
     {
       "value": "5",
-      "label": "Years of applied data science"
+      "label": "Years in data center supply chains",
+      "short": "years in data centers"
     }
   ],
-  "bio": "Jiani (Elva) He is a data scientist and independent researcher based in Seattle, Washington. As a Data Science Consultant at Accenture, Jiani has spent five years applying analytics, optimization, and AI to forward and reverse logistics in a technology client’s data center supply chain. Jiani’s research asks how evidence becomes better operational decisions, spanning demand-forecast stability, causal decision support, trustworthy AI deployment, and AI-assisted reverse logistics. This work includes six 2026 papers with collaborators, among them a first-author paper accepted at AIBThings 2026 and a co-first-author paper accepted at ICECCME 2026, and Jiani has peer-reviewed more than ten journal manuscripts. Jiani holds an MS in Business Analytics from MIT (Operations Research Center) and a BS in Industrial Engineering from Purdue University.",
-  "highlights": [
-    "<strong>First-author and co-first-author papers</strong>: semantic signals for reverse-logistics inspection (AIBThings 2026) and DACRI causal intervention ranking (ICECCME 2026)",
-    "<strong>Four more accepted conference papers</strong> with collaborators: IEOM 2026 (two papers), ICEME 2026, and ICOAI 2026",
-    "<strong>National-priority areas</strong>: AI for operational decisions, applied to data center supply chains; related to the AI and Autonomy and Semiconductors and Microelectronics areas of the U.S. Critical and Emerging Technologies List (2026)",
-    "<strong>MIT</strong> MS in Business Analytics (GPA 4.7/5.0) and <strong>Purdue</strong> BS in Industrial Engineering (Honors &amp; Distinction, GPA 3.9/4.0)"
-  ],
+  "bio": "Jiani (Elva) He is a data scientist and operations researcher who builds AI and optimization methods for the supply chains behind data center infrastructure. As a Data Science Consultant at Accenture, Jiani has spent five years leading planning analytics across the forward and reverse supply chain of a technology client’s data centers, and was promoted from Senior Analyst to Consultant in 2024. In 2026, Jiani co-authored six papers accepted at international conferences, including a first-author paper at AIBThings and a co-first-author paper at ICECCME, on demand-forecast stability, causal intervention ranking, AI assurance, and AI-assisted reverse logistics. Jiani has peer-reviewed more than ten journal manuscripts and holds an MS in Business Analytics from MIT’s Operations Research Center (GPA 4.7/5.0) and a BS in Industrial Engineering from Purdue University (Honors & Distinction).",
   "streams": [
     {
       "id": "forecast",
@@ -41,7 +39,9 @@
       "name": "Forecasting & Planning Value",
       "question": "When do better predictions actually produce better plans?",
       "motivation": "A more accurate forecast is not automatically a better planning input. Forecasts that swing from one run to the next create churn in replenishment, and a new analytical capability creates value only if it changes the plans that are executed.",
-      "practice": "Analyzing demand, stock targets, and shortages across a data center supply network"
+      "practice": "Analyzing demand, stock targets, and shortages across a data center supply network",
+      "title": "Forecasts planners can act on",
+      "short": "Accurate isn’t enough if the forecast swings every week. I build forecasting and early-warning methods steady enough to plan around, and test whether new planning tools actually change outcomes."
     },
     {
       "id": "decide",
@@ -49,7 +49,9 @@
       "name": "Causal Decision Support & Trustworthy AI",
       "question": "Which action should come next, and when can the evidence behind it be trusted?",
       "motivation": "Detecting a disruption is not the same as knowing which intervention recovers the most value. Good decisions need causal evidence and explicit costs and delays. AI-enabled decisions also need provenance that people can review before deployment.",
-      "practice": "Rebalancing inventory across sites and standardizing enterprise LLM workflows"
+      "practice": "Rebalancing inventory across sites and standardizing enterprise LLM workflows",
+      "title": "The intervention that recovers the most",
+      "short": "Knowing what broke is half the job. I rank supply-chain interventions by the value they recover under partial, delayed information, and test when AI recommendations are safe to deploy."
     },
     {
       "id": "recover",
@@ -57,7 +59,9 @@
       "name": "AI-Assisted Reverse Logistics",
       "question": "How can unstructured signals guide inspection and recovery when labor is scarce?",
       "motivation": "Returned assets arrive with uncertain condition and free-text notes. Choosing how deeply to inspect each one, and whether it goes to reuse, resale, recycling, or disposal, is a resource-allocation problem under partial information.",
-      "practice": "Tracking reverse-logistics cycle times and guiding disposition decisions for retired data center hardware"
+      "practice": "Tracking reverse-logistics cycle times and guiding disposition decisions for retired data center hardware",
+      "title": "A second life for data center hardware",
+      "short": "Retired hardware can be reused, resold, or recycled, if the right units get inspected. I use AI to read return notes and send scarce inspection labor where it recovers the most value."
     }
   ],
   "groups": [
@@ -260,13 +264,14 @@
       "role": "Data Science Consultant",
       "dates": "Jun 2024 — Present",
       "place": "Seattle, Washington",
-      "context": "Forward and reverse logistics in a technology client’s data center supply chain, connecting operational analysis with planning and execution.",
+      "context": "Forward and reverse logistics in a technology client’s data center supply chain. Promoted from Senior Analyst in 2024.",
       "bullets": [
-        "Lead planning analyses, manage client relationships, and present recommendations to senior leaders.",
-        "Analyze reverse-logistics cycle time and on-time delivery in SQL to identify bottlenecks; guide reuse, resale, recycling, or disposal decisions based on asset value and lifecycle stage.",
-        "Analyze stock targets, available inventory, and demand; use an optimization engine to rebalance inventory across sites, address shortages, and maintain adequate supply.",
-        "Plan quality-assurance component quantities using demand and bill-of-materials data; define service metrics and support automated inventory adjustments.",
-        "Standardize prompts and analytical queries for enterprise LLM assistants; develop reusable guides and train analysts in AI-assisted analysis."
+        "Lead planning analyses for the client and present recommendations directly to senior leaders.",
+        "Steer recovery decisions for retired hardware: analyze reverse-logistics cycle time and on-time delivery in SQL, find bottlenecks, and route assets to reuse, resale, recycling, or disposal by value and lifecycle stage.",
+        "Rebalance inventory across sites with an optimization engine, matching stock targets to demand to prevent shortages.",
+        "Plan quality-assurance component quantities from demand and bill-of-materials data; define service metrics and support automated inventory adjustments.",
+        "Bring generative AI into daily analysis: standardize prompts and queries for enterprise LLM assistants, write reusable guides, and train analysts.",
+        "Mentored five junior analysts across both roles; lead onboarding and team training."
       ]
     },
     {
@@ -276,10 +281,9 @@
       "place": "Seattle, Washington",
       "context": "",
       "bullets": [
-        "Built SQL dashboards and shortage alerts to compare inventory with demand and inform transfers between sites.",
-        "Tracked reverse-logistics cycle times and on-time delivery; flagged bottlenecks and supported asset reuse, disposal, and recovery scheduling.",
-        "Investigated inventory imbalances and abnormal cycle times using SQL and statistical analysis; automated reporting and purchase-order workflows.",
-        "Across both Accenture roles, mentored five junior analysts in SQL, business problem solving, and client communication; led onboarding and team training."
+        "Built SQL dashboards and shortage alerts that compare inventory with demand and inform transfers between sites.",
+        "Tracked reverse-logistics cycle times and on-time delivery; flagged bottlenecks and supported reuse, disposal, and recovery scheduling.",
+        "Diagnosed inventory imbalances and abnormal cycle times with statistical analysis; automated reporting and purchase-order workflows."
       ]
     },
     {
@@ -366,37 +370,6 @@
     }
   ],
   "importance": {
-    "title": "Decisions that keep critical systems running.",
-    "lead": "Data centers, the supply chains that build and renew them, and the AI systems they run now sit underneath much of the economy. When a forecast swings without reason, a disruption is met with the wrong intervention, or an AI recommendation cannot be traced, the cost shows up as shortages, idle capacity, discarded hardware, and lost trust. My research asks how to make these decisions measurably better, and how to show that they are.",
-    "pillars": [
-      {
-        "label": "Supply-chain resilience",
-        "title": "Acting on disruptions, not just detecting them",
-        "text": "Disruptions in critical supply chains ripple into manufacturing, health care, and national security. Planners need to know which intervention recovers the most value when information is partial and delayed, and they need forecasts steady enough to plan around. DACRI ranks interventions by the net value they recover; my forecasting and late-delivery work aims to give planners earlier, steadier signals.",
-        "papers": [
-          "dacri",
-          "forecasting",
-          "late-delivery"
-        ]
-      },
-      {
-        "label": "Trustworthy AI",
-        "title": "Evidence that AI improves real decisions",
-        "text": "As organizations bring AI into operational decisions, they need evidence that a new capability actually changes outcomes, and that its recommendations can be traced, reviewed, and governed before deployment. With collaborators, I have proposed an observable evidence standard for planning capabilities and a provenance-aware assurance framework for routing requests to large language models.",
-        "papers": [
-          "planning",
-          "routing"
-        ]
-      },
-      {
-        "label": "Recovering value",
-        "title": "A second life for data center hardware",
-        "text": "Retired data center hardware and other returned electronics must be inspected and routed to reuse, resale, recycling, or disposal, usually with limited inspection labor. Better routing keeps usable hardware in service and recovers valuable materials instead of discarding them. My first-author paper shows how semantic signals in free-text return notes can direct inspection effort where it matters most.",
-        "papers": [
-          "ssads"
-        ]
-      }
-    ],
     "cet_intro": "The U.S. Critical and Emerging Technologies (CET) List identifies technology areas of national-security importance. Its August 2026 update, published as Appendix A of the White House National Security Science and Technology Strategy, narrows the list to 14 areas. My work relates to two of them.",
     "cet_rows": [
       {
@@ -436,27 +409,26 @@
   },
   "philosophy": {
     "intro": "Some of the most useful things I know, I learned from operations. Here are a few stories that shape how I work and live.",
-    "quote": "The world has always had enough resources. The work is in using them well, and that is how I hope to help more people.",
     "stories": [
       {
         "title": "Why I chose optimization",
         "text": [
-          "I have always believed that the world has enough resources. What it often lacks is the ability to use them well and get them to the right place. That belief is why I chose to study operations research and optimization: at heart, they are the science of allocating what we have so that it helps more people.",
-          "I see the same pattern in my work today: inventory sitting at one site while another runs short, returned devices that could still be used, inspection hours spent where they matter least. Each one is a chance to do more with what already exists, and that is the kind of problem I want to spend my career on."
+          "I’ve believed this for a long time: the world isn’t short on resources. It’s short on using them well.",
+          "Stock sits at one site while the site next door runs out. Hardware that still works gets scrapped because nobody had time to inspect it. Those aren’t shortages; they’re allocation problems. That’s why I chose operations research and optimization, and it’s still what I work on every day."
         ]
       },
       {
         "title": "Always learning",
         "text": [
-          "I am someone who always wants to keep improving. Since graduating, I have kept learning well beyond my field, from investing and reading to meditation and a range of sports, because I want to grow as a whole person and not only as a professional.",
-          "I hope to keep growing in every direction for the rest of my life."
+          "Graduating didn’t end school for me. It just ended the grades.",
+          "Since then I’ve learned investing, read widely, picked up meditation, and tried all kinds of sports. I want to grow as a whole person, not only as a professional."
         ]
       },
       {
         "title": "Someone people can talk to",
         "text": [
-          "I think of myself as an energetic, warm person, and the people around me often come to me when they are facing a problem. Many times, after we talk, I see them leave a little lighter, and nothing makes me happier than that.",
-          "Whether I am mentoring a junior analyst or talking through a problem with a friend, being able to help is one of the things that makes my life feel meaningful."
+          "When people around me are stuck, they often come to talk. I’m energetic, and I hope I’m warm.",
+          "Watching someone leave a conversation a little lighter than they came in is one of my favorite feelings. Mentoring junior analysts gives me the same feeling at work."
         ]
       }
     ],
@@ -471,9 +443,30 @@
         },
         {
           "title": "My life decision ended in a tie.",
-          "text": "When I had to decide whether to stay or move, I did what an optimization person does: I built a scoring sheet and rated both options on every dimension I cared about. The totals came out almost the same, because each place was better in different ways. So I chose to go with the flow, and I remind myself that things are unfolding as they’re meant to. The scores showed me the trade-offs. Living well with the choice is up to me."
+          "text": "When I had to decide whether to stay or move, I did what an optimization person does: I built a scoring sheet and weighed both options on every dimension I cared about. The totals came out almost the same. So I chose to go with the flow, and I remind myself that everything is unfolding as it should. The scores showed me the trade-offs. Living well with the choice is up to me."
         }
       ]
     }
+  },
+  "mission": "The world has enough resources. The hard part is using them well.",
+  "positioning": "I build AI and optimization for the supply chains behind data centers, the physical backbone of the AI economy.",
+  "credentials": [
+    "MIT Operations Research Center",
+    "Purdue Industrial Engineering",
+    "Accenture",
+    "BMW Group capstone"
+  ],
+  "beyond": [
+    "I message the organizers after the deadline has passed.",
+    "I once built a scoring model for a life decision. It came out a tie.",
+    "Friends come to me when they’re stuck, and I love that they do."
+  ],
+  "experience_hero": {
+    "title": "Five years inside the data center supply chain.",
+    "lead": "From industrial engineering at Purdue to the Operations Research Center at MIT to Accenture, where I lead planning analytics for a technology client’s data center supply chain."
+  },
+  "research_hero": {
+    "title": "When does better evidence lead to better decisions?",
+    "lead": "I work on the decisions that keep data center supply chains running: what to stock, which disruption to fix first, and what to do with hardware that comes back. My research builds AI and optimization methods for those decisions and holds them to one test: does a real decision get better?"
   }
 }

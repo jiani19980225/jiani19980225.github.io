@@ -6,8 +6,8 @@ Research and professional portfolio for GitHub Pages, written so collaborators a
 
 ## Pages
 
-- `index.html`: profile links (Google Scholar, LinkedIn, GitHub, email, CV), achievement stats, a copyable short bio, highlights, research program, selected papers, and a one-line philosophy.
-- `research.html`: the research program: one guiding question, why the work matters (with alignment to the U.S. Critical and Emerging Technologies List), and three streams (motivation, origin in practice, papers).
+- `index.html`: mission and positioning, profile links, credentials, achievement stats, three research directions, lead-author papers, a short "beyond the work" section, and a copyable bio for anyone writing about the work.
+- `research.html`: one guiding question, three research directions (why each matters, where it comes from in practice, papers), and alignment with the U.S. Critical and Emerging Technologies List.
 - `philosophy.html`: life stories, two stories about acting and deciding ("In practice"), and a closing belief. First-person stories are limited to experiences Jiani He has confirmed.
 - `publications.html`: all papers grouped by first-author and accepted (an under-review group appears when needed), with DOIs, code, and BibTeX.
 - `experience.html`: experience, education, service and mentoring, skills.

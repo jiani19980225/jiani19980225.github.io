@@ -1,6 +1,21 @@
 (() => {
   'use strict';
   const root = document.documentElement;
+
+  const copyText = async (text, source, status, done) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      status.textContent = done;
+    } catch (_) {
+      const range = document.createRange();
+      range.selectNodeContents(source);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      status.textContent = 'Text selected. Press Ctrl+C or ⌘C to copy.';
+    }
+  };
+
   const themeButton = document.querySelector('.theme-toggle');
   const updateThemeLabel = () => {
     const dark = root.dataset.theme === 'dark';
@@ -13,37 +28,40 @@
     try { localStorage.setItem('jiani-theme', root.dataset.theme); } catch (_) {}
     updateThemeLabel();
   });
+
   const menu = document.querySelector('.primary-nav');
   const menuButton = document.querySelector('.menu-toggle');
-  const closeMenu = () => {
-    menu?.classList.remove('open');
-    menuButton?.setAttribute('aria-expanded', 'false');
-    if (menuButton) menuButton.textContent = 'Menu';
+  const setMenu = open => {
+    menu?.classList.toggle('open', open);
+    menuButton?.setAttribute('aria-expanded', String(open));
+    menuButton?.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   };
-  menuButton?.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.textContent = open ? 'Close' : 'Menu';
-  });
-  menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  menuButton?.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && menu?.classList.contains('open')) {
-      closeMenu();
+      setMenu(false);
       menuButton.focus();
     }
   });
-  document.querySelectorAll('.filter-button').forEach(button => {
+
+  const filterButtons = document.querySelectorAll('.filter-button');
+  filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-      document.querySelectorAll('.filter-button').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      const filter = button.dataset.filter;
+      filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
       let count = 0;
-      document.querySelectorAll('.publication').forEach(paper => {
-        const visible = button.dataset.filter === 'All' || paper.dataset.category === button.dataset.filter;
-        paper.hidden = !visible;
-        if (visible) count++;
+      document.querySelectorAll('.pub').forEach(paper => {
+        paper.hidden = filter !== 'all' && paper.dataset.stream !== filter;
+        if (!paper.hidden) count++;
       });
-      document.querySelector('.count').textContent = `${count} ${count === 1 ? 'work' : 'works'}`;
+      document.querySelectorAll('.pub-group').forEach(group => {
+        group.hidden = !group.querySelector('.pub:not([hidden])');
+      });
+      document.querySelector('.count').textContent = `${count} ${count === 1 ? 'paper' : 'papers'}`;
     });
   });
+
   const dialog = document.querySelector('.citation-dialog');
   const citationData = document.getElementById('citation-data');
   if (dialog && citationData) {
@@ -58,19 +76,19 @@
       });
     });
     dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
-    dialog.querySelector('.copy-citation').addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(pre.textContent);
-        status.textContent = 'Citation copied to clipboard.';
-      } catch (_) {
-        const range = document.createRange();
-        range.selectNodeContents(pre);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-        status.textContent = 'Citation selected. Press Ctrl+C or ⌘C to copy.';
-      }
+    dialog.addEventListener('click', event => {
+      const box = dialog.getBoundingClientRect();
+      const outside = event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom;
+      if (event.target === dialog && outside) dialog.close();
     });
+    dialog.querySelector('.copy-citation').addEventListener('click', () => copyText(pre.textContent, pre, status, 'Citation copied to clipboard.'));
   }
+
+  document.querySelectorAll('.copy-bio').forEach(button => {
+    const source = document.querySelector(button.dataset.copy);
+    const status = button.parentElement.querySelector('.copy-status');
+    button.addEventListener('click', () => copyText(source.textContent, source, status, 'Bio copied to clipboard.'));
+  });
+
   document.querySelector('.print-button')?.addEventListener('click', () => window.print());
 })();

@@ -1,83 +1,231 @@
 {
   "name": "Jiani (Elva) He",
+  "short_name": "Jiani He",
+  "headline": "Data Science Consultant · Independent Researcher",
   "email": "jiani19980225@gmail.com",
   "location": "Seattle, Washington",
   "scholar": "https://scholar.google.com/citations?user=QoV_NDIAAAAJ&hl=en",
   "linkedin": "https://www.linkedin.com/in/jianihe",
   "github": "https://github.com/jiani19980225",
   "testflight": "https://testflight.apple.com/join/h7WgfPgM",
+  "photo": "",
   "verto_role": "",
   "updated": "October 2026",
+  "stats": [
+    {"value": "6", "label": "Research papers in 2026"},
+    {"value": "5", "label": "Conference acceptances"},
+    {"value": "10+", "label": "Journal manuscripts peer-reviewed"},
+    {"value": "5", "label": "Years of applied data science"}
+  ],
+  "bio": "Jiani (Elva) He is a data scientist and independent researcher based in Seattle, Washington. As a Data Science Consultant at Accenture, Jiani has spent five years applying analytics, optimization, and AI to forward and reverse logistics for a technology client. Jiani’s research asks how evidence becomes better operational decisions, spanning demand-forecast stability, causal decision support, trustworthy AI deployment, and AI-assisted reverse logistics. This work includes six 2026 papers with collaborators, among them a first-author paper accepted at AIBThings 2026, and Jiani has peer-reviewed more than ten journal manuscripts. Jiani holds an MS in Business Analytics from MIT (Operations Research Center) and a BS in Industrial Engineering from Purdue University.",
+  "highlights": [
+    "<strong>First-author paper</strong> on semantic signals for reverse-logistics inspection, accepted at AIBThings 2026",
+    "<strong>Four more accepted conference papers</strong> with collaborators: IEOM 2026 (two papers), ICECCME 2026, and ICEME 2026",
+    "<strong>Peer reviewer</strong> for more than ten journal manuscripts",
+    "<strong>Five years at Accenture</strong> applying SQL, optimization, and LLM workflows to supply-chain decisions; mentored five junior analysts",
+    "<strong>MIT</strong> MS in Business Analytics (GPA 4.7/5.0) and <strong>Purdue</strong> BS in Industrial Engineering (Honors &amp; Distinction, GPA 3.9/4.0)",
+    "Part of the team building <strong>Verto Mind</strong>, an AI cognitive-reframing app in TestFlight beta"
+  ],
+  "streams": [
+    {
+      "id": "forecast",
+      "label": "Forecasting & planning",
+      "name": "Forecasting & Planning Value",
+      "question": "When do better predictions actually produce better plans?",
+      "motivation": "A more accurate forecast is not automatically a better planning input. Forecasts that swing from one run to the next create churn in replenishment, and a new analytical capability creates value only if it changes the plans that are executed.",
+      "problems": ["Forecast stability", "Forecast-to-plan replay", "Late-delivery risk", "Early warning", "Planning value attribution"],
+      "practice": "Analyzing demand, stock targets, and shortages for a technology client’s supply network"
+    },
+    {
+      "id": "decide",
+      "label": "Decision support & trustworthy AI",
+      "name": "Causal Decision Support & Trustworthy AI",
+      "question": "Which action should come next, and when can the evidence behind it be trusted?",
+      "motivation": "Detecting a disruption is not the same as knowing which intervention recovers the most value. Good decisions need causal evidence and explicit costs and delays. AI-enabled decisions also need provenance that people can review before deployment.",
+      "problems": ["Causal intervention ranking", "Net-value objectives", "Partial & delayed information", "Deployment assurance", "LLM routing provenance"],
+      "practice": "Rebalancing inventory across sites and standardizing enterprise LLM workflows"
+    },
+    {
+      "id": "recover",
+      "label": "Reverse logistics",
+      "name": "AI-Assisted Reverse Logistics",
+      "question": "How can unstructured signals guide inspection and recovery when labor is scarce?",
+      "motivation": "Returned assets arrive with uncertain condition and free-text notes. Choosing how deeply to inspect each one, and whether it goes to reuse, resale, recycling, or disposal, is a resource-allocation problem under partial information.",
+      "problems": ["Semantic signals", "Inspection depth", "Recovery allocation", "Condition uncertainty", "Labor-constrained operations"],
+      "practice": "Tracking reverse-logistics cycle times and guiding asset-disposition decisions"
+    }
+  ],
+  "groups": [
+    {"id": "first", "title": "First-author research", "eyebrow": "Lead author"},
+    {"id": "accepted", "title": "Accepted conference papers", "eyebrow": "Accepted with collaborators"},
+    {"id": "review", "title": "Under review", "eyebrow": "Submitted manuscripts"}
+  ],
   "publications": [
     {
       "id": "ssads",
       "title": "Semantic Signal-Assisted Inspection and Recovery Allocation in Reverse Logistics",
       "authors": ["Jiani He", "Dingyan Shang", "Yihua Xu", "Shiqi Huang", "Yan Lyu", "Jize Li", "Shangjing Tang"],
       "year": 2026,
-      "category": "Recovery & logistics",
-      "status": "Accepted · AIBThings 2026",
-      "record": "Public preprint · arXiv:2609.02116",
-      "summary": "Using return notes to guide inspection depth and recovery allocation when asset condition is uncertain and inspection labor is limited. Evaluated in three synthetic reverse-logistics scenarios.",
-      "url": "https://arxiv.org/abs/2609.02116",
-      "code": "https://github.com/jiani19980225/ssads-reverse-logistics",
+      "group": "first",
+      "stream": "recover",
       "first_author": true,
-      "bibtex": "@misc{he2026semantic,\n  title={Semantic Signal-Assisted Inspection and Recovery Allocation in Reverse Logistics},\n  author={He, Jiani and Shang, Dingyan and Xu, Yihua and Huang, Shiqi and Lyu, Yan and Li, Jize and Tang, Shangjing},\n  year={2026},\n  eprint={2609.02116},\n  archivePrefix={arXiv},\n  url={https://arxiv.org/abs/2609.02116}\n}"
+      "status": "Accepted · AIBThings 2026",
+      "venue": "4th International Conference on Artificial Intelligence, Blockchain, and Internet of Things (AIBThings 2026)",
+      "record": "arXiv:2609.02116",
+      "url": "https://arxiv.org/abs/2609.02116",
+      "doi": "10.48550/arXiv.2609.02116",
+      "code": "https://github.com/jiani19980225/ssads-reverse-logistics",
+      "summary": "Uses semantic signals in return notes to guide inspection depth and recovery allocation when asset condition is uncertain and inspection labor is limited. Evaluated in three synthetic reverse-logistics scenarios.",
+      "bibtex": "@misc{he2026semantic,\n  title={Semantic Signal-Assisted Inspection and Recovery Allocation in Reverse Logistics},\n  author={He, Jiani and Shang, Dingyan and Xu, Yihua and Huang, Shiqi and Lyu, Yan and Li, Jize and Tang, Shangjing},\n  year={2026},\n  eprint={2609.02116},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2609.02116},\n  url={https://arxiv.org/abs/2609.02116}\n}"
     },
     {
       "id": "planning",
       "title": "When Does an Added Planning Capability Create Operational Value? An Observable Evidence Standard",
       "authors": ["Yihua Xu", "Yan Lyu", "Jize Li", "Jiani He", "You Lin", "Yidan Hu", "Rubing Qiang"],
       "year": 2026,
-      "category": "Decision systems",
-      "status": "Accepted & presented · IEOM Irvine 2026",
-      "record": "Public preprint · arXiv:2610.27305",
-      "summary": "An evidence standard for assessing whether an added planning capability changes executed plans and improves operational outcomes, evaluated through forecast-to-plan replay on retail datasets.",
-      "url": "https://arxiv.org/abs/2610.27305",
-      "code": "",
+      "group": "accepted",
+      "stream": "forecast",
       "first_author": false,
-      "bibtex": "@misc{xu2026planning,\n  title={When Does an Added Planning Capability Create Operational Value? An Observable Evidence Standard},\n  author={Xu, Yihua and Lyu, Yan and Li, Jize and He, Jiani and Lin, You and Hu, Yidan and Qiang, Rubing},\n  year={2026},\n  eprint={2610.27305},\n  archivePrefix={arXiv},\n  url={https://arxiv.org/abs/2610.27305}\n}"
+      "status": "Accepted & presented · IEOM Irvine 2026",
+      "venue": "3rd World Congress on Industrial Engineering and Operations Management · Irvine, California",
+      "record": "arXiv:2610.27305",
+      "url": "https://arxiv.org/abs/2610.27305",
+      "doi": "10.48550/arXiv.2610.27305",
+      "code": "",
+      "summary": "An observable evidence standard for deciding whether an added planning capability changes executed plans and improves operational outcomes, evaluated through forecast-to-plan replay on retail datasets.",
+      "bibtex": "@misc{xu2026planning,\n  title={When Does an Added Planning Capability Create Operational Value? An Observable Evidence Standard},\n  author={Xu, Yihua and Lyu, Yan and Li, Jize and He, Jiani and Lin, You and Hu, Yidan and Qiang, Rubing},\n  year={2026},\n  eprint={2610.27305},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2610.27305},\n  url={https://arxiv.org/abs/2610.27305}\n}"
     },
     {
-      "id": "routing",
-      "title": "Policy-Bounded, Provenance-Aware Deployment Assurance for LLM Request Routing",
-      "authors": ["Yihua Xu", "Jiani He", "Ishita Chirag Talati", "Yitian Qian", "Youting Wang", "Zhenyu Xu", "Dingyan Shang"],
+      "id": "late-delivery",
+      "title": "From Weak Signals to Supply Chain Reliability Risk: A Feedback-Driven Risk Accumulation Framework for Late-Delivery Prediction, Early Warning, and Risk Prioritization",
+      "authors": ["Yan Lyu", "Yihua Xu", "Jiani He", "Jize Li", "Rubing Qiang", "Yidan Hu"],
       "year": 2026,
-      "category": "Decision systems",
-      "status": "Preprint · SSRN",
-      "record": "SSRN abstract 7554440",
-      "summary": "Research on policy boundaries, evidence provenance, and deployment assurance for routing requests to large language models.",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7554440",
-      "code": "",
+      "group": "accepted",
+      "stream": "forecast",
       "first_author": false,
-      "bibtex": "@misc{xu2026routing,\n  title={Policy-Bounded, Provenance-Aware Deployment Assurance for LLM Request Routing},\n  author={Xu, Yihua and He, Jiani and Talati, Ishita Chirag and Qian, Yitian and Wang, Youting and Xu, Zhenyu and Shang, Dingyan},\n  year={2026},\n  url={https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7554440}\n}"
+      "status": "Accepted · IEOM Irvine 2026",
+      "venue": "3rd World Congress on Industrial Engineering and Operations Management · Irvine, California",
+      "record": "Accepted manuscript · not yet publicly available",
+      "url": "",
+      "doi": "",
+      "code": "",
+      "summary": "A leakage-controlled, feedback-driven risk-accumulation framework that turns weak operational signals into late-delivery predictions, early warnings, and cost-sensitive risk prioritization.",
+      "bibtex": ""
     },
     {
       "id": "dacri",
       "title": "DACRI: Decision-Aware Causal Intervention Ranking for Critical Supply Chains",
       "authors": ["Shiqi Huang", "Jiani He", "Dingyan Shang", "Yihua Xu", "Jize Li", "Yan Lyu", "Lashimi Muraleedharan Nair"],
       "year": 2026,
-      "category": "Decision systems",
-      "status": "Accepted for presentation · ICECCME 2026",
-      "record": "Public preprint · arXiv:2608.11154",
-      "summary": "Ranking supply-chain interventions by recoverable net value, using a controlled synthetic benchmark with causal ground truth and explicit intervention costs, delays, and uncertainty.",
-      "url": "https://arxiv.org/abs/2608.11154",
-      "code": "https://github.com/jiani19980225/dacri-criticalscm-bench",
+      "group": "accepted",
+      "stream": "decide",
       "first_author": false,
-      "bibtex": "@misc{huang2026dacri,\n  title={DACRI: Decision-Aware Causal Intervention Ranking for Critical Supply Chains},\n  author={Huang, Shiqi and He, Jiani and Shang, Dingyan and Xu, Yihua and Li, Jize and Lyu, Yan and Nair, Lashimi Muraleedharan},\n  year={2026},\n  eprint={2608.11154},\n  archivePrefix={arXiv},\n  url={https://arxiv.org/abs/2608.11154}\n}"
+      "status": "Accepted for presentation · ICECCME 2026",
+      "venue": "International Conference on Electrical, Computer, Communications and Mechatronics Engineering (ICECCME 2026) · 15–17 October 2026 · Bali, Indonesia",
+      "record": "arXiv:2608.11154",
+      "url": "https://arxiv.org/abs/2608.11154",
+      "doi": "10.48550/arXiv.2608.11154",
+      "code": "https://github.com/jiani19980225/dacri-criticalscm-bench",
+      "summary": "Ranks supply-chain interventions by recoverable net value, using a controlled synthetic benchmark with causal ground truth and explicit intervention costs, delays, and uncertainty. Identifies when adaptive ranking pays off and when simpler structural policies remain preferable.",
+      "bibtex": "@misc{huang2026dacri,\n  title={DACRI: Decision-Aware Causal Intervention Ranking for Critical Supply Chains},\n  author={Huang, Shiqi and He, Jiani and Shang, Dingyan and Xu, Yihua and Li, Jize and Lyu, Yan and Nair, Lashimi Muraleedharan},\n  year={2026},\n  eprint={2608.11154},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2608.11154},\n  url={https://arxiv.org/abs/2608.11154}\n}"
     },
     {
       "id": "forecasting",
       "title": "Accuracy-Preserving Stability Regularization for Large-Scale Retail Demand Forecasting",
       "authors": ["Jize Li", "Jiani He", "Dishu Yang", "Dingyan Shang", "Jingjing Liu", "Shiqi Huang"],
       "year": 2026,
-      "category": "Forecasting",
-      "status": "Accepted for presentation · ICEME 2026",
-      "record": "Public preprint · arXiv:2607.13331",
-      "summary": "Training-time regularization for steadier retail demand forecasts while preserving point accuracy, evaluated on selected M5 demand series at multiple scales.",
-      "url": "https://arxiv.org/abs/2607.13331",
-      "code": "https://github.com/jizeli-hub/accuracy-preserving-stability-forecasting",
+      "group": "accepted",
+      "stream": "forecast",
       "first_author": false,
-      "bibtex": "@misc{li2026stability,\n  title={Accuracy-Preserving Stability Regularization for Large-Scale Retail Demand Forecasting},\n  author={Li, Jize and He, Jiani and Yang, Dishu and Shang, Dingyan and Liu, Jingjing and Huang, Shiqi},\n  year={2026},\n  eprint={2607.13331},\n  archivePrefix={arXiv},\n  url={https://arxiv.org/abs/2607.13331}\n}"
+      "status": "Accepted for presentation · ICEME 2026",
+      "venue": "ICEME 2026",
+      "record": "arXiv:2607.13331",
+      "url": "https://arxiv.org/abs/2607.13331",
+      "doi": "10.48550/arXiv.2607.13331",
+      "code": "https://github.com/jizeli-hub/accuracy-preserving-stability-forecasting",
+      "summary": "Training-time regularization that makes retail demand forecasts steadier from run to run while preserving point accuracy, evaluated on selected M5 demand series at multiple scales.",
+      "bibtex": "@misc{li2026stability,\n  title={Accuracy-Preserving Stability Regularization for Large-Scale Retail Demand Forecasting},\n  author={Li, Jize and He, Jiani and Yang, Dishu and Shang, Dingyan and Liu, Jingjing and Huang, Shiqi},\n  year={2026},\n  eprint={2607.13331},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2607.13331},\n  url={https://arxiv.org/abs/2607.13331}\n}"
+    },
+    {
+      "id": "routing",
+      "title": "Policy-Bounded, Provenance-Aware Deployment Assurance for LLM Request Routing",
+      "authors": ["Yihua Xu", "Jiani He", "Ishita Chirag Talati", "Yitian Qian", "Youting Wang", "Zhenyu Xu", "Dingyan Shang"],
+      "year": 2026,
+      "group": "review",
+      "stream": "decide",
+      "first_author": false,
+      "status": "Under review · ICOAI 2026",
+      "venue": "Submitted to ICOAI 2026 · public preprint on SSRN",
+      "record": "SSRN 7554440",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7554440",
+      "doi": "10.2139/ssrn.7554440",
+      "code": "",
+      "summary": "Studies how policy boundaries, provenance, and evidence identity determine whether an LLM request-routing package is qualified for deployment and for later updates.",
+      "bibtex": "@misc{xu2026routing,\n  title={Policy-Bounded, Provenance-Aware Deployment Assurance for LLM Request Routing},\n  author={Xu, Yihua and He, Jiani and Talati, Ishita Chirag and Qian, Yitian and Wang, Youting and Xu, Zhenyu and Shang, Dingyan},\n  year={2026},\n  publisher={SSRN},\n  doi={10.2139/ssrn.7554440},\n  url={https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7554440}\n}"
     }
+  ],
+  "experience": [
+    {
+      "org": "Accenture",
+      "role": "Data Science Consultant",
+      "dates": "Jun 2024 — Present",
+      "place": "Seattle, Washington",
+      "context": "Forward and reverse logistics for a technology client, connecting operational analysis with planning and execution.",
+      "bullets": [
+        "Lead planning analyses, manage client relationships, and present recommendations to senior leaders.",
+        "Analyze reverse-logistics cycle time and on-time delivery in SQL to identify bottlenecks; guide reuse, resale, recycling, or disposal decisions based on asset value and lifecycle stage.",
+        "Analyze stock targets, available inventory, and demand; use an optimization engine to rebalance inventory across sites, address shortages, and maintain adequate supply.",
+        "Plan quality-assurance component quantities using demand and bill-of-materials data; define service metrics and support automated inventory adjustments.",
+        "Standardize prompts and analytical queries for enterprise LLM assistants; develop reusable guides and train analysts in AI-assisted analysis."
+      ]
+    },
+    {
+      "org": "Accenture",
+      "role": "Data Science Senior Analyst",
+      "dates": "Oct 2021 — May 2024",
+      "place": "Seattle, Washington",
+      "context": "",
+      "bullets": [
+        "Built SQL dashboards and shortage alerts to compare inventory with demand and inform transfers between sites.",
+        "Tracked reverse-logistics cycle times and on-time delivery; flagged bottlenecks and supported asset reuse, disposal, and recovery scheduling.",
+        "Investigated inventory imbalances and abnormal cycle times using SQL and statistical analysis; automated reporting and purchase-order workflows.",
+        "Across both Accenture roles, mentored five junior analysts in SQL, business problem solving, and client communication; led onboarding and team training."
+      ]
+    },
+    {
+      "org": "BMW Group",
+      "role": "Data Scientist Intern · MIT Capstone, Dynamic Vehicle Pricing",
+      "dates": "Feb — Aug 2021",
+      "place": "Cambridge, Massachusetts",
+      "context": "",
+      "bullets": [
+        "Modeled vehicle demand and cross-price elasticity in Python to recommend discounts by customer segment and sales channel; built Tableau pricing dashboards."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Massachusetts Institute of Technology",
+      "degree": "MS, Business Analytics · Operations Research Center",
+      "gpa": "GPA 4.7 / 5.0",
+      "date": "Aug 2021",
+      "place": "Cambridge, Massachusetts",
+      "detail": "Classification trees for 40,000 news articles (Python/Julia) and robust bike-allocation models (Julia). Analytics Lab: an NLP admissions Q&A pipeline for AdmitHub with response evaluation and human review."
+    },
+    {
+      "school": "Purdue University",
+      "degree": "BS, Industrial Engineering · Honors & Distinction",
+      "gpa": "GPA 3.9 / 4.0",
+      "date": "May 2020",
+      "place": "West Lafayette, Indiana",
+      "detail": "LSTM forecasting models (Keras) and reinforcement learning for sensor placement (Python/R)."
+    }
+  ],
+  "skills": [
+    {"area": "Tools", "items": ["SQL", "Python", "R", "Julia", "Keras", "Tableau", "AWS"]},
+    {"area": "Modeling", "items": ["Machine learning", "Forecasting", "Regression", "Classification", "Clustering", "Robust optimization"]},
+    {"area": "Analytics & BI", "items": ["Statistical analysis", "Root-cause analysis", "Data visualization", "Dashboards", "KPI design"]},
+    {"area": "AI", "items": ["Generative AI", "NLP", "LLM workflows", "Prompt & query design"]},
+    {"area": "Consulting", "items": ["Problem framing", "Client communication", "Stakeholder coordination", "Project delivery", "Mentoring"]}
   ]
 }

@@ -7,7 +7,8 @@ Research and professional portfolio for GitHub Pages, written so collaborators a
 ## Pages
 
 - `index.html`: profile links (Google Scholar, LinkedIn, GitHub, email, CV), achievement stats, a copyable short bio, highlights, research program, and selected papers.
-- `research.html`: the research program: one guiding question, three streams (motivation, origin in practice, problems, papers), and the research journey.
+- `research.html`: the research program: one guiding question, why the work matters (with alignment to the U.S. Critical and Emerging Technologies List), three streams (motivation, origin in practice, problems, papers), and the research journey.
+- `philosophy.html`: principles for research, working with people, and life.
 - `publications.html`: all papers grouped by first-author, accepted, and under review, with stream filters, DOIs, code, and BibTeX.
 - `experience.html`: experience, education, service and leadership, skills.
 - `cv.html` and `assets/Jiani_He_CV.pdf`: web and PDF CV.
@@ -16,7 +17,7 @@ Research and professional portfolio for GitHub Pages, written so collaborators a
 
 The published site is plain HTML, CSS, and JavaScript. Nothing needs to be installed to serve it.
 
-- `content.json`: all text content: profile links, stats, bio, highlights, research streams, publications, experience, education, skills. `photo` points to the portrait (`assets/headshot.jpg`); leave it empty to show the monogram instead.
+- `content.json`: all text content: profile links, stats, bio, highlights, research streams, importance and CET mapping, philosophy, publications, experience, education, skills. `photo` points to the portrait (`assets/headshot.jpg`); leave it empty to show the monogram instead.
 - `scripts/build.py`: page layouts. Run `python3 scripts/build.py` after editing content or templates, and commit the generated HTML files.
 - `scripts/build_cv.py`: regenerates the PDF CV from `content.json`. Requires `reportlab`.
 - `scripts/build_images.js`: regenerates `assets/og-image.png` (link preview) and `assets/apple-touch-icon.png`. Requires Playwright.
@@ -38,6 +39,7 @@ GitHub Pages serves the repository root from `main`. Pushing the generated files
 - Experience and education: the Jiani He Data Science Consultant resume. The phone number is intentionally left out.
 - Portrait: supplied by Jiani He; cropped to a square with image metadata removed.
 - Papers: public arXiv and SSRN records listed in `content.json`, and the Google Scholar profile https://scholar.google.com/citations?user=QoV_NDIAAAAJ&hl=en.
+- CET alignment: the February 2024 Critical and Emerging Technologies List Update (NSTC/OSTP) for AI subfield names, and Appendix A of the August 2026 National Security Science and Technology Strategy. The mapping to papers is the author's own.
 - Conference details for shared papers (the IEOM late-delivery manuscript, ICOAI submission of the routing paper, ICECCME dates and location, AIBThings full name): co-author Yihua Xu's public website, last verified 2026-10-26.
 
-Conference labels describe acceptance or presentation and do not claim final proceedings publication. Citation counts are deliberately not hardcoded. The site has no analytics, cookies, or backend; the theme preference is stored only in the visitor's browser.
+Accepted papers were accepted at conferences that have already taken place; proceedings are forthcoming, and the site does not claim final publication. Citation counts are deliberately not hardcoded. The site has no analytics, cookies, or backend; the theme preference is stored only in the visitor's browser.

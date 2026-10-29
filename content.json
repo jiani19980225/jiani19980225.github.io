@@ -31,6 +31,7 @@
   "highlights": [
     "<strong>First-author paper</strong> on semantic signals for reverse-logistics inspection, accepted at AIBThings 2026",
     "<strong>Four more accepted conference papers</strong> with collaborators: IEOM 2026 (two papers), ICECCME 2026, and ICEME 2026",
+    "<strong>National-priority research areas</strong>: AI for planning and decision making and AI assurance, both named as AI subfields on the U.S. Critical and Emerging Technologies List",
     "<strong>Peer reviewer</strong> for more than ten journal manuscripts",
     "<strong>Five years at Accenture</strong> applying SQL, optimization, and LLM workflows to supply-chain decisions; mentored five junior analysts",
     "<strong>MIT</strong> MS in Business Analytics (GPA 4.7/5.0) and <strong>Purdue</strong> BS in Industrial Engineering (Honors &amp; Distinction, GPA 3.9/4.0)"
@@ -123,7 +124,9 @@
       "doi": "10.48550/arXiv.2609.02116",
       "code": "https://github.com/jiani19980225/ssads-reverse-logistics",
       "summary": "Uses semantic signals in return notes to guide inspection depth and recovery allocation when asset condition is uncertain and inspection labor is limited. Evaluated in three synthetic reverse-logistics scenarios.",
-      "bibtex": "@misc{he2026semantic,\n  title={Semantic Signal-Assisted Inspection and Recovery Allocation in Reverse Logistics},\n  author={He, Jiani and Shang, Dingyan and Xu, Yihua and Huang, Shiqi and Lyu, Yan and Li, Jize and Tang, Shangjing},\n  year={2026},\n  eprint={2609.02116},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2609.02116},\n  url={https://arxiv.org/abs/2609.02116}\n}"
+      "bibtex": "@misc{he2026semantic,\n  title={Semantic Signal-Assisted Inspection and Recovery Allocation in Reverse Logistics},\n  author={He, Jiani and Shang, Dingyan and Xu, Yihua and Huang, Shiqi and Lyu, Yan and Li, Jize and Tang, Shangjing},\n  year={2026},\n  eprint={2609.02116},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2609.02116},\n  url={https://arxiv.org/abs/2609.02116}\n}",
+      "short": "Semantic-signal inspection and recovery allocation (first author)",
+      "proceedings": "Proceedings forthcoming"
     },
     {
       "id": "planning",
@@ -141,14 +144,16 @@
       "group": "accepted",
       "stream": "forecast",
       "first_author": false,
-      "status": "Accepted & presented · IEOM Irvine 2026",
+      "status": "Accepted · IEOM Irvine 2026",
       "venue": "3rd World Congress on Industrial Engineering and Operations Management · Irvine, California",
       "record": "arXiv:2610.27305",
       "url": "https://arxiv.org/abs/2610.27305",
       "doi": "10.48550/arXiv.2610.27305",
       "code": "",
       "summary": "An observable evidence standard for deciding whether an added planning capability changes executed plans and improves operational outcomes, evaluated through forecast-to-plan replay on retail datasets.",
-      "bibtex": "@misc{xu2026planning,\n  title={When Does an Added Planning Capability Create Operational Value? An Observable Evidence Standard},\n  author={Xu, Yihua and Lyu, Yan and Li, Jize and He, Jiani and Lin, You and Hu, Yidan and Qiang, Rubing},\n  year={2026},\n  eprint={2610.27305},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2610.27305},\n  url={https://arxiv.org/abs/2610.27305}\n}"
+      "bibtex": "@misc{xu2026planning,\n  title={When Does an Added Planning Capability Create Operational Value? An Observable Evidence Standard},\n  author={Xu, Yihua and Lyu, Yan and Li, Jize and He, Jiani and Lin, You and Hu, Yidan and Qiang, Rubing},\n  year={2026},\n  eprint={2610.27305},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2610.27305},\n  url={https://arxiv.org/abs/2610.27305}\n}",
+      "short": "Observable evidence standard for planning capabilities",
+      "proceedings": "Proceedings forthcoming"
     },
     {
       "id": "late-delivery",
@@ -172,7 +177,9 @@
       "doi": "",
       "code": "",
       "summary": "A leakage-controlled, feedback-driven risk-accumulation framework that turns weak operational signals into late-delivery predictions, early warnings, and cost-sensitive risk prioritization.",
-      "bibtex": ""
+      "bibtex": "",
+      "short": "Late-delivery risk prediction and early warning",
+      "proceedings": "Proceedings forthcoming"
     },
     {
       "id": "dacri",
@@ -190,14 +197,16 @@
       "group": "accepted",
       "stream": "decide",
       "first_author": false,
-      "status": "Accepted for presentation · ICECCME 2026",
+      "status": "Accepted · ICECCME 2026",
       "venue": "International Conference on Electrical, Computer, Communications and Mechatronics Engineering (ICECCME 2026) · 15–17 October 2026 · Bali, Indonesia",
       "record": "arXiv:2608.11154",
       "url": "https://arxiv.org/abs/2608.11154",
       "doi": "10.48550/arXiv.2608.11154",
       "code": "https://github.com/jiani19980225/dacri-criticalscm-bench",
       "summary": "Ranks supply-chain interventions by recoverable net value, using a controlled synthetic benchmark with causal ground truth and explicit intervention costs, delays, and uncertainty. Identifies when adaptive ranking pays off and when simpler structural policies remain preferable.",
-      "bibtex": "@misc{huang2026dacri,\n  title={DACRI: Decision-Aware Causal Intervention Ranking for Critical Supply Chains},\n  author={Huang, Shiqi and He, Jiani and Shang, Dingyan and Xu, Yihua and Li, Jize and Lyu, Yan and Nair, Lashimi Muraleedharan},\n  year={2026},\n  eprint={2608.11154},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2608.11154},\n  url={https://arxiv.org/abs/2608.11154}\n}"
+      "bibtex": "@misc{huang2026dacri,\n  title={DACRI: Decision-Aware Causal Intervention Ranking for Critical Supply Chains},\n  author={Huang, Shiqi and He, Jiani and Shang, Dingyan and Xu, Yihua and Li, Jize and Lyu, Yan and Nair, Lashimi Muraleedharan},\n  year={2026},\n  eprint={2608.11154},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2608.11154},\n  url={https://arxiv.org/abs/2608.11154}\n}",
+      "short": "DACRI: decision-aware causal intervention ranking",
+      "proceedings": "Proceedings forthcoming"
     },
     {
       "id": "forecasting",
@@ -214,14 +223,16 @@
       "group": "accepted",
       "stream": "forecast",
       "first_author": false,
-      "status": "Accepted for presentation · ICEME 2026",
+      "status": "Accepted · ICEME 2026",
       "venue": "ICEME 2026",
       "record": "arXiv:2607.13331",
       "url": "https://arxiv.org/abs/2607.13331",
       "doi": "10.48550/arXiv.2607.13331",
       "code": "https://github.com/jizeli-hub/accuracy-preserving-stability-forecasting",
       "summary": "Training-time regularization that makes retail demand forecasts steadier from run to run while preserving point accuracy, evaluated on selected M5 demand series at multiple scales.",
-      "bibtex": "@misc{li2026stability,\n  title={Accuracy-Preserving Stability Regularization for Large-Scale Retail Demand Forecasting},\n  author={Li, Jize and He, Jiani and Yang, Dishu and Shang, Dingyan and Liu, Jingjing and Huang, Shiqi},\n  year={2026},\n  eprint={2607.13331},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2607.13331},\n  url={https://arxiv.org/abs/2607.13331}\n}"
+      "bibtex": "@misc{li2026stability,\n  title={Accuracy-Preserving Stability Regularization for Large-Scale Retail Demand Forecasting},\n  author={Li, Jize and He, Jiani and Yang, Dishu and Shang, Dingyan and Liu, Jingjing and Huang, Shiqi},\n  year={2026},\n  eprint={2607.13331},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2607.13331},\n  url={https://arxiv.org/abs/2607.13331}\n}",
+      "short": "Accuracy-preserving stability regularization for forecasting",
+      "proceedings": "Proceedings forthcoming"
     },
     {
       "id": "routing",
@@ -246,7 +257,9 @@
       "doi": "10.2139/ssrn.7554440",
       "code": "",
       "summary": "Studies how policy boundaries, provenance, and evidence identity determine whether an LLM request-routing package is qualified for deployment and for later updates.",
-      "bibtex": "@misc{xu2026routing,\n  title={Policy-Bounded, Provenance-Aware Deployment Assurance for LLM Request Routing},\n  author={Xu, Yihua and He, Jiani and Talati, Ishita Chirag and Qian, Yitian and Wang, Youting and Xu, Zhenyu and Shang, Dingyan},\n  year={2026},\n  publisher={SSRN},\n  doi={10.2139/ssrn.7554440},\n  url={https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7554440}\n}"
+      "bibtex": "@misc{xu2026routing,\n  title={Policy-Bounded, Provenance-Aware Deployment Assurance for LLM Request Routing},\n  author={Xu, Yihua and He, Jiani and Talati, Ishita Chirag and Qian, Yitian and Wang, Youting and Xu, Zhenyu and Shang, Dingyan},\n  year={2026},\n  publisher={SSRN},\n  doi={10.2139/ssrn.7554440},\n  url={https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7554440}\n}",
+      "short": "Deployment assurance for LLM request routing",
+      "proceedings": ""
     }
   ],
   "experience": [
@@ -359,5 +372,155 @@
         "Mentoring"
       ]
     }
-  ]
+  ],
+  "importance": {
+    "title": "Decisions that keep critical systems running.",
+    "lead": "Supply chains and AI systems now sit underneath much of the economy. When a forecast swings without reason, a disruption is met with the wrong intervention, or an AI recommendation cannot be traced, the cost shows up as shortages, idle capacity, discarded hardware, and lost trust. My research asks how to make these decisions measurably better, and how to show that they are.",
+    "pillars": [
+      {
+        "label": "Supply-chain resilience",
+        "title": "Acting on disruptions, not just detecting them",
+        "text": "Disruptions in critical supply chains ripple into manufacturing, health care, and national security. Planners need to know which intervention recovers the most value when information is partial and delayed, and they need forecasts steady enough to plan around. DACRI ranks interventions by the net value they recover; my forecasting and late-delivery work aims to give planners earlier, steadier signals.",
+        "papers": [
+          "dacri",
+          "forecasting",
+          "late-delivery"
+        ]
+      },
+      {
+        "label": "Trustworthy AI",
+        "title": "Evidence that AI improves real decisions",
+        "text": "As organizations bring AI into operational decisions, they need evidence that a new capability actually changes outcomes, and that its recommendations can be traced, reviewed, and governed before deployment. With collaborators, I have proposed an observable evidence standard for planning capabilities and a provenance-aware assurance framework for routing requests to large language models.",
+        "papers": [
+          "planning",
+          "routing"
+        ]
+      },
+      {
+        "label": "Recovering value",
+        "title": "A second life for returned technology",
+        "text": "Returned and retired electronics must be inspected and routed to reuse, resale, recycling, or disposal, usually with limited inspection labor. Better routing keeps usable hardware in service and recovers valuable materials instead of discarding them. My first-author paper shows how semantic signals in free-text return notes can direct inspection effort where it matters most.",
+        "papers": [
+          "ssads"
+        ]
+      }
+    ],
+    "cet_intro": "The U.S. Critical and Emerging Technologies (CET) List, maintained by the White House Office of Science and Technology Policy, identifies advanced technologies that are potentially significant to U.S. national security. Artificial intelligence is a CET area. The February 2024 update names AI subfields that correspond directly to this research, and artificial intelligence remains a priority area in the August 2026 update published with the National Security Science and Technology Strategy.",
+    "cet_rows": [
+      {
+        "subfield": "Planning, reasoning, and decision making",
+        "papers": [
+          "dacri",
+          "ssads",
+          "planning"
+        ]
+      },
+      {
+        "subfield": "AI assurance and assessment techniques",
+        "papers": [
+          "planning",
+          "routing"
+        ]
+      },
+      {
+        "subfield": "Technologies for improving AI safety, trust, security, and responsible use",
+        "papers": [
+          "routing"
+        ]
+      },
+      {
+        "subfield": "Synthetic data approaches for training, tuning, and testing",
+        "papers": [
+          "dacri",
+          "ssads"
+        ]
+      },
+      {
+        "subfield": "Machine learning",
+        "papers": [
+          "forecasting",
+          "late-delivery"
+        ]
+      },
+      {
+        "subfield": "Generative AI systems, multimodal and large language models",
+        "papers": [
+          "routing"
+        ]
+      }
+    ],
+    "cet_note": "Mapping by the author. The CET List names technology areas, not specific research.",
+    "sources": [
+      {
+        "label": "Critical and Emerging Technologies List Update (NSTC, February 2024)",
+        "url": "https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/02/Critical-and-Emerging-Technologies-List-2024-Update.pdf"
+      },
+      {
+        "label": "National Security Science & Technology Strategy, Appendix A (August 2026)",
+        "url": "https://www.whitehouse.gov/wp-content/uploads/2026/08/NSSTS-082026.pdf"
+      }
+    ]
+  },
+  "philosophy": {
+    "intro": "Many of the most useful things I know, I learned from operations: every system has constraints, information is never complete, and almost nothing should be thrown away too quickly. These are the principles I try to bring to research, to the people I work with, and to the rest of my life. Like any good model, they are a work in progress.",
+    "quote": "Optimization taught me that the best solution respects its constraints. I try to live that way: aim high, work within what is real, and keep improving.",
+    "groups": [
+      {
+        "id": "on-research",
+        "eyebrow": "On research",
+        "title": "How I approach research.",
+        "items": [
+          {
+            "title": "Judge a model by the decision it changes.",
+            "featured": true,
+            "text": "It is easy to fall in love with a clever method. I try to start from the decision someone actually has to make, and to measure success by whether that decision gets better. If nothing would change, the analysis isn’t finished."
+          },
+          {
+            "title": "Say exactly what you know.",
+            "text": "Evidence earns trust only when it is reported honestly: what was tested, what wasn’t, and how sure we are. I would rather make a smaller claim that holds than a bigger one that doesn’t."
+          },
+          {
+            "title": "Curiosity doesn’t need a title.",
+            "text": "My research grew out of questions from my day-to-day work that I couldn’t stop thinking about. You don’t need permission to be curious. You need a question you care about, good collaborators, and the patience to keep going."
+          }
+        ]
+      },
+      {
+        "id": "on-people",
+        "eyebrow": "On people",
+        "title": "How I work with others.",
+        "items": [
+          {
+            "title": "Leave people better than you found them.",
+            "text": "Some of the work I value most will never appear in a paper: helping junior analysts grow into confident problem solvers. Teaching someone to frame a problem well outlasts any single analysis I could hand them."
+          },
+          {
+            "title": "Make it useful to everyone at the table.",
+            "text": "A model that only its author understands rarely changes anything. I try to explain assumptions and limits in plain language, whether I’m talking with executives, engineers, or the people closest to the work."
+          }
+        ]
+      },
+      {
+        "id": "on-life",
+        "eyebrow": "On life",
+        "title": "What operations taught me about living.",
+        "items": [
+          {
+            "title": "Everything deserves a second life.",
+            "featured": true,
+            "text": "In reverse logistics, a returned device isn’t waste; it’s an asset whose next use hasn’t been decided yet. I try to treat setbacks the same way: inspect them honestly, keep what’s valuable, and route the rest toward something new."
+          },
+          {
+            "title": "Steady beats spectacular.",
+            "featured": true,
+            "text": "My forecasting research favors predictions that don’t swing wildly from week to week, because steadiness is what lets others plan. I try to be that kind of colleague and friend: consistent, reliable, and there when it counts."
+          },
+          {
+            "title": "Decide with the information you have.",
+            "text": "Waiting for perfect information is itself a decision, and usually an expensive one. I try to act on the best evidence available, stay open to new signals, and adjust without regret."
+          }
+        ]
+      }
+    ]
+  }
 }

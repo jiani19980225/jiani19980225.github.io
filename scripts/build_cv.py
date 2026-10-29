@@ -57,6 +57,7 @@ add(f"{escape(DATA['headline'])}<br/>{escape(DATA['location'])} | {escape(DATA['
 
 section('Research interests')
 add('Demand-forecast stability and planning value; causal decision support under partial information; trustworthy deployment of AI systems; AI-assisted reverse logistics.')
+add('This work corresponds to AI subfields on the U.S. Critical and Emerging Technologies List, including planning, reasoning, and decision making, and AI assurance and assessment techniques.')
 
 section('Professional experience')
 for x in DATA['experience']:
@@ -78,7 +79,7 @@ for g in DATA['groups']:
         authors = ', '.join(f'<b>{escape(a)}</b>' if a == 'Jiani He' else escape(a) for a in p['authors'])
         record = link(p['url'], p['record']) if p['url'] else escape(p['record'])
         story.append(KeepTogether([Paragraph(f'{n}. {authors}. {p["year"]}. “{escape(p["title"])}.” <i>{escape(p["venue"])}</i>. {record}. '
-                                             f'<font color="{GOLD}"><b>{escape(p["status"])}</b></font>', S['pub'])]))
+                                             f'<font color="{GOLD}"><b>{escape(p["status"] + ("; " + p["proceedings"].lower() if p["proceedings"] else ""))}</b></font>', S['pub'])]))
 
 section('Service & mentoring')
 add('• Peer reviewer for 10+ journal manuscripts.', 'bullet')

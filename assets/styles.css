@@ -337,6 +337,56 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .citation-dialog pre{margin:22px 0;padding:18px;border-radius:14px;background:var(--surface);border:1px solid var(--line);font-size:12px;line-height:1.75;white-space:pre-wrap;overflow-wrap:anywhere}
 .copy-citation+.copy-status{margin-top:10px}
 
+/* ---------- why this work matters ---------- */
+.badge-note{color:var(--muted);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line-strong)}
+.cet-strip{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:20px;padding:22px 26px;border-radius:20px;background:var(--surface);border:1px solid var(--card-edge);border-left:3px solid var(--gold)}
+.cet-strip-label{margin-bottom:10px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-ink)}
+.impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.impact{display:flex;flex-direction:column;padding:30px}
+.impact-label{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--steel-ink)}
+.impact h3{margin-top:12px;font-family:var(--serif);font-size:24px;font-weight:500;line-height:1.25}
+.impact-text{margin:12px 0 20px!important;font-size:15px;line-height:1.75}
+.impact-papers{margin-top:auto!important;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;line-height:1.5}
+.impact-papers span{display:block;margin-bottom:6px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink)}
+.impact-papers a,.cet-map dd a{display:block;margin-top:4px;color:var(--steel-ink);font-weight:500;text-decoration:underline;text-decoration-color:var(--steel-line);text-underline-offset:3px}
+.cet{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:44px;margin-top:20px;padding:40px;border-top:3px solid var(--gold)}
+.cet-head h3{margin-top:12px;font-family:var(--serif);font-size:clamp(24px,2.4vw,30px);font-weight:500;line-height:1.2}
+.cet-head>p:not(.eyebrow){margin-top:14px;font-size:15px;line-height:1.75}
+.cet-sources{list-style:none;padding:0;margin-top:18px;font-size:13.5px;line-height:1.5}
+.cet-sources li+li{margin-top:8px}
+.cet-sources a{color:var(--steel-ink);text-decoration:underline;text-decoration-color:var(--steel-line);text-underline-offset:3px}
+.cet-map>div{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px;padding:16px 0;border-top:1px solid var(--line)}
+.cet-map>div:first-child{border-top:0;padding-top:0}
+.cet-map dt{font-family:var(--serif);font-size:18px;line-height:1.35;color:var(--ink)}
+.cet-map dd{font-size:14px}
+.cet-map dd a:first-child{margin-top:0}
+.cet-tag{display:block;margin-bottom:4px;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink)}
+.cet-note{grid-column:1/-1;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+
+/* ---------- philosophy ---------- */
+.beliefs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.belief h3{margin-top:14px;font-family:var(--serif);font-size:23px;font-weight:500;line-height:1.28}
+.belief p{margin-top:10px;font-size:15px;line-height:1.75}
+.principle-num{font-family:var(--serif);font-size:34px;line-height:1;color:var(--gold-ink)}
+.philo-hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(220px,.55fr);gap:56px;align-items:center;padding:72px 0 76px}
+.philo-hero h1{margin-top:18px}
+.philo-intro{max-width:680px;margin-top:22px;font-family:var(--serif);font-size:clamp(20px,2vw,24px);line-height:1.55;color:var(--ink)}
+.philo-portrait{justify-self:center;text-align:center}
+.philo-portrait .avatar{width:220px;height:220px;padding:5px}
+.philo-portrait figcaption{margin-top:14px;font-size:13px;color:var(--muted)}
+.philo-group{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1.6fr);gap:56px;align-items:start}
+.philo-group header{position:sticky;top:112px}
+.philo-group h2{margin-top:14px;font-size:clamp(28px,3vw,40px)}
+.principles{list-style:none;padding:0}
+.principle{display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px;padding:28px 0;border-top:1px solid var(--line)}
+.principle:first-child{padding-top:4px;border-top:0}
+.principle h3{font-family:var(--serif);font-size:clamp(23px,2.2vw,29px);font-weight:500;line-height:1.25}
+.principle p{max-width:640px;margin-top:10px;font-size:16.5px;line-height:1.8}
+.closing-quote{max-width:920px;margin:0}
+.closing-quote p{font-family:var(--serif);font-size:clamp(26px,3vw,38px);font-style:italic;line-height:1.35;color:var(--on-navy)}
+.closing-quote p::before{content:'“';display:block;margin-bottom:10px;font-size:84px;font-style:normal;line-height:.6;color:var(--gold-on-navy)}
+.closing-quote footer{margin-top:24px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-on-navy)}
+
 .no-js .menu-toggle,.no-js .theme-toggle,.no-js .filter-bar,.no-js .cite-button,.no-js .copy-bio,.no-js .print-button{display:none}
 
 /* ---------- responsive ---------- */
@@ -358,7 +408,10 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
   .profile-card{max-width:440px;width:100%}
   .stats{grid-template-columns:repeat(2,1fr);row-gap:28px}
   .stat:nth-child(3){padding-left:0;border-left:0}
-  .brief,.streams,.cta-band,.footer-card,.edu-grid,.service-grid{grid-template-columns:1fr}
+  .brief,.streams,.cta-band,.footer-card,.edu-grid,.service-grid,.impact-grid,.cet,.beliefs,.philo-hero,.philo-group{grid-template-columns:1fr}
+  .philo-group header{position:static}
+  .philo-group{gap:28px}
+  .philo-portrait{justify-self:start}
   .pub-row{grid-template-columns:1fr;gap:16px}
   .pub-row .pub-links{justify-content:flex-start}
   .xp{grid-template-columns:1fr;gap:10px}
@@ -420,6 +473,14 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
   .footer-links{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column;gap:4px}
   .citation-dialog{padding:22px}
+  .cet{padding:24px;gap:28px}
+  .cet-map>div{grid-template-columns:1fr;gap:6px}
+  .cet-strip{flex-direction:column;align-items:flex-start;padding:20px}
+  .impact{padding:24px}
+  .principle{grid-template-columns:44px minmax(0,1fr);gap:12px}
+  .principle-num{font-size:28px}
+  .philo-portrait .avatar{width:150px;height:150px}
+  .philo-hero{padding:44px 0 48px;gap:28px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 

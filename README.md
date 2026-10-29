@@ -1,42 +1,43 @@
 # Jiani (Elva) He — personal website
 
-Personal research and professional portfolio, designed for GitHub Pages.
+Research and professional portfolio for GitHub Pages, written so collaborators and recommendation-letter writers can find achievements, papers, and profile links quickly.
 
 **Live website:** https://jiani19980225.github.io/
 
+## Pages
+
+- `index.html`: profile links (Google Scholar, LinkedIn, GitHub, email, CV), achievement stats, a copyable short bio, highlights, research program, and selected papers.
+- `research.html`: the research program: one guiding question, three streams (motivation, origin in practice, problems, papers), and the research journey.
+- `publications.html`: all papers grouped by first-author, accepted, and under review, with stream filters, DOIs, code, and BibTeX.
+- `experience.html`: experience, education, service and leadership, skills.
+- `cv.html` and `assets/Jiani_He_CV.pdf`: web and PDF CV.
+
 ## Edit the website
 
-The published site is plain HTML, CSS, and JavaScript. No package installation or framework build is required to serve it.
+The published site is plain HTML, CSS, and JavaScript. Nothing needs to be installed to serve it.
 
-- `content.json`: publications, profile links, and the optional Verto Mind role.
-- `scripts/build.py`: page text and shared layouts. Run `python3 scripts/build.py` after editing content or templates. Commit the generated HTML files too.
-- `assets/styles.css`: colors, typography, responsive layout, and print styles.
-- `assets/site.js`: mobile menu, theme preference, publication filters, and citation dialog.
-- `scripts/build_cv.py`: public CV PDF generator. Requires `reportlab`. Run after changing the PDF content or research list.
+- `content.json`: all text content: profile links, stats, bio, highlights, research streams, publications, experience, education, skills. `photo` points to the portrait (`assets/headshot.jpg`); leave it empty to show the monogram instead.
+- `scripts/build.py`: page layouts. Run `python3 scripts/build.py` after editing content or templates, and commit the generated HTML files.
+- `scripts/build_cv.py`: regenerates the PDF CV from `content.json`. Requires `reportlab`.
+- `scripts/build_images.js`: regenerates `assets/og-image.png` (link preview) and `assets/apple-touch-icon.png`. Requires Playwright.
+- `assets/styles.css`: palette, typography, layout, dark theme, print styles.
+- `assets/site.js`: mobile menu, theme toggle, publication filters, BibTeX dialog, copy-bio button.
 
 Preview locally with `python3 -m http.server 8000` and open http://localhost:8000.
 
+## Design
+
+Colors are applied by section: a warm cream page (`#FBF8F2`) with white cards; a sky-blue wash (`#E5F2FD` → `#EBF5FD`) at the top of each page and on alternating sections; a deep steel-navy band (`#17375C`) with champagne-gold figures (`#E4BB68`) for achievements and service; a champagne section (`#FBF6EE` → `#FDF2E2`) for selected papers; a cream header and footer (`#F2F1E7`); steel-blue actions (`#3375B1`); and charcoal headings (`#252829`). Gold (`#C8963E`, with `#8C6422` for small text) marks highlights and first-author work. Type is Newsreader for headings and Inter for text, from Google Fonts with system fallbacks. Page structure is inspired by https://yvonnexu442.github.io/research.html; the code is original.
+
 ## Deployment
 
-GitHub Pages serves the repository root from `main`. Updating and pushing the generated files republishes the site. The `.nojekyll` file enables plain static serving.
+GitHub Pages serves the repository root from `main`. Pushing the generated files republishes the site. `.nojekyll` enables plain static serving.
 
 ## Content sources
 
-Professional experience and education: the supplied Jiani He Data Science Consultant resume. The public CV is a newly typeset version with an updated research list; the original attachment and its telephone number are not included in this repository.
+- Experience and education: the Jiani He Data Science Consultant resume. The phone number is intentionally left out.
+- Portrait: supplied by Jiani He; cropped to a square with image metadata removed.
+- Papers: public arXiv and SSRN records listed in `content.json`, and the Google Scholar profile https://scholar.google.com/citations?user=QoV_NDIAAAAJ&hl=en.
+- Conference details for shared papers (the IEOM late-delivery manuscript, ICOAI submission of the routing paper, ICECCME dates and location, AIBThings full name): co-author Yihua Xu's public website, last verified 2026-10-26.
 
-Research checked in October 2026:
-
-- Google Scholar: https://scholar.google.com/citations?user=QoV_NDIAAAAJ&hl=en
-- https://arxiv.org/abs/2609.02116
-- https://arxiv.org/abs/2608.11154
-- https://arxiv.org/abs/2607.13331
-- https://arxiv.org/abs/2610.27305
-- https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7554440
-
-Conference labels reflect public arXiv records; the site distinguishes acceptance/presentation from proceedings publication. The SSRN listing is conservatively labeled as a preprint. The SSRN description is limited to its title/topic. Citation counts are deliberately not hardcoded.
-
-Verto Mind product description: https://testflight.apple.com/join/h7WgfPgM. The product journey is an editorial overview, not an app screenshot. The site claims no unconfirmed founder title or individual product responsibility.
-
-Design: original implementation inspired by the editorial hierarchy and generous spacing of https://yvonnexu442.github.io/research.html. Brand accents use Verto Mind blue `#0077B6` and warm gold-orange `#EB993F`, paired with navy `#102D46`, warm paper `#FAF8F3`, and pale sky `#E0F2FE`. No source code or private assets from the app are included.
-
-The website has no analytics, cookies, external application API calls, or backend. Theme preference is stored locally in the visitor's browser. Google Fonts supplies the display and body fonts, with system fallbacks.
+Conference labels describe acceptance or presentation and do not claim final proceedings publication. Citation counts are deliberately not hardcoded. The site has no analytics, cookies, or backend; the theme preference is stored only in the visitor's browser.

@@ -12,8 +12,8 @@
   "stats": [
     {
       "value": "6",
-      "label": "Conference papers accepted in 2026",
-      "short": "accepted papers in 2026"
+      "label": "Conference papers in 2026",
+      "short": "conference papers in 2026"
     },
     {
       "value": "2",
@@ -31,7 +31,7 @@
       "short": "years in data centers"
     }
   ],
-  "bio": "Jiani (Elva) He is a data scientist and independent researcher focused on AI-assisted reverse logistics: using information about returned assets to support inspection, recovery, and disposition decisions. A Data Science Consultant at Accenture, Jiani works on planning analytics for a technology client’s data center supply chains. Jiani proposed the core research idea and methodological framework for SSADS, a first-author paper accepted at AIBThings 2026, and is a co-first author of DACRI, accepted at ICECCME 2026. Jiani’s six accepted 2026 conference papers also span forecasting, planning value, early warning, and AI assurance. Jiani holds an MS in Business Analytics from MIT and a BS in Industrial Engineering from Purdue.",
+  "bio": "Jiani (Elva) He is a data scientist and independent researcher focused on AI-assisted reverse logistics: using information about returned assets to support inspection, recovery, and disposition decisions. A Data Science Consultant at Accenture, Jiani works on planning analytics for a technology client’s data center supply chains. Jiani proposed the core research idea and methodological framework for SSADS, a first-author paper at AIBThings 2026, and is a co-first author of DACRI at ICECCME 2026. Jiani’s six 2026 conference papers also span forecasting, planning value, early warning, and AI assurance. The conferences have concluded; proceedings are forthcoming. Jiani holds an MS in Business Analytics from MIT and a BS in Industrial Engineering from Purdue.",
   "streams": [
     {
       "id": "recover",
@@ -75,8 +75,8 @@
     },
     {
       "id": "accepted",
-      "title": "Accepted conference papers",
-      "eyebrow": "Accepted with collaborators"
+      "title": "Conference papers",
+      "eyebrow": "With collaborators"
     },
     {
       "id": "review",
@@ -101,7 +101,7 @@
       "group": "first",
       "stream": "recover",
       "first_author": true,
-      "status": "Accepted · AIBThings 2026",
+      "status": "AIBThings 2026",
       "venue": "4th International Conference on Artificial Intelligence, Blockchain, and Internet of Things (AIBThings 2026)",
       "record": "arXiv:2609.02116",
       "url": "https://arxiv.org/abs/2609.02116",
@@ -130,7 +130,7 @@
       "group": "first",
       "stream": "decide",
       "first_author": false,
-      "status": "Accepted · ICECCME 2026",
+      "status": "ICECCME 2026",
       "venue": "International Conference on Electrical, Computer, Communications and Mechatronics Engineering (ICECCME 2026) · 15–17 October 2026 · Bali, Indonesia",
       "record": "arXiv:2608.11154",
       "url": "https://arxiv.org/abs/2608.11154",
@@ -163,7 +163,7 @@
       "group": "accepted",
       "stream": "forecast",
       "first_author": false,
-      "status": "Accepted · IEOM Irvine 2026",
+      "status": "IEOM Irvine 2026",
       "venue": "3rd World Congress on Industrial Engineering and Operations Management · Irvine, California",
       "record": "arXiv:2610.27305",
       "url": "https://arxiv.org/abs/2610.27305",
@@ -191,7 +191,7 @@
       "group": "accepted",
       "stream": "forecast",
       "first_author": false,
-      "status": "Accepted · IEOM Irvine 2026",
+      "status": "IEOM Irvine 2026",
       "venue": "3rd World Congress on Industrial Engineering and Operations Management · Irvine, California",
       "record": "SSRN preprint submitted · posting pending",
       "url": "",
@@ -219,7 +219,7 @@
       "group": "accepted",
       "stream": "forecast",
       "first_author": false,
-      "status": "Accepted · ICEME 2026",
+      "status": "ICEME 2026",
       "venue": "ICEME 2026",
       "record": "arXiv:2607.13331",
       "url": "https://arxiv.org/abs/2607.13331",
@@ -248,7 +248,7 @@
       "group": "accepted",
       "stream": "decide",
       "first_author": false,
-      "status": "Accepted · ICOAI 2026",
+      "status": "ICOAI 2026",
       "venue": "ICOAI 2026 · public preprint on SSRN",
       "record": "SSRN 7554440",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7554440",
@@ -508,5 +508,6 @@
     "goal": "My goal is to help teams connect AI-extracted evidence with costs, inventory needs, and feasible recovery routes. SSADS studies one part of that workflow: note-informed inspection and recovery allocation under labor constraints.",
     "invitation": "I welcome conversations with teams trying to put these ideas into practice.",
     "industry_source": "https://datacenters.microsoft.com/wp-content/uploads/2025/04/CircularityWhitePaperApril2025.pdf"
-  }
+  },
+  "social_description": "AI-assisted reverse logistics · Resource recovery · Practical decision support"
 }

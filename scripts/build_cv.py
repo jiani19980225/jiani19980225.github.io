@@ -73,6 +73,7 @@ for x in DATA['education']:
                                Paragraph(escape(x['detail']), S['body']), Spacer(1, 4)]))
 
 section('Research & publications')
+add('The conferences listed below have concluded; proceedings publication is pending.')
 n = 0
 for g in DATA['groups']:
     if not any(p['group'] == g['id'] for p in DATA['publications']):

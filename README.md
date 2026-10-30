@@ -9,7 +9,7 @@ Research and professional portfolio for GitHub Pages, written so collaborators a
 - `index.html`: mission and positioning, profile links, credentials, achievement stats, three research directions, lead-author papers, a short "beyond the work" section, and a copyable bio for anyone writing about the work.
 - `research.html`: one guiding question, three research directions (why each matters, where it comes from in practice, papers), and alignment with the U.S. Critical and Emerging Technologies List.
 - `philosophy.html`: life stories, two stories about acting and deciding ("In practice"), and a closing belief. First-person stories are limited to experiences Jiani He has confirmed.
-- `publications.html`: all papers grouped by first-author and accepted (an under-review group appears when needed), with DOIs, code, and BibTeX.
+- `publications.html`: all papers grouped by lead-author and other conference papers (an under-review group appears when needed), with DOIs, code, and BibTeX.
 - `experience.html`: experience, education, service and mentoring, skills.
 - `cv.html` and `assets/Jiani_He_CV.pdf`: web and PDF CV.
 
@@ -44,4 +44,4 @@ GitHub Pages serves the repository root from `main`. Pushing the generated files
 - The IEOM late-delivery paper is confirmed by Jiani He; its SSRN preprint is pending.
 - Conference details for shared papers (the IEOM late-delivery manuscript, ICOAI submission of the routing paper, ICECCME dates and location, AIBThings full name): co-author Yihua Xu's public website, last verified 2026-10-26.
 
-Accepted papers were accepted at conferences that have already taken place; proceedings are forthcoming, and the site does not claim final publication. Citation counts are deliberately not hardcoded. The site has no analytics, cookies, or backend; the theme preference is stored only in the visitor's browser.
+The conferences have concluded; proceedings publication is pending, and the site does not claim final publication. Citation counts are deliberately not hardcoded. The site has no analytics, cookies, or backend; the theme preference is stored only in the visitor's browser.

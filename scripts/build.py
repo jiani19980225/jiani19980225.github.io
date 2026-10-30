@@ -236,8 +236,8 @@ def publications():
         if not count:
             continue
         groups.append(f'''<section class="pub-group" aria-labelledby="group-{g['id']}"><div class="group-head"><div>{eyebrow(g['eyebrow'])}<h2 id="group-{g['id']}">{e(g['title'])}</h2></div><span class="group-count">{count} paper{'' if count == 1 else 's'}</span></div><div class="pub-stack">{''.join(cards)}</div></section>''')
-    body = f'''<section class="band band-hero"><div class="wrap page-hero">{eyebrow('Publications', '01')}<h1>Publications &amp; preprints.</h1><p class="lead">{sum(p['group'] in ('first', 'accepted') for p in PUBS)} papers accepted at international conferences in 2026, {sum(p['group'] == 'first' for p in PUBS)} as lead author. My name is underlined in each author list.</p><div class="hero-buttons">{external(DATA['scholar'], ICONS['scholar'] + 'Google Scholar profile', 'btn btn-primary')}<a class="btn btn-soft" href="research.html">How the papers connect</a></div></div></section>
-<section class="band band-flush" aria-label="Papers"><div class="wrap">{''.join(groups)}<p class="small-note">Last checked {DATA['updated']}. Accepted papers were accepted at international conferences that have already taken place; their proceedings are forthcoming. arXiv and SSRN links point to public preprints; one accepted paper is awaiting posting on SSRN.</p></div></section>'''
+    body = f'''<section class="band band-hero"><div class="wrap page-hero">{eyebrow('Publications', '01')}<h1>Publications &amp; preprints.</h1><p class="lead">{sum(p['group'] in ('first', 'accepted') for p in PUBS)} conference papers in 2026, {sum(p['group'] == 'first' for p in PUBS)} as lead author. The conferences have concluded; proceedings are forthcoming. My name is underlined in each author list.</p><div class="hero-buttons">{external(DATA['scholar'], ICONS['scholar'] + 'Google Scholar profile', 'btn btn-primary')}<a class="btn btn-soft" href="research.html">How the papers connect</a></div></div></section>
+<section class="band band-flush" aria-label="Papers"><div class="wrap">{''.join(groups)}<p class="small-note">Last checked {DATA['updated']}. Proceedings publication is pending. arXiv and SSRN links point to public preprints; one conference paper is awaiting posting on SSRN.</p></div></section>'''
     page('publications.html', 'Publications', f'Publications and preprints by Jiani (Elva) He: {len(PUBS)} papers on demand forecasting, causal decision support, LLM deployment assurance, and reverse logistics, with code and BibTeX.', body, 'publications', citation_extra(PUBS))
 
 
@@ -270,7 +270,7 @@ def cv():
 <section class="cv-section"><h2>Research interests</h2><p>AI-assisted reverse logistics and resource recovery · Inspection and disposition under uncertainty · Causal decision support · Forecast stability and planning value · AI deployment assurance</p><p>Related areas on the U.S. Critical and Emerging Technologies List (2026): AI and Autonomy (research), and Semiconductors and Microelectronics (through data center hardware supply chains).</p></section>
 <section class="cv-section"><h2>Professional experience</h2>{xp}</section>
 <section class="cv-section"><h2>Education</h2>{edu}</section>
-<section class="cv-section"><h2>Research &amp; publications</h2>{pub_sections}</section>
+<section class="cv-section"><h2>Research &amp; publications</h2><p>The conferences listed below have concluded; proceedings publication is pending.</p>{pub_sections}</section>
 <section class="cv-section"><h2>Service &amp; mentoring</h2><ul><li>Peer reviewer for 10+ journal manuscripts.</li><li>Mentored five junior analysts across Accenture roles; led onboarding and team training, including AI-assisted analysis.</li></ul></section>
 <section class="cv-section"><h2>Skills</h2>{skills}</section>
 </article><p class="small-note">Updated {DATA['updated']}. For the latest papers, see my <a href="{e(DATA['scholar'])}">Google Scholar profile</a>.</p></div></section>'''

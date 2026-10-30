@@ -487,5 +487,26 @@
     "finding": "In three synthetic scenarios, the keyword implementation improved recovery value over a noisy full-inspection comparator while reducing inspection cost. At equal inspection cost, targeting added value in the aircraft scenario and had little economic effect in the other two settings.",
     "boundary": "These are benchmark results, not measured savings from a production deployment. A risk-blind policy that skipped inspection scored higher under the benchmark’s purely economic objective.",
     "contribution": "I proposed the core research idea and methodological framework for SSADS: using semantic signals from return notes to inform inspection and recovery allocation."
+  },
+  "research_implementation": {
+    "title": "From a model to a workflow.",
+    "intro": "For a returned part, the practical question is what should happen next: return it to inventory, remarket it, or scrap it. I think about that decision through three factors.",
+    "factors": [
+      {
+        "title": "Cost & value",
+        "text": "Unit cost, expected recovery value, and the effort needed to inspect and process the item."
+      },
+      {
+        "title": "Scarcity & demand",
+        "text": "How difficult the part is to replace, and whether keeping it available can meet an inventory need."
+      },
+      {
+        "title": "Condition",
+        "text": "What is known about the item, what the return notes suggest, and what further inspection needs to establish."
+      }
+    ],
+    "goal": "My goal is to help teams connect AI-extracted evidence with costs, inventory needs, and feasible recovery routes. SSADS studies one part of that workflow: note-informed inspection and recovery allocation under labor constraints.",
+    "invitation": "I welcome conversations with teams trying to put these ideas into practice.",
+    "industry_source": "https://datacenters.microsoft.com/wp-content/uploads/2025/04/CircularityWhitePaperApril2025.pdf"
   }
 }

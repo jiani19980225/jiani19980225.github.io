@@ -234,6 +234,37 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .pub-links a.primary{background:var(--steel-btn);border-color:var(--steel-btn);color:#fff}
 .pub-links a.primary:hover{background:var(--steel-btn-hover);color:#fff}
 
+/* ---------- research: a concrete study, evidence, and personal context ---------- */
+.research-scope{max-width:740px;margin-top:20px!important;padding-left:18px;border-left:2px solid var(--gold-line);font-size:15px;line-height:1.85;color:var(--muted)}
+.featured-study{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;padding:42px;border-top:3px solid var(--gold)}
+.study-role{font-size:12px;line-height:1.65;color:var(--steel-ink);margin-top:16px!important}
+.study-heading h2{margin-top:16px;font-size:clamp(31px,3.3vw,43px)}
+.study-intro{font-size:17px;line-height:1.85}
+.study-path{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:24px 0;margin:24px 0;border-block:1px solid var(--line)}
+.study-path li{min-width:0}
+.study-path span{display:block;font-family:var(--serif);font-size:25px;line-height:1;color:var(--gold-ink);margin-bottom:12px}
+.study-path strong{display:block;font-size:13px;font-weight:600;color:var(--ink)}
+.study-path small{display:block;font-size:11px;line-height:1.6;color:var(--muted);margin-top:5px}
+.study-evidence summary,.policy-details>summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--steel-ink);line-height:1.6}
+.study-evidence summary:hover,.policy-details>summary:hover{text-decoration:underline;text-underline-offset:4px}
+.study-evidence summary:focus-visible,.policy-details>summary:focus-visible{outline:3px solid var(--steel);outline-offset:5px;border-radius:3px}
+.study-evidence p{font-size:14px;line-height:1.85;margin-top:16px}
+.study-contribution{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.study-contribution h3{font-size:14px;font-weight:600}
+.study-contribution p{font-size:15px;line-height:1.8;margin-top:9px}
+.study-finding{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.study-finding h3{font-size:14px;font-weight:600}
+.study-finding p{font-size:14px;line-height:1.85;margin-top:9px}
+.study-finding+.study-evidence{margin-top:16px}
+.research-context{padding-block:64px}
+.policy-details{padding:24px 30px}
+.policy-details .cet{margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+.research-personal{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:start}
+.research-personal h2{margin-top:18px}
+.research-personal p{font-size:16px;line-height:1.85}
+.research-personal .link-arrow{margin-top:24px}
+@media(max-width:760px){.featured-study{grid-template-columns:1fr;gap:28px;padding:26px}.study-heading h2{font-size:35px}.study-intro{font-size:16px}.study-path{gap:14px;grid-template-columns:1fr}.study-path li{display:grid;grid-template-columns:28px 1fr;column-gap:12px;align-items:baseline}.study-path span{grid-row:1/3;margin:0}.study-path strong{font-size:14px}.study-path small{grid-column:2;font-size:12px}.research-personal{grid-template-columns:1fr;gap:28px}.policy-details{padding:22px}.research-context{padding-block:52px}}
+
 /* ---------- experience ---------- */
 .xp-stack,.edu-grid{display:grid;gap:16px}
 .xp{display:grid;grid-template-columns:190px minmax(0,1fr);gap:32px}

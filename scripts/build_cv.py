@@ -56,7 +56,7 @@ add(f"{escape(DATA['headline'])}<br/>{escape(DATA['location'])} | {escape(DATA['
     f"{link('https://jiani19980225.github.io', 'jiani19980225.github.io')} | {link(DATA['linkedin'], 'LinkedIn')} | {link(DATA['scholar'], 'Google Scholar')}", 'subtitle')
 
 section('Research interests')
-add('Demand-forecast stability and planning value; causal decision support under partial information; trustworthy deployment of AI systems; AI-assisted reverse logistics.')
+add('AI-assisted reverse logistics and resource recovery; inspection and disposition under uncertainty; causal decision support; forecast stability and planning value; AI deployment assurance.')
 add('Related areas on the U.S. Critical and Emerging Technologies List (2026): AI and Autonomy (research), and Semiconductors and Microelectronics (through data center hardware supply chains).')
 
 section('Professional experience')

@@ -31,17 +31,18 @@
       "short": "years in data centers"
     }
   ],
-  "bio": "Jiani (Elva) He is a data scientist and operations researcher who builds AI and optimization methods for the supply chains behind data center infrastructure. As a Data Science Consultant at Accenture, Jiani has spent five years leading planning analytics across the forward and reverse supply chain of a technology client’s data centers, and was promoted from Senior Analyst to Consultant in 2024. In 2026, Jiani co-authored six papers accepted at international conferences, including a first-author paper at AIBThings and a co-first-author paper at ICECCME, on demand-forecast stability, causal intervention ranking, AI assurance, and AI-assisted reverse logistics. Jiani has peer-reviewed more than ten journal manuscripts and holds an MS in Business Analytics from MIT’s Operations Research Center (GPA 4.7/5.0) and a BS in Industrial Engineering from Purdue University (Honors & Distinction).",
+  "bio": "Jiani (Elva) He is a data scientist and independent researcher focused on AI-assisted reverse logistics: using information about returned assets to support inspection, recovery, and disposition decisions. A Data Science Consultant at Accenture, Jiani works on planning analytics for a technology client’s data center supply chains. Jiani proposed the core research idea and methodological framework for SSADS, a first-author paper accepted at AIBThings 2026, and is a co-first author of DACRI, accepted at ICECCME 2026. Jiani’s six accepted 2026 conference papers also span forecasting, planning value, early warning, and AI assurance. Jiani holds an MS in Business Analytics from MIT and a BS in Industrial Engineering from Purdue.",
   "streams": [
     {
-      "id": "forecast",
-      "label": "Forecasting & planning",
-      "name": "Forecasting & Planning Value",
-      "question": "When do better predictions actually produce better plans?",
-      "motivation": "A more accurate forecast is not automatically a better planning input. Forecasts that swing from one run to the next create churn in replenishment, and a new analytical capability creates value only if it changes the plans that are executed.",
-      "practice": "Analyzing demand, stock targets, and shortages across a data center supply network",
-      "title": "Forecasts planners can act on",
-      "short": "Accurate isn’t enough if the forecast swings every week. I build forecasting and early-warning methods steady enough to plan around, and test whether new planning tools actually change outcomes."
+      "id": "recover",
+      "label": "Reverse logistics",
+      "name": "AI-Assisted Reverse Logistics",
+      "question": "How can unstructured signals guide inspection and recovery when labor is scarce?",
+      "motivation": "Returned assets arrive with uncertain condition and free-text notes. Choosing how deeply to inspect each one, and whether it goes to reuse, resale, recycling, or disposal, is a resource-allocation problem under partial information.",
+      "practice": "Tracking reverse-logistics cycle times and guiding disposition decisions for retired data center hardware",
+      "title": "A second life for returned hardware",
+      "short": "In SSADS, we treat return notes as imperfect evidence for deciding how much inspection to allocate before choosing a recovery route.",
+      "evidence": "Three synthetic reverse-logistics scenarios: IT decommissioning, aircraft maintenance, and consumer-electronics returns."
     },
     {
       "id": "decide",
@@ -50,18 +51,20 @@
       "question": "Which action should come next, and when can the evidence behind it be trusted?",
       "motivation": "Detecting a disruption is not the same as knowing which intervention recovers the most value. Good decisions need causal evidence and explicit costs and delays. AI-enabled decisions also need provenance that people can review before deployment.",
       "practice": "Rebalancing inventory across sites and standardizing enterprise LLM workflows",
-      "title": "The intervention that recovers the most",
-      "short": "Knowing what broke is half the job. I rank supply-chain interventions by the value they recover under partial, delayed information, and test when AI recommendations are safe to deploy."
+      "title": "Which action is worth taking?",
+      "short": "In DACRI, we compare interventions under explicit costs, delays, and incomplete information. Related work examines the policy and provenance evidence needed to qualify an LLM-routing system for deployment.",
+      "evidence": "Controlled supply-chain simulations with causal ground truth; a separate study of deployment assurance for LLM request routing."
     },
     {
-      "id": "recover",
-      "label": "Reverse logistics",
-      "name": "AI-Assisted Reverse Logistics",
-      "question": "How can unstructured signals guide inspection and recovery when labor is scarce?",
-      "motivation": "Returned assets arrive with uncertain condition and free-text notes. Choosing how deeply to inspect each one, and whether it goes to reuse, resale, recycling, or disposal, is a resource-allocation problem under partial information.",
-      "practice": "Tracking reverse-logistics cycle times and guiding disposition decisions for retired data center hardware",
-      "title": "A second life for data center hardware",
-      "short": "Retired hardware can be reused, resold, or recycled, if the right units get inspected. I use AI to read return notes and send scarce inspection labor where it recovers the most value."
+      "id": "forecast",
+      "label": "Forecasting & planning",
+      "name": "Forecasting & Planning Value",
+      "question": "When do better predictions actually produce better plans?",
+      "motivation": "A forecast can score well on point accuracy and still move sharply between adjacent time steps. A planning tool also needs to be evaluated through the cost and feasibility of the plans it produces.",
+      "practice": "Analyzing demand, stock targets, and shortages across a data center supply network",
+      "title": "Forecasts planners can act on",
+      "short": "With collaborators, I study the trade-off between forecast accuracy and stability, early warning for delivery risk, and the operational value of added planning capabilities.",
+      "evidence": "Retail-demand forecasting experiments; forecast-to-plan replay on Favorita, M5, and Walmart data; separate work on late-delivery risk."
     }
   ],
   "groups": [
@@ -140,7 +143,8 @@
       "co_first": true,
       "equal": [
         "Shiqi Huang",
-        "Jiani He"
+        "Jiani He",
+        "Dingyan Shang"
       ]
     },
     {
@@ -221,7 +225,7 @@
       "url": "https://arxiv.org/abs/2607.13331",
       "doi": "10.48550/arXiv.2607.13331",
       "code": "https://github.com/jizeli-hub/accuracy-preserving-stability-forecasting",
-      "summary": "Training-time regularization that makes retail demand forecasts steadier from run to run while preserving point accuracy, evaluated on selected M5 demand series at multiple scales.",
+      "summary": "Training-time regularization that reduces movement between adjacent time steps within a retail-demand forecast while preserving point accuracy, evaluated on selected M5 series at multiple scales.",
       "bibtex": "@misc{li2026stability,\n  title={Accuracy-Preserving Stability Regularization for Large-Scale Retail Demand Forecasting},\n  author={Li, Jize and He, Jiani and Yang, Dishu and Shang, Dingyan and Liu, Jingjing and Huang, Shiqi},\n  year={2026},\n  eprint={2607.13331},\n  archivePrefix={arXiv},\n  doi={10.48550/arXiv.2607.13331},\n  url={https://arxiv.org/abs/2607.13331}\n}",
       "short": "Accuracy-preserving stability regularization for forecasting",
       "proceedings": "Proceedings forthcoming",
@@ -413,8 +417,15 @@
       {
         "title": "Why I chose optimization",
         "text": [
-          "I’ve believed this for a long time: the world isn’t short on resources. It’s short on using them well.",
-          "Stock sits at one site while the site next door runs out. Hardware that still works gets scrapped because nobody had time to inspect it. Those aren’t shortages; they’re allocation problems. That’s why I chose operations research and optimization, and it’s still what I work on every day."
+          "I’m bothered by how much useful material goes to waste.",
+          "A returned component may still have a useful life ahead of it. Deciding whether to put it back into inventory, remarket it, or scrap it is a question of evidence, condition, and allocation. That’s why I chose operations research and optimization."
+        ]
+      },
+      {
+        "title": "A mission for the long term",
+        "text": [
+          "I care about long-term thinking. Before committing to something, I want to know what mission it serves and what belief will sustain the effort.",
+          "In this work, that belief is straightforward: we can make better use of the resources we already have."
         ]
       },
       {
@@ -448,8 +459,8 @@
       ]
     }
   },
-  "mission": "The world has enough resources. The hard part is using them well.",
-  "positioning": "I build AI and optimization for the supply chains behind data centers, the physical backbone of the AI economy.",
+  "mission": "I want fewer useful things to go to waste.",
+  "positioning": "I study AI-assisted reverse logistics: how to inspect returned hardware and decide what can return to inventory, be remarketed, or be scrapped. My industry work is in data center supply chains.",
   "credentials": [
     "MIT Operations Research Center",
     "Purdue Industrial Engineering",
@@ -466,7 +477,15 @@
     "lead": "From industrial engineering at Purdue to the Operations Research Center at MIT to Accenture, where I lead planning analytics for a technology client’s data center supply chain."
   },
   "research_hero": {
-    "title": "When does better evidence lead to better decisions?",
-    "lead": "I work on the decisions that keep data center supply chains running: what to stock, which disruption to fix first, and what to do with hardware that comes back. My research builds AI and optimization methods for those decisions and holds them to one test: does a real decision get better?"
+    "title": "A second life for useful hardware.",
+    "lead": "Many returned parts still have value. My main research interest is AI-assisted reverse logistics: how to use information about an asset to decide what needs inspection and what should return to inventory, be remarketed, or be scrapped. My industry work is in data center supply chains.",
+    "scope": "The SSADS study uses three synthetic reverse-logistics scenarios. Related papers examine retail forecasting, simulated supply-chain interventions, and LLM-routing assurance."
+  },
+  "research_feature": {
+    "title": "Which returned assets deserve an inspection?",
+    "intro": "Returned equipment often arrives with a note and an unknown condition. In SSADS, text readers—including an LLM—turn those notes into condition and signal-quality estimates. Inspection and recovery logic use that evidence under a shared labor budget.",
+    "finding": "In three synthetic scenarios, the keyword implementation improved recovery value over a noisy full-inspection comparator while reducing inspection cost. At equal inspection cost, targeting added value in the aircraft scenario and had little economic effect in the other two settings.",
+    "boundary": "These are benchmark results, not measured savings from a production deployment. A risk-blind policy that skipped inspection scored higher under the benchmark’s purely economic objective.",
+    "contribution": "I proposed the core research idea and methodological framework for SSADS: using semantic signals from return notes to inform inspection and recovery allocation."
   }
 }

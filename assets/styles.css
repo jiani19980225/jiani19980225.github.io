@@ -331,6 +331,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--steel);outline-offs
 .footer-description{max-width:420px;margin-top:12px!important;font-size:15px}
 .footer-email{display:inline-flex;align-items:center;gap:10px;margin-top:20px;font-size:15.5px;font-weight:600;color:var(--steel-ink);border-bottom:1.5px solid var(--gold-line);padding-bottom:3px}
 .footer-email svg{width:17px;height:17px}
+.footer-contacts{display:grid;gap:14px;margin-top:22px}
+.footer-contacts dt{font-size:12px;font-weight:600;color:var(--muted)}
+.footer-contacts .footer-email{margin-top:4px}
 .footer-links{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-content:start}
 .footer-links a{display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--line);font-size:14px;font-weight:600;color:var(--ink);transition:border-color .2s,color .2s}
 .footer-links a:hover{border-color:var(--steel-line);color:var(--steel-ink)}

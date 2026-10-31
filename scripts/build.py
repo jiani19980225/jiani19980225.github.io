@@ -41,7 +41,8 @@ def profile_buttons(cv=True):
         external(DATA['scholar'], f'{ICONS["scholar"]}Google Scholar', 'btn btn-primary'),
         external(DATA['linkedin'], f'{ICONS["linkedin"]}LinkedIn', 'btn btn-soft'),
         external(DATA['github'], f'{ICONS["github"]}GitHub', 'btn btn-soft'),
-        f'<a class="btn btn-soft" href="mailto:{DATA["email"]}">{ICONS["mail"]}Email</a>',
+        f'<a class="btn btn-soft" href="mailto:{DATA["email"]}">{ICONS["mail"]}Professional email</a>',
+        f'<a class="btn btn-soft" href="mailto:{DATA["academic_email"]}">{ICONS["mail"]}Academic email</a>',
     ]
     if cv:
         buttons.append(f'<a class="btn btn-gold" href="assets/Jiani_He_CV.pdf" download>{ICONS["file"]}CV (PDF)</a>')
@@ -68,14 +69,14 @@ def footer():
              + external(DATA['linkedin'], f'{ICONS["linkedin"]}LinkedIn')
              + external(DATA['github'], f'{ICONS["github"]}GitHub')
              + f'<a href="assets/Jiani_He_CV.pdf" download>{ICONS["file"]}CV (PDF)</a>')
-    return f'''<footer class="site-footer" id="contact"><div class="wrap"><div class="footer-card"><div><p class="footer-title">Let’s connect.</p><p class="footer-description">Open to research collaboration and conversations about supply-chain analytics, operations research, and trustworthy applied AI.</p><a class="footer-email" href="mailto:{DATA['email']}">{ICONS['mail']}{DATA['email']}</a></div><nav class="footer-links" aria-label="Profiles">{links}</nav></div><div class="footer-bottom"><span>© 2026 {DATA['name']} · {DATA['location']}</span><span>Updated {DATA['updated']} · <a href="#main-content">Back to top ↑</a></span></div></div></footer>'''
+    return f'''<footer class="site-footer" id="contact"><div class="wrap"><div class="footer-card"><div><p class="footer-title">Let’s connect.</p><p class="footer-description">Open to research collaboration and conversations about supply-chain analytics, operations research, and trustworthy applied AI.</p><dl class="footer-contacts"><div><dt>Professional</dt><dd><a class="footer-email" href="mailto:{DATA['email']}">{ICONS['mail']}{DATA['email']}</a></dd></div><div><dt>Academic</dt><dd><a class="footer-email" href="mailto:{DATA['academic_email']}">{ICONS['mail']}{DATA['academic_email']}</a></dd></div></dl></div><nav class="footer-links" aria-label="Profiles">{links}</nav></div><div class="footer-bottom"><span>© 2026 {DATA['name']} · {DATA['location']}</span><span>Updated {DATA['updated']} · <a href="#main-content">Back to top ↑</a></span></div></div></footer>'''
 
 
 def page(filename, title, description, body, current='', extra=''):
     canonical = SITE + ('' if filename == 'index.html' else filename)
     full_title = f'{title} | {DATA["name"]}' if title else f'{DATA["name"]} — Data Science, Research & Applied AI'
     person = {'@context': 'https://schema.org', '@type': 'Person', 'name': DATA['name'], 'url': SITE,
-              'email': 'mailto:' + DATA['email'], 'jobTitle': 'Data Science Consultant',
+              'email': ['mailto:' + DATA['email'], 'mailto:' + DATA['academic_email']], 'jobTitle': 'Data Science Consultant',
               'worksFor': {'@type': 'Organization', 'name': 'Accenture'},
               'address': {'@type': 'PostalAddress', 'addressLocality': 'Seattle', 'addressRegion': 'WA'},
               'sameAs': [DATA['scholar'], DATA['linkedin'], DATA['github']],
@@ -266,7 +267,7 @@ def cv():
     edu = ''.join(f'''<div class="cv-entry"><div class="cv-row"><strong>{e(x['school'])}</strong><span>{e(x['date'])}</span></div><div class="cv-row cv-meta"><em>{e(x['degree'])} · {e(x['gpa'])}</em><span>{e(x['place'])}</span></div><p>{e(x['detail'])}</p></div>''' for x in DATA['education'])
     skills = ''.join(f'<p><strong>{e(s["area"])}:</strong> {e(", ".join(s["items"]))}</p>' for s in DATA['skills'])
     body = f'''<section class="band band-hero cv-hero"><div class="wrap page-hero">{eyebrow('Curriculum vitae', '01')}<h1>Curriculum vitae.</h1><p class="lead">A web version of my CV, kept in sync with the publication list on this site.</p><div class="hero-buttons"><a class="btn btn-primary" href="assets/Jiani_He_CV.pdf" download>{ICONS['file']}Download PDF</a><button class="btn btn-soft print-button">Print this page</button></div></div></section>
-<section class="band band-flush" aria-label="CV document"><div class="wrap"><article class="card cv-doc"><header class="cv-head"><h2>{DATA['name']}</h2><p>{DATA['headline']}</p><p>{DATA['location']} · <a href="mailto:{DATA['email']}">{DATA['email']}</a> · <a href="{SITE}">jiani19980225.github.io</a> · <a href="{e(DATA['linkedin'])}">LinkedIn</a> · <a href="{e(DATA['scholar'])}">Google Scholar</a></p></header>
+<section class="band band-flush" aria-label="CV document"><div class="wrap"><article class="card cv-doc"><header class="cv-head"><h2>{DATA['name']}</h2><p>{DATA['headline']}</p><p>{DATA['location']} · <a href="{SITE}">jiani19980225.github.io</a> · <a href="{e(DATA['linkedin'])}">LinkedIn</a> · <a href="{e(DATA['scholar'])}">Google Scholar</a></p><p>Professional: <a href="mailto:{DATA['email']}">{DATA['email']}</a><br>Academic: <a href="mailto:{DATA['academic_email']}">{DATA['academic_email']}</a></p></header>
 <section class="cv-section"><h2>Research interests</h2><p>AI-assisted reverse logistics and resource recovery · Inspection and disposition under uncertainty · Causal decision support · Forecast stability and planning value · AI deployment assurance</p><p>Related areas on the U.S. Critical and Emerging Technologies List (2026): AI and Autonomy (research), and Semiconductors and Microelectronics (through data center hardware supply chains).</p></section>
 <section class="cv-section"><h2>Professional experience</h2>{xp}</section>
 <section class="cv-section"><h2>Education</h2>{edu}</section>

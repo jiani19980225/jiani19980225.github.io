@@ -52,8 +52,10 @@ def link(url, label):
 
 
 add(escape(DATA['name']), 'name')
-add(f"{escape(DATA['headline'])}<br/>{escape(DATA['location'])} | {escape(DATA['email'])} | "
-    f"{link('https://jiani19980225.github.io', 'jiani19980225.github.io')} | {link(DATA['linkedin'], 'LinkedIn')} | {link(DATA['scholar'], 'Google Scholar')}", 'subtitle')
+add(f"{escape(DATA['headline'])}<br/>{escape(DATA['location'])} | "
+    f"{link('https://jiani19980225.github.io', 'jiani19980225.github.io')} | {link(DATA['linkedin'], 'LinkedIn')} | {link(DATA['scholar'], 'Google Scholar')}<br/>"
+    f"Professional: {link('mailto:' + DATA['email'], DATA['email'])}<br/>"
+    f"Academic: {link('mailto:' + DATA['academic_email'], DATA['academic_email'])}", 'subtitle')
 
 section('Research interests')
 add('AI-assisted reverse logistics and resource recovery; inspection and disposition under uncertainty; causal decision support; forecast stability and planning value; AI deployment assurance.')

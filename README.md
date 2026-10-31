@@ -7,7 +7,9 @@ Research and professional portfolio for GitHub Pages, written so collaborators a
 ## Pages
 
 - `index.html`: mission and positioning, profile links, credentials, achievement stats, three research directions, lead-author papers, a short "beyond the work" section, and a copyable bio for anyone writing about the work.
-- `research.html`: one guiding question, three research directions (why each matters, where it comes from in practice, papers), and alignment with the U.S. Critical and Emerging Technologies List.
+- `research.html`: a reverse-logistics study, contribution and evaluation boundaries, three research directions, implementation questions, and policy context.
+- `notes.html`: accessible research writing and three companion code/benchmark projects, with reproduction guides and evaluation scope.
+- `return-notes.html`: a plain-language SSADS explainer, clearly labeled hypothetical examples, and questions to ask before a real-workflow pilot.
 - `philosophy.html`: life stories, two stories about acting and deciding ("In practice"), and a closing belief. First-person stories are limited to experiences Jiani He has confirmed.
 - `publications.html`: all papers grouped by lead-author and other conference papers (an under-review group appears when needed), with DOIs, code, and BibTeX.
 - `experience.html`: experience, education, service and mentoring, skills.
@@ -41,6 +43,8 @@ GitHub Pages serves the repository root from `main`. Pushing the generated files
 - Papers: public arXiv and SSRN records listed in `content.json`, and the Google Scholar profile https://scholar.google.com/citations?user=QoV_NDIAAAAJ&hl=en.
 - CET alignment: Appendix A of the August 2026 National Security Science and Technology Strategy (current list, 14 areas; area names supplied by Jiani He and consistent with public coverage), the February 2024 CET List Update for AI subfield names, and America's AI Action Plan (July 2025) for data center infrastructure. The mapping is the author's own.
 - Data center supply-chain context of the Accenture role: supplied by Jiani He.
+- Research-note examples are newly written hypothetical illustrations, not client records, benchmark observations, or model outputs. The SSADS explanation is based on the full paper and repository manifest. Pilot questions describe prospective evaluation rather than completed deployments.
+- Code summaries and reproduction links are checked against the public SSADS, DACRI, and forecast-stability repositories. Authorship links lead to the full collaborative publication records.
 - The IEOM late-delivery paper is confirmed by Jiani He; its SSRN preprint is pending.
 - Conference details for shared papers (the IEOM late-delivery manuscript, ICOAI submission of the routing paper, ICECCME dates and location, AIBThings full name): co-author Yihua Xu's public website, last verified 2026-10-26.
 

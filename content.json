@@ -510,5 +510,83 @@
     "invitation": "I welcome conversations with teams trying to put these ideas into practice.",
     "industry_source": "https://datacenters.microsoft.com/wp-content/uploads/2025/04/CircularityWhitePaperApril2025.pdf"
   },
-  "social_description": "AI-assisted reverse logistics · Resource recovery · Practical decision support"
+  "social_description": "AI-assisted reverse logistics · Resource recovery · Practical decision support",
+  "research_note": {
+    "title": "What can a return note tell us?",
+    "deck": "A plain-language guide to inspection and recovery decisions in reverse logistics.",
+    "date": "October 31, 2026",
+    "intro": "A returned part may still have a useful life. Whether to keep it in inventory, remarket it, or scrap it depends on its cost, scarcity, condition, and the recovery routes actually available. This is the practical question that draws me to reverse logistics.",
+    "signal_title": "Condition and information are different.",
+    "signal_text": "A detailed description of damage can be informative even when the asset is in poor condition. A vague note can leave its condition uncertain. In SSADS, we separate estimated condition from signal quality, so those two judgments can inform different parts of the decision.",
+    "examples": [
+      {
+        "note": "Removed during a scheduled upgrade; the recorded functional check passed.",
+        "condition": "Favorable evidence",
+        "information": "A specific observation to examine"
+      },
+      {
+        "note": "Failed a bench test; scorching is visible at the power connector.",
+        "condition": "Unfavorable evidence",
+        "information": "Still a specific observation"
+      },
+      {
+        "note": "Returned. Issue reported.",
+        "condition": "Unclear",
+        "information": "Little detail to work with"
+      }
+    ],
+    "allocation_title": "Inspection is a resource-allocation decision.",
+    "allocation_text": "SSADS uses the two signals to adjust expected recovery yield and inspection depth. A capacity-constrained allocator then selects recovery actions. The text reader can be a keyword rule, a phrase matcher, or an LLM; the downstream decision logic stays the same.",
+    "evidence_title": "What the study tells us so far.",
+    "evidence_text": "Across three synthetic scenarios and 30 paired seeds, the keyword version improves net recovery value over a comparator using structured features and noisy full inspection. Gains from targeting inspection at matched cost are concentrated in the aircraft scenario. A risk-blind policy that skips inspection still earns more under the benchmark’s economic objective. These results test a mechanism; they do not demonstrate field savings.",
+    "pilot_title": "Questions I would bring to a pilot.",
+    "pilot_intro": "For a real workflow, I would start with the operating decision and the evidence needed to evaluate it:",
+    "pilot_questions": [
+      {
+        "title": "Which choices are feasible?",
+        "text": "Identify the available inventory, resale, recovery, and scrap routes, alongside labor limits and required checks."
+      },
+      {
+        "title": "What information changes the choice?",
+        "text": "Connect return notes with unit costs, scarcity or demand, condition records, and inspection outcomes. Scarcity matters to my broader practical interests; this paper does not separately validate a scarcity model."
+      },
+      {
+        "title": "What would count as improvement?",
+        "text": "Compare against the current workflow, including a simple rule-based alternative. Track realized recovery value, inspection effort, and costly mistakes before making a deployment claim."
+      }
+    ],
+    "closing": "I want this work to help useful things find a second life. That means following an idea far enough to understand what it would take to use it."
+  },
+  "software": [
+    {
+      "paper": "ssads",
+      "title": "SSADS / Reverse Logistics Decision Benchmark",
+      "role": "First & corresponding author",
+      "question": "How should return notes influence inspection and recovery?",
+      "contents": "Scenario configurations, text readers, inspection policies, allocation logic, and stored evaluation outputs for three synthetic reverse-logistics settings.",
+      "start": "The reproducibility manifest maps the reported results to commands and reference outputs. Cached LLM scores support the documented reruns without new API calls.",
+      "guide": "https://github.com/jiani19980225/ssads-reverse-logistics/blob/main/REPRODUCIBILITY.md",
+      "boundary": "Synthetic benchmark; these artifacts do not establish recovery gains in a facility."
+    },
+    {
+      "paper": "dacri",
+      "title": "DACRI / CriticalSCM-Bench",
+      "role": "Co-first author · shared contribution",
+      "question": "Which supply-chain intervention is worth its cost and delay?",
+      "contents": "Controlled causal scenarios, intervention-ranking methods, experiment drivers, and stored tables for examining decision value under disruption.",
+      "start": "The reproduction guide gives the commands for individual tables. The README maps manuscript claims to their stored outputs.",
+      "guide": "https://github.com/jiani19980225/dacri-criticalscm-bench/blob/main/dacri/REPRODUCE.md",
+      "boundary": "Causal graphs and intervention outcomes are synthetic. Public data calibrate inputs; they do not validate field intervention effects."
+    },
+    {
+      "paper": "forecasting",
+      "title": "Accuracy-preserving forecast stability",
+      "role": "Co-author",
+      "question": "Can a forecast path be smoother without sacrificing accuracy?",
+      "contents": "M5 retail-demand experiments with structured and temporal features, stability regularization, smoothing baselines, and evaluation artifacts.",
+      "start": "Read the reproduction guide and dataset instructions first. Download the official M5 files separately; the repository does not redistribute the raw competition data.",
+      "guide": "https://github.com/jizeli-hub/accuracy-preserving-stability-forecasting/blob/main/REPRODUCIBILITY.md",
+      "boundary": "Stability here concerns adjacent points within a forecast series, rather than revisions across successive forecast runs."
+    }
+  ]
 }
